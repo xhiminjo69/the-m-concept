@@ -1,67 +1,21 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    'Founded in 2000, The M Concept has grown from a small Vlorë workshop into Albania\'s premier custom furniture manufacturer — crafting bespoke pieces for hospitality and residential spaces worldwide.',
+    "Founded in 2000, The M Concept has grown from a small Vlorë workshop into Albania's premier custom furniture manufacturer — crafting bespoke pieces for hospitality and residential spaces worldwide.",
 };
 
-const milestones = [
-  {
-    year: '2000',
-    title: 'The Beginning',
-    body: 'Founded in a small workshop on the outskirts of Vlorë, The M Concept started with a single lathe, a handful of tools, and an uncompromising belief that furniture should be built to last.',
-  },
-  {
-    year: '2006',
-    title: 'First Major Contract',
-    body: 'Our first large-scale hospitality commission — a full bedroom fit-out for a coastal resort — set the benchmark for what we would become: a trusted partner for demanding projects.',
-  },
-  {
-    year: '2012',
-    title: 'New Facility',
-    body: 'Demand outgrew our original workshop. We moved into a purpose-built manufacturing facility in Vlorë, equipped with CNC machinery and dedicated finishing rooms — while keeping every craftsman on staff.',
-  },
-  {
-    year: '2017',
-    title: 'Expanding the Fleet',
-    body: 'We brought delivery and installation in-house, adding our first branded fleet vehicles. From our factory floor to your space — every step under our own control.',
-  },
-  {
-    year: '2022',
-    title: 'The M Concept Brand',
-    body: 'After two decades of quiet reputation-building, we unified our identity under The M Concept — a name that stands for precision, craft, and the relentless pursuit of quality.',
-  },
-  {
-    year: '2026',
-    title: 'Present Day',
-    body: 'Today we serve hotels, residences, and commercial clients across the region, producing every piece entirely in-house — no outsourcing, no shortcuts, no two pieces alike.',
-  },
-];
+export default async function CompanyPage() {
+  const t = await getTranslations('company');
+  const tFooter = await getTranslations('footer');
+  const milestones = t.raw('timeline.milestones') as Array<{ year: string; title: string; body: string }>;
+  const values = t.raw('values.items') as Array<{ label: string; desc: string }>;
 
-const values = [
-  {
-    label: 'No Outsourcing',
-    desc: 'Every joint, surface, and finish is done under our roof by our own team.',
-  },
-  {
-    label: 'Built to Order',
-    desc: 'Nothing is made speculatively. Every piece is commissioned, designed, and produced for a specific space.',
-  },
-  {
-    label: 'Premium Materials',
-    desc: 'We work exclusively with certified hardwoods, natural stone, and premium hardware — sourced for longevity.',
-  },
-  {
-    label: 'Delivered Complete',
-    desc: 'We handle production, delivery, and on-site installation — so you receive a finished result, not a flatpack.',
-  },
-];
-
-export default function CompanyPage() {
   return (
     <>
       <Navbar />
@@ -92,12 +46,12 @@ export default function CompanyPage() {
         </span>
 
         <div className="relative z-10 px-6 md:px-10 lg:px-16 pb-20 pt-40">
-          <span className="eyebrow" style={{ color: 'rgba(255,158,113,0.9)' }}>Est. 2000 — Vlorë, Albania</span>
+          <span className="eyebrow" style={{ color: 'rgba(255,158,113,0.9)' }}>{t('hero.eyebrow')}</span>
           <h1
             className="font-display font-light text-white leading-tight tracking-tight mt-2 mb-6"
             style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}
           >
-            Our Story
+            {t('hero.heading')}
           </h1>
           <div
             style={{ width: '48px', height: '1px', background: 'linear-gradient(90deg, #F4511E, transparent)' }}
@@ -106,7 +60,7 @@ export default function CompanyPage() {
             className="font-body text-stone-300 leading-relaxed mt-6 max-w-sm"
             style={{ fontSize: '1rem' }}
           >
-            Twenty-five years of craft, conviction,<br />and furniture built to outlast trends.
+            {t('hero.subheading')}
           </p>
         </div>
       </section>
@@ -128,10 +82,9 @@ export default function CompanyPage() {
             className="font-display font-light text-stone-800 leading-snug tracking-tight"
             style={{ fontSize: 'clamp(1.875rem, 3.6vw, 3rem)' }}
           >
-            We were founded on one conviction — that a piece of furniture should tell
-            a story of the hands that made it, and still be standing{' '}
+            {t('statementMain')}
             <em className="not-italic" style={{ color: '#A67C52' }}>
-              fifty years from now.
+              {t('statementEmphasis')}
             </em>
           </p>
           <div
@@ -148,32 +101,25 @@ export default function CompanyPage() {
 
             {/* Text */}
             <div>
-              <span className="eyebrow">The Founding</span>
+              <span className="eyebrow">{t('founding.eyebrow')}</span>
               <h2
                 className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
                 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
               >
-                Born in Vlorë.<br />Built by hand.
+                {t('founding.headingMain')}<br />{t('founding.headingEmphasis')}
               </h2>
               <div className="divider-accent mb-8" />
               <p className="font-body text-body-lg text-stone-600 leading-relaxed mb-5">
-                In 2000, a small woodworking workshop opened on the edge of Vlorë with a simple
-                ambition: to make furniture that was worth making. No flat-pack. No shortcuts.
-                Just timber, skill, and an obsessive eye for detail.
+                {t('founding.body1')}
               </p>
               <p className="font-body text-body-md text-muted leading-relaxed mb-5">
-                The early years were defined by word of mouth. Hoteliers along Albania&apos;s
-                Riviera began to notice — a bedroom set that felt different, a wardrobe that
-                closed exactly right, a reception desk that commanded attention. Commissions
-                grew. So did the team.
+                {t('founding.body2')}
               </p>
               <p className="font-body text-body-md text-muted leading-relaxed mb-10">
-                By the mid-2000s we had outgrown our original space. By the 2010s we had built
-                a manufacturing facility equipped for serious scale — without ever losing the
-                precision of the workshop where it all began.
+                {t('founding.body3')}
               </p>
               <Link href="/projects" className="btn-secondary btn-md">
-                See Our Projects
+                {t('founding.cta')}
               </Link>
             </div>
 
@@ -212,12 +158,12 @@ export default function CompanyPage() {
       >
         <div className="px-6 md:px-10 lg:px-16">
           <div className="mb-16">
-            <span className="eyebrow">Timeline</span>
+            <span className="eyebrow">{t('timeline.eyebrow')}</span>
             <h2
               className="font-display font-light text-stone-800 leading-tight"
               style={{ fontSize: 'clamp(1.75rem, 2.8vw, 2.375rem)' }}
             >
-              Twenty-five years<br />in the making.
+              {t('timeline.headingMain')}<br />{t('timeline.headingEmphasis')}
             </h2>
           </div>
 
@@ -246,10 +192,7 @@ export default function CompanyPage() {
                   </div>
 
                   {/* Content column */}
-                  <div
-                    className="pb-14 border-b md:border-b-0 border-stone-200 last:border-0 md:pl-0"
-                    style={{ borderLeft: undefined }}
-                  >
+                  <div className="pb-14 border-b md:border-b-0 border-stone-200 last:border-0 md:pl-0">
                     <h3
                       className="font-display font-light text-stone-800 mb-3 leading-tight"
                       style={{ fontSize: 'clamp(1.25rem, 1.8vw, 1.625rem)' }}
@@ -295,30 +238,26 @@ export default function CompanyPage() {
 
             {/* Text */}
             <div className="order-1 lg:order-2">
-              <span className="eyebrow">The Facility</span>
+              <span className="eyebrow">{t('facility.eyebrow')}</span>
               <h2
                 className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
                 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
               >
-                Industrial scale.<br />Artisan precision.
+                {t('facility.headingMain')}<br />{t('facility.headingEmphasis')}
               </h2>
               <div className="divider-accent mb-8" />
               <p className="font-body text-body-lg text-stone-600 leading-relaxed mb-5">
-                Our Vlorë facility spans over 2,500 m² of dedicated manufacturing space.
-                CNC machining, precision joinery, lacquering booths, and upholstery —
-                all under one roof, all operated by craftsmen who have been with us for years.
+                {t('facility.body1')}
               </p>
               <p className="font-body text-body-md text-muted leading-relaxed mb-10">
-                We do not outsource. The piece that leaves our floor is the piece our
-                team designed, cut, finished, and signed off on. That is the only way
-                to guarantee what we guarantee.
+                {t('facility.body2')}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className="btn-primary btn-md">
-                  Start a Project
+                  {t('facility.startProject')}
                 </Link>
                 <Link href="/projects" className="btn-ghost btn-md">
-                  See Our Work
+                  {t('facility.seeWork')}
                 </Link>
               </div>
             </div>
@@ -339,13 +278,13 @@ export default function CompanyPage() {
               className="font-label text-[0.7rem] uppercase tracking-[0.22em] mb-4 block"
               style={{ color: '#FF9E71' }}
             >
-              How We Work
+              {t('values.eyebrow')}
             </span>
             <h2
               className="font-display font-light text-white leading-tight"
               style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
             >
-              Our principles,<br />unchanged since day one.
+              {t('values.headingMain')}<br />{t('values.headingEmphasis')}
             </h2>
           </div>
 
@@ -379,20 +318,19 @@ export default function CompanyPage() {
           style={{ height: '80px', background: 'linear-gradient(to bottom, rgba(166,124,82,0.18), transparent)' }}
         />
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <span className="eyebrow">Work with Us</span>
+          <span className="eyebrow">{t('cta.eyebrow')}</span>
           <h2
             className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
             style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
           >
-            Have a project in mind?
+            {t('cta.heading')}
           </h2>
           <p className="font-body text-body-lg text-muted leading-relaxed mb-12 max-w-lg mx-auto">
-            Whether it&apos;s a single statement piece or a full-building fit-out,
-            our team works with you from initial brief to final installation.
+            {t('cta.body')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn-primary btn-lg">Start a Project</Link>
-            <Link href="/projects" className="btn-ghost btn-lg">See Our Work</Link>
+            <Link href="/contact" className="btn-primary btn-lg">{t('cta.startProject')}</Link>
+            <Link href="/projects" className="btn-ghost btn-lg">{t('cta.seeOurWork')}</Link>
           </div>
         </div>
       </section>
@@ -409,28 +347,30 @@ export default function CompanyPage() {
             <div className="md:col-span-2">
               <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
               <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">
-                Custom furniture manufacturer. Designed and built in Vlorë — delivered worldwide.
+                {tFooter('tagline')}
               </p>
               <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Instagram</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Google Maps</a>
+                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
+                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
               </div>
             </div>
             <div>
-              <p className="footer-heading">Navigate</p>
+              <p className="footer-heading">{tFooter('navigate')}</p>
               <ul className="flex flex-col gap-3">
-                {[
-                  { label: 'Company',  href: '/company'  },
-                  { label: 'Projects', href: '/projects' },
-                  { label: 'Contact',  href: '/contact'  },
-                  { label: 'Materia',  href: '/materia'  },
-                ].map((l) => (
-                  <li key={l.href}><Link href={l.href} className="footer-link">{l.label}</Link></li>
+                {([
+                  { key: 'company',  href: '/company'  },
+                  { key: 'projects', href: '/projects' },
+                  { key: 'contact',  href: '/contact'  },
+                  { key: 'materia',  href: '/materia'  },
+                ] as const).map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="footer-link">{tFooter(`nav.${l.key}`)}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="footer-heading">Get in Touch</p>
+              <p className="footer-heading">{tFooter('getInTouch')}</p>
               <p className="font-body text-[0.8125rem] text-stone-500 leading-relaxed">
                 Vlorë, Albania<br />
                 <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
@@ -440,7 +380,7 @@ export default function CompanyPage() {
           </div>
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-body text-[0.8125rem] text-stone-600">
-              &copy; {new Date().getFullYear()} The M Concept. All rights reserved.
+              &copy; {new Date().getFullYear()} {tFooter('copyright')}
             </p>
           </div>
         </div>

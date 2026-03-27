@@ -1,22 +1,16 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState, useRef } from 'react';
-
-const projectSubLinks = [
-  { label: 'Commercial Projects', href: '/projects/commercial' },
-  { label: 'Hospitality Projects', href: '/projects/hospitality' },
-  { label: 'Residential Projects', href: '/projects/residential' },
-];
-
-const productSubLinks = [
-  { label: 'Wardrobes', href: '/products/wardrobes' },
-  { label: 'Kitchens', href: '/products/kitchens' },
-  { label: 'Libraries', href: '/products/libraries' },
-];
+import { useTranslations, useLocale } from 'next-intl';
+import { Link, useRouter, usePathname } from '@/i18n/navigation';
 
 export default function Navbar() {
+  const t = useTranslations('nav');
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
@@ -43,6 +37,22 @@ export default function Navbar() {
     productsDropdownTimer.current = setTimeout(() => setProductsDropdownOpen(false), 140);
   }
 
+  function switchLocale(next: string) {
+    router.replace(pathname, { locale: next });
+  }
+
+  const projectSubLinks = [
+    { label: t('projectsMenu.commercial'), href: '/projects/commercial' },
+    { label: t('projectsMenu.hospitality'), href: '/projects/hospitality' },
+    { label: t('projectsMenu.residential'), href: '/projects/residential' },
+  ];
+
+  const productSubLinks = [
+    { label: t('productsMenu.wardrobes'), href: '/products/wardrobes' },
+    { label: t('productsMenu.kitchens'), href: '/products/kitchens' },
+    { label: t('productsMenu.libraries'), href: '/products/libraries' },
+  ];
+
   return (
     <header className="nav">
       {/* Logo */}
@@ -59,7 +69,7 @@ export default function Navbar() {
 
       {/* ── Desktop nav ───────────────────────────────────────────────────── */}
       <nav className="hidden md:flex items-center gap-10">
-        <Link href="/company" className="nav-link">Company</Link>
+        <Link href="/company" className="nav-link">{t('company')}</Link>
 
         {/* Projects with dropdown */}
         <div
@@ -71,7 +81,7 @@ export default function Navbar() {
             href="/projects"
             className="nav-link flex items-center gap-1.5"
           >
-            Projects
+            {t('projects')}
             <svg
               width="9"
               height="9"
@@ -114,7 +124,7 @@ export default function Navbar() {
                   className="flex items-center px-5 py-3 font-label text-[0.65rem] uppercase tracking-[0.2em] text-stone-400 hover:text-stone-600 transition-colors duration-150"
                   onClick={() => setDropdownOpen(false)}
                 >
-                  All Projects
+                  {t('projectsMenu.all')}
                 </Link>
               </div>
             </div>
@@ -131,7 +141,7 @@ export default function Navbar() {
             href="/products"
             className="nav-link flex items-center gap-1.5"
           >
-            Products
+            {t('products')}
             <svg
               width="9"
               height="9"
@@ -174,21 +184,37 @@ export default function Navbar() {
                   className="flex items-center px-5 py-3 font-label text-[0.65rem] uppercase tracking-[0.2em] text-stone-400 hover:text-stone-600 transition-colors duration-150"
                   onClick={() => setProductsDropdownOpen(false)}
                 >
-                  All Products
+                  {t('productsMenu.all')}
                 </Link>
               </div>
             </div>
           </div>
         </div>
 
-        <Link href="/contact" className="nav-link">Contact</Link>
-        <Link href="/materia" className="nav-link">Materia</Link>
+        <Link href="/contact" className="nav-link">{t('contact')}</Link>
+        <Link href="/materia" className="nav-link">{t('materia')}</Link>
       </nav>
 
-      {/* Desktop CTA */}
+      {/* Desktop CTA + Language Switcher */}
       <div className="hidden md:flex items-center gap-4">
+        {/* Language Switcher */}
+        <div className="flex items-center gap-1.5 font-label text-[0.65rem] uppercase tracking-[0.18em]">
+          <button
+            onClick={() => switchLocale('en')}
+            className={`transition-colors duration-150 ${locale === 'en' ? 'text-stone-800' : 'text-stone-400 hover:text-stone-600'}`}
+          >
+            EN
+          </button>
+          <span className="text-stone-300 select-none">|</span>
+          <button
+            onClick={() => switchLocale('sq')}
+            className={`transition-colors duration-150 ${locale === 'sq' ? 'text-stone-800' : 'text-stone-400 hover:text-stone-600'}`}
+          >
+            SQ
+          </button>
+        </div>
         <Link href="/contact" className="btn-outline btn-sm">
-          Start a Project
+          {t('cta')}
         </Link>
       </div>
 
@@ -222,7 +248,7 @@ export default function Navbar() {
             className="font-label text-[0.875rem] text-stone-700 uppercase tracking-widest hover:text-coral-500 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
-            Company
+            {t('company')}
           </Link>
 
           {/* Projects accordion */}
@@ -231,7 +257,7 @@ export default function Navbar() {
               className="flex items-center justify-between w-full font-label text-[0.875rem] text-stone-700 uppercase tracking-widest hover:text-coral-500 transition-colors"
               onClick={() => setMobileProjectsOpen((o) => !o)}
             >
-              Projects
+              {t('projects')}
               <svg
                 width="9"
                 height="9"
@@ -261,7 +287,7 @@ export default function Navbar() {
                   className="font-label text-[0.7rem] text-stone-400 uppercase tracking-widest hover:text-stone-600 transition-colors"
                   onClick={() => { setMenuOpen(false); setMobileProjectsOpen(false); }}
                 >
-                  All Projects
+                  {t('projectsMenu.all')}
                 </Link>
               </div>
             )}
@@ -273,7 +299,7 @@ export default function Navbar() {
               className="flex items-center justify-between w-full font-label text-[0.875rem] text-stone-700 uppercase tracking-widest hover:text-coral-500 transition-colors"
               onClick={() => setMobileProductsOpen((o) => !o)}
             >
-              Products
+              {t('products')}
               <svg
                 width="9"
                 height="9"
@@ -303,7 +329,7 @@ export default function Navbar() {
                   className="font-label text-[0.7rem] text-stone-400 uppercase tracking-widest hover:text-stone-600 transition-colors"
                   onClick={() => { setMenuOpen(false); setMobileProductsOpen(false); }}
                 >
-                  All Products
+                  {t('productsMenu.all')}
                 </Link>
               </div>
             )}
@@ -314,15 +340,32 @@ export default function Navbar() {
             className="font-label text-[0.875rem] text-stone-700 uppercase tracking-widest hover:text-coral-500 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
-            Contact
+            {t('contact')}
           </Link>
           <Link
             href="/materia"
             className="font-label text-[0.875rem] text-stone-700 uppercase tracking-widest hover:text-coral-500 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
-            Materia
+            {t('materia')}
           </Link>
+
+          {/* Mobile Language Switcher */}
+          <div className="flex items-center gap-2 font-label text-[0.75rem] uppercase tracking-[0.18em]">
+            <button
+              onClick={() => { switchLocale('en'); setMenuOpen(false); }}
+              className={`transition-colors duration-150 ${locale === 'en' ? 'text-stone-800' : 'text-stone-400 hover:text-stone-600'}`}
+            >
+              EN
+            </button>
+            <span className="text-stone-300 select-none">|</span>
+            <button
+              onClick={() => { switchLocale('sq'); setMenuOpen(false); }}
+              className={`transition-colors duration-150 ${locale === 'sq' ? 'text-stone-800' : 'text-stone-400 hover:text-stone-600'}`}
+            >
+              SQ
+            </button>
+          </div>
 
           <div className="pt-4 border-t border-border">
             <Link
@@ -330,7 +373,7 @@ export default function Navbar() {
               className="btn-primary btn-sm w-full justify-center"
               onClick={() => setMenuOpen(false)}
             >
-              Start a Project
+              {t('cta')}
             </Link>
           </div>
         </div>

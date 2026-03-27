@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, FormEvent, ChangeEvent } from 'react';
-
-const projectTypes = ['Commercial', 'Hospitality', 'Residential', 'Other'];
+import { useTranslations } from 'next-intl';
 
 export default function ContactForm() {
+  const t = useTranslations('contact');
+
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -42,10 +43,10 @@ export default function ContactForm() {
           className="font-display font-light text-stone-800 mb-3"
           style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
         >
-          Message Received
+          {t('form.successHeading')}
         </h3>
         <p className="font-body text-muted leading-relaxed max-w-sm">
-          Thank you for reaching out. Our team will be in touch within one business day.
+          {t('form.successBody')}
         </p>
       </div>
     );
@@ -54,19 +55,19 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
       <div>
-        <span className="eyebrow">Send a Message</span>
+        <span className="eyebrow">{t('form.eyebrow')}</span>
         <h2
           className="font-display font-light text-stone-800 leading-tight tracking-tight mt-4 mb-8"
           style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
         >
-          Tell us about<br />your project.
+          {t('form.headingMain')}<br />{t('form.headingEmphasis')}
         </h2>
       </div>
 
       {/* Name + Email */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="input-label" htmlFor="name">Full Name *</label>
+          <label className="input-label" htmlFor="name">{t('form.fullName')}</label>
           <input
             id="name"
             name="name"
@@ -75,11 +76,11 @@ export default function ContactForm() {
             value={form.name}
             onChange={handleChange}
             className="input"
-            placeholder="Your name"
+            placeholder={t('form.fullNamePlaceholder')}
           />
         </div>
         <div>
-          <label className="input-label" htmlFor="email">Email Address *</label>
+          <label className="input-label" htmlFor="email">{t('form.emailAddress')}</label>
           <input
             id="email"
             name="email"
@@ -88,7 +89,7 @@ export default function ContactForm() {
             value={form.email}
             onChange={handleChange}
             className="input"
-            placeholder="your@email.com"
+            placeholder={t('form.emailPlaceholder')}
           />
         </div>
       </div>
@@ -96,7 +97,7 @@ export default function ContactForm() {
       {/* Phone + Project Type */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
-          <label className="input-label" htmlFor="phone">Phone (optional)</label>
+          <label className="input-label" htmlFor="phone">{t('form.phone')}</label>
           <input
             id="phone"
             name="phone"
@@ -104,11 +105,11 @@ export default function ContactForm() {
             value={form.phone}
             onChange={handleChange}
             className="input"
-            placeholder="+355..."
+            placeholder={t('form.phonePlaceholder')}
           />
         </div>
         <div>
-          <label className="input-label" htmlFor="type">Project Type</label>
+          <label className="input-label" htmlFor="type">{t('form.projectType')}</label>
           <select
             id="type"
             name="type"
@@ -117,17 +118,18 @@ export default function ContactForm() {
             className="input"
             style={{ cursor: 'pointer' }}
           >
-            <option value="">Select a type</option>
-            {projectTypes.map((t) => (
-              <option key={t} value={t}>{t}</option>
-            ))}
+            <option value="">{t('form.selectType')}</option>
+            <option value="Commercial">{t('form.typeCommercial')}</option>
+            <option value="Hospitality">{t('form.typeHospitality')}</option>
+            <option value="Residential">{t('form.typeResidential')}</option>
+            <option value="Other">{t('form.typeOther')}</option>
           </select>
         </div>
       </div>
 
       {/* Message */}
       <div>
-        <label className="input-label" htmlFor="message">Your Message *</label>
+        <label className="input-label" htmlFor="message">{t('form.message')}</label>
         <textarea
           id="message"
           name="message"
@@ -136,7 +138,7 @@ export default function ContactForm() {
           value={form.message}
           onChange={handleChange}
           className="input resize-none"
-          placeholder="Describe your project, space, or requirements…"
+          placeholder={t('form.messagePlaceholder')}
         />
       </div>
 
@@ -146,7 +148,7 @@ export default function ContactForm() {
         className="btn-primary btn-lg self-start"
         style={{ opacity: loading ? 0.7 : 1 }}
       >
-        {loading ? 'Sending…' : 'Send Message'}
+        {loading ? t('form.sending') : t('form.send')}
       </button>
     </form>
   );

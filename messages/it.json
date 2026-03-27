@@ -1,0 +1,367 @@
+{
+  "nav": {
+    "company": "Azienda",
+    "projects": "Progetti",
+    "products": "Prodotti",
+    "contact": "Contatto",
+    "materia": "Materia",
+    "cta": "Avvia un Progetto",
+    "projectsMenu": {
+      "commercial": "Progetti Commerciali",
+      "hospitality": "Progetti Hospitality",
+      "residential": "Progetti Residenziali",
+      "all": "Tutti i Progetti"
+    },
+    "productsMenu": {
+      "wardrobes": "Armadi",
+      "kitchens": "Cucine",
+      "libraries": "Librerie",
+      "all": "Tutti i Prodotti"
+    }
+  },
+  "footer": {
+    "tagline": "Produttore di mobili su misura. Progettati e realizzati a Vlorë — consegnati in tutto il mondo.",
+    "navigate": "Naviga",
+    "getInTouch": "Contattaci",
+    "copyright": "The M Concept. Tutti i diritti riservati.",
+    "privacy": "Informativa sulla Privacy",
+    "terms": "Termini",
+    "instagram": "Instagram",
+    "googleMaps": "Google Maps",
+    "nav": {
+      "company": "Azienda",
+      "projects": "Progetti",
+      "products": "Prodotti",
+      "contact": "Contatto",
+      "materia": "Materia"
+    },
+    "contact": {
+      "startProject": "Avvia un Progetto",
+      "showroom": "Visita Showroom",
+      "careers": "Carriere"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Mobili Premium su Misura · Vlorë, Albania",
+      "taglineMain": "Realizzato per",
+      "taglineEmphasis": "tutta la vita.",
+      "viewProjects": "Vedi Progetti",
+      "ourStory": "La Nostra Storia",
+      "estLabel": "Est. Vlorë",
+      "scroll": "Scorri"
+    },
+    "statementMain": "Progettiamo e realizziamo mobili premium su misura per spazi residenziali, hospitality e commerciali —",
+    "statementEmphasis": " con una precisione che dura nel tempo.",
+    "selectedWork": {
+      "eyebrow": "Lavori Selezionati",
+      "heading": "Progetti Recenti",
+      "viewAll": "Vedi Tutti",
+      "viewProject": "Vedi Progetto",
+      "viewAllMobile": "Vedi Tutti i Progetti"
+    },
+    "craft": {
+      "eyebrow": "Il Nostro Mestiere",
+      "heading": "Mobili\ncon un'anima.",
+      "body1": "The M Concept è nato da una sola convinzione: i mobili devono sopravvivere alle tendenze, attraversare le generazioni e migliorare con il tempo. Lavoriamo esclusivamente con legni pregiati e pietra naturale, plasmati da artigiani che si preoccupano profondamente di ogni giuntura, ogni superficie, ogni dettaglio.",
+      "body2": "Ogni pezzo è progettato a Vlorë e prodotto interamente nei nostri stabilimenti — nessun outsourcing, nessun compromesso sulla qualità, nessun pezzo esattamente uguale all'altro.",
+      "cta": "La Nostra Storia"
+    },
+    "stats": [
+      { "value": "100%", "label": "Su ordinazione" },
+      { "value": "Unico", "label": "Ogni pezzo è unico" },
+      { "value": "Premium", "label": "Solo materiali pregiati" },
+      { "value": "Vlorë", "label": "Progettato e prodotto" }
+    ],
+    "facility": {
+      "eyebrow": "Stabilimento di Produzione",
+      "headingMain": "Scala industriale.",
+      "headingEmphasis": "Precisione artigianale.",
+      "body": "Il nostro stabilimento di Vlorë è dotato di macchinari avanzati per la lavorazione del legno — fresatura CNC, falegnameria di precisione, cabine di verniciatura — gestiti da un team dedicato di artigiani qualificati.",
+      "cta": "Dentro la Nostra Fabbrica"
+    },
+    "materials": {
+      "eyebrow": "Materia",
+      "headingMain": "Materiali autentici,",
+      "headingEmphasis": "risultati duraturi.",
+      "cta": "Esplora i Materiali",
+      "items": [
+        { "name": "Rovere Bianco", "desc": "Venatura leggera, forza senza tempo" },
+        { "name": "Noce", "desc": "Toni cioccolato ricchi, finitura liscia" },
+        { "name": "Frassino", "desc": "Resistente, chiaro e versatile" },
+        { "name": "Marmo", "desc": "Lusso freddo per superfici da tavolo" }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Lavora con Noi",
+      "heading": "Hai un progetto in mente?",
+      "body": "Che si tratti di un singolo pezzo d'eccezione o di un allestimento completo, il nostro team lavora con voi dal primo briefing fino all'installazione finale.",
+      "startProject": "Avvia un Progetto",
+      "seeOurWork": "Scopri il Nostro Lavoro"
+    }
+  },
+  "company": {
+    "meta": {
+      "title": "La Nostra Storia",
+      "description": "Fondata nel 2000, The M Concept è cresciuta da un piccolo laboratorio di Vlorë fino a diventare il principale produttore albanese di mobili su misura."
+    },
+    "hero": {
+      "eyebrow": "Est. 2000 — Vlorë, Albania",
+      "heading": "La Nostra Storia",
+      "subheading": "Venticinque anni di artigianato, convinzione e mobili costruiti per resistere alle tendenze."
+    },
+    "statementMain": "Siamo stati fondati su una sola convinzione — che un mobile debba raccontare la storia delle mani che lo hanno creato, e stare ancora in piedi tra",
+    "statementEmphasis": "cinquant'anni da oggi.",
+    "founding": {
+      "eyebrow": "La Fondazione",
+      "headingMain": "Nati a Vlorë.",
+      "headingEmphasis": "Costruiti a mano.",
+      "body1": "Nel 2000, un piccolo laboratorio di falegnameria aprì ai margini di Vlorë con una semplice ambizione: fare mobili che valesse la pena fare. Niente flatpack. Niente scorciatoie. Solo legno, abilità e un occhio ossessivo per i dettagli.",
+      "body2": "I primi anni furono definiti dal passaparola. Gli albergatori lungo la Riviera Albanese cominciarono a notare — un set camera da letto che si sentiva diverso, un armadio che si chiudeva esattamente bene, una reception che comandava attenzione. Le commissioni crescevano. Come il team.",
+      "body3": "A metà degli anni 2000 avevamo superato lo spazio originale. Negli anni 2010 avevamo costruito uno stabilimento produttivo attrezzato per una scala seria — senza mai perdere la precisione del laboratorio dove tutto era iniziato.",
+      "cta": "Vedi i Nostri Progetti"
+    },
+    "timeline": {
+      "eyebrow": "Cronologia",
+      "headingMain": "Venticinque anni",
+      "headingEmphasis": "di storia.",
+      "milestones": [
+        {
+          "year": "2000",
+          "title": "Gli Inizi",
+          "body": "Fondata in un piccolo laboratorio alla periferia di Vlorë, The M Concept iniziò con un solo tornio, una manciata di attrezzi e la ferma convinzione che i mobili dovessero essere costruiti per durare."
+        },
+        {
+          "year": "2006",
+          "title": "Primo Grande Contratto",
+          "body": "La nostra prima grande commessa hospitality — l'allestimento completo delle camere da letto per un resort costiero — stabilì il benchmark di ciò che saremmo diventati: un partner di fiducia per progetti esigenti."
+        },
+        {
+          "year": "2012",
+          "title": "Nuovo Stabilimento",
+          "body": "La domanda superò il laboratorio originale. Ci trasferimmo in uno stabilimento produttivo appositamente costruito a Vlorë, dotato di macchinari CNC e cabine di finitura dedicate — mantenendo ogni artigiano nello staff."
+        },
+        {
+          "year": "2017",
+          "title": "Espansione della Flotta",
+          "body": "Portammo consegna e installazione all'interno dell'azienda, aggiungendo i primi veicoli brandizzati. Dal nostro pavimento di fabbrica al vostro spazio — ogni passo sotto il nostro controllo."
+        },
+        {
+          "year": "2022",
+          "title": "Il Brand The M Concept",
+          "body": "Dopo due decenni di costruzione silenziosa della reputazione, unificammo la nostra identità sotto The M Concept — un nome che rappresenta precisione, artigianato e la ricerca incessante della qualità."
+        },
+        {
+          "year": "2026",
+          "title": "Oggi",
+          "body": "Oggi serviamo hotel, residenze e clienti commerciali in tutta la regione, producendo ogni pezzo interamente all'interno — nessun outsourcing, nessuna scorciatoia, nessun pezzo uguale all'altro."
+        }
+      ]
+    },
+    "facility": {
+      "eyebrow": "Lo Stabilimento",
+      "headingMain": "Scala industriale.",
+      "headingEmphasis": "Precisione artigianale.",
+      "body1": "Il nostro stabilimento di Vlorë si estende su oltre 2.500 m² di spazio produttivo dedicato. Fresatura CNC, falegnameria di precisione, cabine di verniciatura e tappezzeria — tutto sotto un unico tetto, gestito da artigiani che sono con noi da anni.",
+      "body2": "Non facciamo outsourcing. Il pezzo che lascia il nostro pavimento è il pezzo che il nostro team ha progettato, tagliato, rifinito e approvato. È l'unico modo per garantire ciò che garantiamo.",
+      "startProject": "Avvia un Progetto",
+      "seeWork": "Scopri il Nostro Lavoro"
+    },
+    "values": {
+      "eyebrow": "Come Lavoriamo",
+      "headingMain": "I nostri principi,",
+      "headingEmphasis": "invariati dal primo giorno.",
+      "items": [
+        {
+          "label": "Nessun Outsourcing",
+          "desc": "Ogni giuntura, superficie e finitura viene eseguita nel nostro stabilimento dal nostro team."
+        },
+        {
+          "label": "Costruito su Ordine",
+          "desc": "Niente viene prodotto in modo speculativo. Ogni pezzo viene commissionato, progettato e prodotto per uno spazio specifico."
+        },
+        {
+          "label": "Materiali Premium",
+          "desc": "Lavoriamo esclusivamente con legni certificati, pietra naturale e hardware premium — selezionati per la longevità."
+        },
+        {
+          "label": "Consegnato Completo",
+          "desc": "Gestiamo produzione, consegna e installazione in loco — così ricevete un risultato finito, non un flatpack."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Lavora con Noi",
+      "heading": "Hai un progetto in mente?",
+      "body": "Che si tratti di un singolo pezzo d'eccezione o di un allestimento completo, il nostro team lavora con voi dal primo briefing fino all'installazione finale.",
+      "startProject": "Avvia un Progetto",
+      "seeOurWork": "Scopri il Nostro Lavoro"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contatto",
+      "description": "Contatta The M Concept. Avvia un progetto di mobili su misura, richiedi un preventivo o visita il nostro showroom a Vlorë, Albania."
+    },
+    "hero": {
+      "eyebrow": "Contatto",
+      "headingLine1": "Costruiamo",
+      "headingLine2": "Qualcosa di",
+      "headingLine3": "Straordinario."
+    },
+    "details": {
+      "eyebrow": "I Nostri Dettagli",
+      "headingMain": "Visitaci, chiamaci,",
+      "headingEmphasis": "o invia un messaggio.",
+      "address": "Indirizzo",
+      "viewOnMaps": "Vedi su Google Maps →",
+      "phone": "Telefono",
+      "email": "Email",
+      "officeHours": "Orari di Apertura",
+      "instagram": "Instagram",
+      "googleMaps": "Google Maps"
+    },
+    "hours": {
+      "monFri": "Lunedì – Venerdì",
+      "saturday": "Sabato",
+      "sunday": "Domenica",
+      "closed": "Chiuso"
+    },
+    "form": {
+      "eyebrow": "Invia un Messaggio",
+      "headingMain": "Raccontaci del",
+      "headingEmphasis": "tuo progetto.",
+      "fullName": "Nome Completo *",
+      "fullNamePlaceholder": "Il tuo nome",
+      "emailAddress": "Indirizzo Email *",
+      "emailPlaceholder": "tua@email.com",
+      "phone": "Telefono (opzionale)",
+      "phonePlaceholder": "+355...",
+      "projectType": "Tipo di Progetto",
+      "selectType": "Seleziona un tipo",
+      "message": "Il Tuo Messaggio *",
+      "messagePlaceholder": "Descrivi il tuo progetto, lo spazio o i requisiti…",
+      "send": "Invia Messaggio",
+      "sending": "Invio in corso…",
+      "successHeading": "Messaggio Ricevuto",
+      "successBody": "Grazie per averci contattato. Il nostro team ti risponderà entro un giorno lavorativo.",
+      "typeCommercial": "Commerciale",
+      "typeHospitality": "Hospitality",
+      "typeResidential": "Residenziale",
+      "typeOther": "Altro"
+    },
+    "map": {
+      "openInMaps": "Apri in Google Maps"
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Prodotti",
+      "description": "Esplora le nostre collezioni di mobili su misura — armadi, cucine e librerie realizzati da The M Concept a Vlorë, Albania."
+    },
+    "hero": {
+      "eyebrow": "Le Nostre Collezioni",
+      "bespoke": "Su Misura",
+      "heading": "Prodotti",
+      "description": "Tre collezioni. Un solo standard artigianale. Mobili su misura progettati e realizzati a Vlorë."
+    },
+    "explore": "Esplora",
+    "allProducts": "Tutti i Prodotti",
+    "categories": {
+      "wardrobes": {
+        "label": "Armadi",
+        "description": "Soluzioni armadio su misura adattate al tuo spazio e al tuo stile.",
+        "heroDescription": "Soluzioni armadio su misura adattate al tuo spazio e al tuo stile, realizzate con precisione a Vlorë, Albania."
+      },
+      "kitchens": {
+        "label": "Cucine",
+        "description": "Mobili da cucina su misura e arredamento fisso, costruiti per durare.",
+        "heroDescription": "Mobili da cucina su misura e arredamento fisso progettati e realizzati con precisione a Vlorë, Albania."
+      },
+      "libraries": {
+        "label": "Librerie",
+        "description": "Sistemi di scaffalature e librerie artigianali per ogni interior.",
+        "heroDescription": "Sistemi di scaffalature e librerie artigianali progettati e costruiti per durare a Vlorë, Albania."
+      }
+    },
+    "cta": {
+      "eyebrow": "Lavora con Noi",
+      "heading": "Hai un progetto in mente?",
+      "body": "Da un singolo pezzo su misura a un allestimento completo degli interni, lavoriamo con voi dal briefing all'installazione finale.",
+      "startProject": "Avvia un Progetto"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Progetti",
+      "description": "Esplora il nostro lavoro nei settori commerciale, hospitality e residenziale — mobili su misura progettati e realizzati a Vlorë, Albania."
+    },
+    "hero": {
+      "eyebrow": "Il Nostro Lavoro",
+      "selected": "Selezionati",
+      "heading": "Progetti",
+      "description": "Tre settori. Un solo standard artigianale. Esplora il nostro lavoro nelle categorie commerciale, hospitality e residenziale."
+    },
+    "explore": "Esplora",
+    "allProjects": "Tutti i Progetti",
+    "viewProject": "Vedi Progetto",
+    "noProjects": "Nessun progetto disponibile al momento — ricontrolla presto.",
+    "categories": {
+      "commercial": {
+        "label": "Commerciale",
+        "headline": "Progetti Commerciali",
+        "eyebrow": "Settore 01",
+        "description": "Uffici, negozi al dettaglio e interni aziendali costruiti secondo standard elevati. Precisione funzionale senza compromessi su materiali o artigianato.",
+        "metaTitle": "Progetti Commerciali",
+        "metaDescription": "Allestimenti commerciali di The M Concept — interni per uffici, spazi retail e ambienti aziendali realizzati a Vlorë, Albania.",
+        "ctaBody": "Da un singolo pezzo su misura a un allestimento commerciale completo, lavoriamo con voi dal briefing all'installazione finale."
+      },
+      "hospitality": {
+        "label": "Hospitality",
+        "headline": "Progetti Hospitality",
+        "eyebrow": "Settore 02",
+        "description": "Allestimenti completi di hotel e interni per l'esperienza degli ospiti — dalla lobby alla camera, progettati e realizzati interamente a Vlorë.",
+        "metaTitle": "Progetti Hospitality",
+        "metaDescription": "Allestimenti hospitality di The M Concept — interni alberghieri, arredamento camere e programmi di interior completi progettati a Vlorë, Albania.",
+        "ctaBody": "Da una singola camera ospiti a un allestimento completo dell'hotel, lavoriamo con voi dal briefing all'installazione finale."
+      },
+      "residential": {
+        "label": "Residenziale",
+        "headline": "Progetti Residenziali",
+        "eyebrow": "Settore 03",
+        "description": "Residenze private su misura dove ogni elemento è progettato attorno al modo di vivere del cliente — nessun componente standard.",
+        "metaTitle": "Progetti Residenziali",
+        "metaDescription": "Interni residenziali di The M Concept — abitazioni private e appartamenti su misura progettati e realizzati a Vlorë, Albania.",
+        "ctaBody": "Da una cucina e soggiorno a una residenza privata completa, lavoriamo con voi dal briefing all'installazione finale."
+      }
+    },
+    "cta": {
+      "eyebrow": "Lavora con Noi",
+      "heading": "Hai un progetto in mente?",
+      "startProject": "Avvia un Progetto",
+      "bodyDefault": "Da un singolo pezzo su misura a un allestimento completo dell'hotel, lavoriamo con voi dal briefing all'installazione finale."
+    },
+    "detail": {
+      "overview": "Panoramica del Progetto",
+      "gallery": "Galleria",
+      "photography": "Fotografie del Progetto",
+      "client": "Cliente",
+      "sector": "Settore",
+      "scope": "Ambito",
+      "year": "Anno",
+      "location": "Luogo",
+      "startSimilar": "Avvia un Progetto Simile",
+      "previous": "Precedente",
+      "next": "Successivo"
+    }
+  },
+  "materia": {
+    "eyebrow": "The M Concept · Materia",
+    "heading": "Prossimamente",
+    "bodyMain": "Stiamo costruendo qualcosa di veramente innovativo — una piattaforma alimentata dalla tecnologia più recente, progettata per rendere semplice la scoperta dei mobili e dei materiali dei tuoi sogni,",
+    "bodyEmphasis": "su misura per il tuo budget e la tua visione.",
+    "body2": "Rimanete sintonizzati. L'esperienza vale l'attesa.",
+    "cta": "Contattaci",
+    "label": "Materia"
+  }
+}

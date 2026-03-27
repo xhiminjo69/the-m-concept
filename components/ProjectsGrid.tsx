@@ -1,17 +1,20 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import type { Project } from '@/lib/projects';
 
 type Props = {
   projects: Project[];
 };
 
-export default function ProjectsGrid({ projects }: Props) {
+export default async function ProjectsGrid({ projects }: Props) {
+  const t = await getTranslations('projects');
+
   if (projects.length === 0) {
     return (
       <div className="py-24 text-center px-6">
         <p className="font-label text-[0.75rem] text-stone-400 uppercase tracking-widest">
-          No projects available yet — check back soon.
+          {t('noProjects')}
         </p>
       </div>
     );
@@ -85,7 +88,7 @@ export default function ProjectsGrid({ projects }: Props) {
                   className="font-label text-[0.65rem] uppercase tracking-[0.25em]"
                   style={{ color: '#BF9468' }}
                 >
-                  View Project
+                  {t('viewProject')}
                 </span>
               </div>
             </div>

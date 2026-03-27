@@ -1,0 +1,366 @@
+{
+  "nav": {
+    "company": "Company",
+    "projects": "Projects",
+    "products": "Products",
+    "contact": "Contact",
+    "materia": "Materia",
+    "cta": "Start a Project",
+    "projectsMenu": {
+      "commercial": "Commercial Projects",
+      "hospitality": "Hospitality Projects",
+      "residential": "Residential Projects",
+      "all": "All Projects"
+    },
+    "productsMenu": {
+      "wardrobes": "Wardrobes",
+      "kitchens": "Kitchens",
+      "libraries": "Libraries",
+      "all": "All Products"
+    }
+  },
+  "footer": {
+    "tagline": "Custom furniture manufacturer. Designed and built in Vlorë — delivered worldwide.",
+    "navigate": "Navigate",
+    "getInTouch": "Get in Touch",
+    "copyright": "The M Concept. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "instagram": "Instagram",
+    "googleMaps": "Google Maps",
+    "nav": {
+      "company": "Company",
+      "projects": "Projects",
+      "products": "Products",
+      "contact": "Contact",
+      "materia": "Materia"
+    },
+    "contact": {
+      "startProject": "Start a Project",
+      "showroom": "Showroom Visit"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Premium Custom Furniture · Vlorë, Albania",
+      "taglineMain": "Crafted for",
+      "taglineEmphasis": "a lifetime.",
+      "viewProjects": "View Projects",
+      "ourStory": "Our Story",
+      "estLabel": "Est. Vlorë",
+      "scroll": "Scroll"
+    },
+    "statementMain": "We design and manufacture premium custom furniture for residential, hospitality, and commercial spaces —",
+    "statementEmphasis": " with precision that endures.",
+    "selectedWork": {
+      "eyebrow": "Selected Work",
+      "heading": "Recent Projects",
+      "viewAll": "View All",
+      "viewProject": "View Project",
+      "viewAllMobile": "View All Projects"
+    },
+    "craft": {
+      "eyebrow": "Our Craft",
+      "heading": "Furniture\nwith a soul.",
+      "body1": "The M Concept was built on a single conviction: furniture should outlast trends, survive generations, and improve with age. We work exclusively with premium hardwoods and natural stone, shaped by craftsmen who care deeply about every joint, every surface, every detail.",
+      "body2": "Every piece is designed in Vlorë and produced entirely in our own facilities — no outsourcing, no compromise on quality, no two pieces exactly alike.",
+      "cta": "Our Story"
+    },
+    "stats": [
+      { "value": "100%", "label": "Built to order" },
+      { "value": "Custom", "label": "Every piece unique" },
+      { "value": "Premium", "label": "Materials only" },
+      { "value": "Vlorë", "label": "Designed & manufactured" }
+    ],
+    "facility": {
+      "eyebrow": "Production Facility",
+      "headingMain": "Industrial scale.",
+      "headingEmphasis": "Artisan precision.",
+      "body": "Our Vlorë facility is equipped with advanced woodworking machinery — CNC machining, precision joinery, finishing rooms — operated by a dedicated team of skilled craftsmen.",
+      "cta": "Inside Our Factory"
+    },
+    "materials": {
+      "eyebrow": "Materia",
+      "headingMain": "Honest materials,",
+      "headingEmphasis": "lasting results.",
+      "cta": "Explore Materials",
+      "items": [
+        { "name": "White Oak", "desc": "Light grain, timeless strength" },
+        { "name": "Walnut", "desc": "Rich chocolate tones, smooth finish" },
+        { "name": "Ash Wood", "desc": "Resilient, pale, and versatile" },
+        { "name": "Marble", "desc": "Cold luxury for tabletop surfaces" }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Work with Us",
+      "heading": "Have a project in mind?",
+      "body": "Whether it's a single statement piece or a full-building fit-out, our team works with you from initial brief to final installation.",
+      "startProject": "Start a Project",
+      "seeOurWork": "See Our Work"
+    }
+  },
+  "company": {
+    "meta": {
+      "title": "Our Story",
+      "description": "Founded in 2000, The M Concept has grown from a small workshop in Vlorë into Albania's leading custom furniture manufacturer."
+    },
+    "hero": {
+      "eyebrow": "Est. 2000 — Vlorë, Albania",
+      "heading": "Our Story",
+      "subheading": "Twenty-five years of craft, conviction, and furniture built to outlast trends."
+    },
+    "statementMain": "Founded on a conviction — that a piece of furniture should tell the story of the hands that made it, and stand",
+    "statementEmphasis": " fifty years from now.",
+    "founding": {
+      "eyebrow": "The Founding",
+      "headingMain": "Born in Vlorë.",
+      "headingEmphasis": "Built by Hand.",
+      "body1": "In 2000, a small woodworking workshop opened on the edge of Vlorë with a simple ambition: to make furniture worth making. No assembly. No shortcuts. Just wood, skill, and an obsessive eye for detail.",
+      "body2": "The early years were defined by word of mouth. Hoteliers along the Albanian Riviera started to notice — a bedroom that felt different, a wardrobe that closed exactly, a reception table that commanded attention. Orders grew. So did the team.",
+      "body3": "By the mid-2000s we had outgrown the original space. By the 2010s we had built a production facility equipped for serious scale — without ever losing the precision of the workshop where everything began.",
+      "cta": "See Our Projects"
+    },
+    "timeline": {
+      "eyebrow": "The Timeline",
+      "headingMain": "Twenty-five years",
+      "headingEmphasis": "in the making.",
+      "milestones": [
+        {
+          "year": "2000",
+          "title": "The Beginning",
+          "body": "Founded in a small workshop on the outskirts of Vlorë, The M Concept started with a lathe, a handful of tools, and an uncompromising belief that furniture should be built to last."
+        },
+        {
+          "year": "2006",
+          "title": "First Major Contract",
+          "body": "Our first large-scale hospitality commission — a full bedroom fit-out for a coastal resort — set the standard for what we would become: a trusted partner for demanding projects."
+        },
+        {
+          "year": "2012",
+          "title": "New Factory",
+          "body": "Demand outgrew the original workshop. We moved into a purpose-built production facility in Vlorë, equipped with CNC machinery and dedicated rooms — retaining every craftsman on staff."
+        },
+        {
+          "year": "2017",
+          "title": "Fleet Expansion",
+          "body": "We brought delivery and installation in-house, adding our own branded vehicles. From the factory floor to your space — every step under our control."
+        },
+        {
+          "year": "2022",
+          "title": "The M Concept Brand",
+          "body": "After two decades of quietly building a reputation, we unified our identity under The M Concept — a name that stands for precision, craft, and an unrelenting pursuit of quality."
+        },
+        {
+          "year": "2026",
+          "title": "Today",
+          "body": "Today we serve hotels, residences, and commercial clients across the region, producing every piece entirely in-house — no outsourcing, no shortcuts, no two pieces exactly alike."
+        }
+      ]
+    },
+    "facility": {
+      "eyebrow": "The Facility",
+      "headingMain": "Industrial scale.",
+      "headingEmphasis": "Artisan precision.",
+      "body1": "Our Vlorë facility spans 2,500 m² of dedicated production space. CNC machinery, precision joinery, lacquering rooms and upholstery — all under one roof, all operated by craftsmen who have been with us for years.",
+      "body2": "We do not subcontract. The piece that leaves our floor is the piece our team designed, cut, finished, and approved. That's the only way to guarantee what we guarantee.",
+      "startProject": "Start a Project",
+      "seeWork": "See Our Work"
+    },
+    "values": {
+      "eyebrow": "How We Work",
+      "headingMain": "Our principles,",
+      "headingEmphasis": "unchanged since day one.",
+      "items": [
+        {
+          "label": "No Outsourcing",
+          "desc": "Every joint, surface, and finish is made under our roof by our team."
+        },
+        {
+          "label": "Built to Order",
+          "desc": "Nothing is produced speculatively. Every piece is commissioned, designed, and manufactured for a specific space."
+        },
+        {
+          "label": "Premium Materials",
+          "desc": "We work exclusively with certified hardwoods, natural stone, and premium hardware — sourced for longevity."
+        },
+        {
+          "label": "Delivered Complete",
+          "desc": "We handle production, delivery, and on-site installation — so you receive a finished result, not a flatpack."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Work with Us",
+      "heading": "Have a project in mind?",
+      "body": "Whether it's a single statement piece or a full-building fit-out, our team works with you from initial brief to final installation.",
+      "startProject": "Start a Project",
+      "seeOurWork": "See Our Work"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Get in touch. Start a bespoke furniture project, request a quote, or visit our showroom in Vlorë, Albania."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "headingLine1": "Let's Build",
+      "headingLine2": "Something",
+      "headingLine3": "Extraordinary."
+    },
+    "details": {
+      "eyebrow": "Our Details",
+      "headingMain": "Visit us, call us,",
+      "headingEmphasis": "or send a message.",
+      "address": "Address",
+      "viewOnMaps": "View on Google Maps →",
+      "phone": "Phone",
+      "email": "Email",
+      "officeHours": "Office Hours",
+      "instagram": "Instagram",
+      "googleMaps": "Google Maps"
+    },
+    "hours": {
+      "monFri": "Monday – Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed"
+    },
+    "form": {
+      "eyebrow": "Send a Message",
+      "headingMain": "Tell us",
+      "headingEmphasis": "about your project.",
+      "fullName": "Full Name *",
+      "fullNamePlaceholder": "Your name",
+      "emailAddress": "Email Address *",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+355...",
+      "projectType": "Project Type",
+      "selectType": "Select a type",
+      "message": "Your Message *",
+      "messagePlaceholder": "Describe your project, space, or requirements…",
+      "send": "Send Message",
+      "sending": "Sending…",
+      "successHeading": "Message Received",
+      "successBody": "Thank you for reaching out. Our team will be in touch within one business day.",
+      "typeCommercial": "Commercial",
+      "typeHospitality": "Hospitality",
+      "typeResidential": "Residential",
+      "typeOther": "Other"
+    },
+    "map": {
+      "openInMaps": "Open in Google Maps"
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Products",
+      "description": "Explore our custom furniture collections — wardrobes, kitchens, and libraries crafted by The M Concept in Vlorë, Albania."
+    },
+    "hero": {
+      "eyebrow": "Our Collections",
+      "bespoke": "Bespoke",
+      "heading": "Products",
+      "description": "Three collections. One standard of craft. Bespoke furniture designed and built in Vlorë."
+    },
+    "explore": "Explore",
+    "allProducts": "All Products",
+    "categories": {
+      "wardrobes": {
+        "label": "Wardrobes",
+        "description": "Bespoke wardrobe solutions tailored to your space and style.",
+        "heroDescription": "Bespoke wardrobe solutions tailored to your space and style, crafted with precision in Vlorë."
+      },
+      "kitchens": {
+        "label": "Kitchens",
+        "description": "Bespoke kitchen cabinetry and fitted furniture, built to last.",
+        "heroDescription": "Bespoke kitchen cabinetry and fitted furniture designed and manufactured with precision in Vlorë."
+      },
+      "libraries": {
+        "label": "Libraries",
+        "description": "Handcrafted shelving and library systems for every interior.",
+        "heroDescription": "Handcrafted shelving and library systems designed and built in Vlorë."
+      }
+    },
+    "cta": {
+      "eyebrow": "Work with Us",
+      "heading": "Have a project in mind?",
+      "body": "From a single piece to a complete interior fit-out, we work with you from initial brief to final installation.",
+      "startProject": "Start a Project"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projects",
+      "description": "Explore our work across commercial, hospitality, and residential sectors — bespoke furniture designed and manufactured in Vlorë."
+    },
+    "hero": {
+      "eyebrow": "Our Work",
+      "selected": "Selected",
+      "heading": "Projects",
+      "description": "Three sectors. One standard of craft. Explore our work across commercial, hospitality, and residential categories."
+    },
+    "explore": "Explore",
+    "allProjects": "All Projects",
+    "viewProject": "View Project",
+    "noProjects": "No projects available yet — check back soon.",
+    "categories": {
+      "commercial": {
+        "label": "Commercial",
+        "headline": "Commercial Projects",
+        "eyebrow": "Sector 01",
+        "description": "Offices, retail spaces, and corporate interiors built to exacting standards. Functional precision without compromise on material or craft.",
+        "metaTitle": "Commercial Projects",
+        "metaDescription": "Commercial fit-outs by The M Concept — office interiors, retail spaces, and corporate environments crafted in Vlorë.",
+        "ctaBody": "From a single piece to a full commercial fit-out, we work with you from initial brief to final installation."
+      },
+      "hospitality": {
+        "label": "Hospitality",
+        "headline": "Hospitality Projects",
+        "eyebrow": "Sector 02",
+        "description": "Full hotel fit-outs and guest experience interiors — from lobby to guest room, designed and manufactured entirely in Vlorë.",
+        "metaTitle": "Hospitality Projects",
+        "metaDescription": "Hospitality fit-outs by The M Concept — hotel interiors, bedroom furniture, and full interior programmes designed and built in Vlorë.",
+        "ctaBody": "From a single guest room to a full hotel fit-out, we work with you from initial brief to final installation."
+      },
+      "residential": {
+        "label": "Residential",
+        "headline": "Residential Projects",
+        "eyebrow": "Sector 03",
+        "description": "Bespoke private residences where every element is designed around how the client lives — no off-the-shelf components.",
+        "metaTitle": "Residential Projects",
+        "metaDescription": "Residential interiors by The M Concept — private homes and bespoke apartments designed and crafted in Vlorë.",
+        "ctaBody": "From kitchen and living room to a complete private residence, we work with you from initial brief to final installation."
+      }
+    },
+    "cta": {
+      "eyebrow": "Work with Us",
+      "heading": "Have a project in mind?",
+      "startProject": "Start a Project",
+      "bodyDefault": "From a single piece to a full hotel fit-out, we work with you from initial brief to final installation."
+    },
+    "detail": {
+      "overview": "Project Overview",
+      "gallery": "Gallery",
+      "photography": "Project Photography",
+      "client": "Client",
+      "sector": "Sector",
+      "scope": "Scope",
+      "year": "Year",
+      "location": "Location",
+      "startSimilar": "Start a Similar Project",
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "materia": {
+    "eyebrow": "The M Concept · Materia",
+    "heading": "Coming Soon",
+    "bodyMain": "We're building something truly innovative — a platform powered by the latest technology, designed to make it easy for you to discover the furniture and materials of your dreams,",
+    "bodyEmphasis": "tailored precisely to your budget and vision.",
+    "body2": "Stay tuned. The experience will be worth the wait.",
+    "cta": "Contact Us",
+    "label": "Materia"
+  }
+}

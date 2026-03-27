@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 
 // ─── Portfolio project data ───────────────────────────────────────────────────
@@ -29,21 +31,12 @@ const projects = [
   },
 ];
 
-const stats = [
-  { value: '100%',    label: 'Built to order' },
-  { value: 'Custom',  label: 'Every piece unique' },
-  { value: 'Premium', label: 'Materials only' },
-  { value: 'Vlorë',   label: 'Designed & manufactured' },
-];
+export default async function Home() {
+  const t = await getTranslations('home');
+  const tFooter = await getTranslations('footer');
+  const stats = t.raw('stats') as Array<{ value: string; label: string }>;
+  const materials = t.raw('materials.items') as Array<{ name: string; desc: string }>;
 
-const materials = [
-  { name: 'White Oak', desc: 'Light grain, timeless strength' },
-  { name: 'Walnut',    desc: 'Rich chocolate tones, smooth finish' },
-  { name: 'Ash Wood',  desc: 'Resilient, pale, and versatile' },
-  { name: 'Marble',    desc: 'Cold luxury for tabletop surfaces' },
-];
-
-export default function Home() {
   return (
     <>
       <Navbar />
@@ -74,7 +67,7 @@ export default function Home() {
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-px" style={{ background: 'rgba(255,255,255,0.3)' }} />
             <p className="font-label text-[0.6rem] text-white/50 uppercase tracking-[0.45em]">
-              Premium Custom Furniture &nbsp;&middot;&nbsp; Vlorë, Albania
+              {t('hero.eyebrow')}
             </p>
             <div className="w-8 h-px" style={{ background: 'rgba(255,255,255,0.3)' }} />
           </div>
@@ -82,7 +75,18 @@ export default function Home() {
             className="font-display font-light uppercase text-center leading-none"
             style={{ fontSize: 'clamp(4rem, 8.5vw, 10rem)', letterSpacing: '0.18em', color: '#1C1714' }}
           >
-            The M Concept
+            The{' '}
+            <span
+              style={{
+                backgroundImage: 'linear-gradient(135deg, #8E2FA8 0%, #F4511E 60%, #BF9468 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              M
+            </span>
+            {' '}Concept
           </h1>
           <div
             className="mt-10 mb-8"
@@ -96,22 +100,25 @@ export default function Home() {
             className="font-display font-light text-center leading-tight"
             style={{ fontSize: 'clamp(1rem, 1.8vw, 1.4rem)', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.08em' }}
           >
-            Crafted for <span style={{ color: 'rgba(255,255,255,0.88)', fontStyle: 'italic' }}>a lifetime.</span>
+            {t('hero.taglineMain')}{' '}
+            <span style={{ color: 'rgba(255,255,255,0.88)', fontStyle: 'italic' }}>
+              {t('hero.taglineEmphasis')}
+            </span>
           </p>
         </div>
 
         {/* Bottom CTAs */}
         <div className="relative z-10 w-full pb-16 md:pb-24 px-6 md:px-10 lg:px-16">
           <div className="flex items-center gap-8 flex-wrap">
-            <a href="/projects" className="btn-outline-light btn-md">
-              View Projects
-            </a>
-            <a
+            <Link href="/projects" className="btn-outline-light btn-md">
+              {t('hero.viewProjects')}
+            </Link>
+            <Link
               href="/company"
               className="font-label text-[0.8125rem] text-white/60 uppercase tracking-widest hover:text-white transition-colors duration-200"
             >
-              Our Story &rarr;
-            </a>
+              {t('hero.ourStory')} &rarr;
+            </Link>
           </div>
         </div>
 
@@ -121,7 +128,7 @@ export default function Home() {
             className="font-label text-[0.6rem] text-white/35 uppercase tracking-[0.35em]"
             style={{ writingMode: 'vertical-rl' }}
           >
-            Scroll
+            {t('hero.scroll')}
           </span>
           <div className="w-px h-16" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.2), transparent)' }} />
         </div>
@@ -129,7 +136,7 @@ export default function Home() {
         {/* Bottom-left project count indicator */}
         <div className="absolute bottom-12 left-10 hidden lg:block pointer-events-none">
           <p className="font-label text-[0.6rem] text-white/30 uppercase tracking-[0.3em]">
-            Est. Vlorë
+            {t('hero.estLabel')}
           </p>
         </div>
       </section>
@@ -156,9 +163,8 @@ export default function Home() {
             className="font-display font-light text-stone-800 leading-snug tracking-tight"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.375rem)' }}
           >
-            We design and manufacture premium custom furniture
-            for residential, hospitality, and commercial spaces —
-            <em className="not-italic" style={{ color: '#A67C52' }}> with precision that endures.</em>
+            {t('statementMain')}
+            <em className="not-italic" style={{ color: '#A67C52' }}>{t('statementEmphasis')}</em>
           </p>
           <div
             className="mx-auto mt-14"
@@ -176,32 +182,32 @@ export default function Home() {
           {/* Section header */}
           <div className="flex items-end justify-between mb-14 md:mb-18">
             <div>
-              <span className="eyebrow">Selected Work</span>
+              <span className="eyebrow">{t('selectedWork.eyebrow')}</span>
               <h2
                 className="font-display font-light text-stone-800 leading-tight mb-0"
                 style={{ fontSize: 'clamp(1.75rem, 2.8vw, 2.375rem)' }}
               >
-                Recent Projects
+                {t('selectedWork.heading')}
               </h2>
             </div>
-            <a
+            <Link
               href="/projects"
               className="hidden sm:inline-flex items-center gap-3 group"
             >
               <span className="font-label text-[0.72rem] text-stone-400 uppercase tracking-[0.2em] group-hover:text-stone-700 transition-colors duration-200">
-                View All
+                {t('selectedWork.viewAll')}
               </span>
               <span
                 className="inline-block h-px w-10 transition-all duration-300 group-hover:w-14"
                 style={{ background: 'linear-gradient(to right, #A67C52, #D4B48A)' }}
               />
-            </a>
+            </Link>
           </div>
 
           {/* 3-column curated portfolio grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
             {projects.map((project) => (
-              <a
+              <Link
                 key={project.id}
                 href={`/projects/${project.id}`}
                 className="group block"
@@ -270,19 +276,19 @@ export default function Home() {
                         className="font-label text-[0.6rem] uppercase tracking-[0.22em]"
                         style={{ color: '#BF9468' }}
                       >
-                        View Project
+                        {t('selectedWork.viewProject')}
                       </span>
                     </div>
 
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Mobile "View All" — below grid */}
           <div className="mt-12 sm:hidden text-center">
-            <a href="/projects" className="btn-ghost btn-sm">View All Projects &rarr;</a>
+            <Link href="/projects" className="btn-ghost btn-sm">{t('selectedWork.viewAllMobile')} &rarr;</Link>
           </div>
 
         </div>
@@ -330,26 +336,22 @@ export default function Home() {
 
             {/* Text */}
             <div className="lg:pl-4">
-              <span className="eyebrow">Our Craft</span>
+              <span className="eyebrow">{t('craft.eyebrow')}</span>
               <h2
                 className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
-                style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
+                style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)', whiteSpace: 'pre-line' }}
               >
-                Furniture<br />with a soul.
+                {t('craft.heading')}
               </h2>
               <div className="divider-accent mb-8" />
               <p className="font-body text-body-lg text-stone-600 leading-relaxed mb-5">
-                The M Concept was built on a single conviction: furniture should outlast trends,
-                survive generations, and improve with age. We work exclusively with premium
-                hardwoods and natural stone, shaped by craftsmen who care deeply about
-                every joint, every surface, every detail.
+                {t('craft.body1')}
               </p>
               <p className="font-body text-body-md text-muted leading-relaxed mb-10">
-                Every piece is designed in Vlorë and produced entirely in our own facilities —
-                no outsourcing, no compromise on quality, no two pieces exactly alike.
+                {t('craft.body2')}
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="/company"  className="btn-secondary btn-md">Our Story</a>
+                <Link href="/company" className="btn-secondary btn-md">{t('craft.cta')}</Link>
               </div>
             </div>
 
@@ -404,23 +406,21 @@ export default function Home() {
               className="font-label text-[0.7rem] uppercase tracking-[0.22em] mb-6 block"
               style={{ color: '#FF9E71' }}
             >
-              Production Facility
+              {t('facility.eyebrow')}
             </span>
             <h2
               className="font-display font-light text-white leading-tight mb-6"
               style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)' }}
             >
-              Industrial scale.<br />Artisan precision.
+              {t('facility.headingMain')}<br />{t('facility.headingEmphasis')}
             </h2>
             <div className="w-10 h-px bg-coral-500 mb-8" />
             <p className="font-body text-body-lg text-stone-300 leading-relaxed mb-10 max-w-md">
-              Our Vlorë facility is equipped with advanced woodworking machinery —
-              CNC machining, precision joinery, finishing rooms — operated by
-              a dedicated team of skilled craftsmen.
+              {t('facility.body')}
             </p>
-            <a href="/company" className="btn-outline-light btn-md">
-              Inside Our Factory
-            </a>
+            <Link href="/company" className="btn-outline-light btn-md">
+              {t('facility.cta')}
+            </Link>
           </div>
         </div>
       </section>
@@ -440,18 +440,18 @@ export default function Home() {
                 className="font-label text-[0.7rem] uppercase tracking-[0.22em] mb-4 block"
                 style={{ color: '#FF9E71' }}
               >
-                Materia
+                {t('materials.eyebrow')}
               </span>
               <h2
                 className="font-display font-light text-white leading-tight"
                 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
               >
-                Honest materials,<br />lasting results.
+                {t('materials.headingMain')}<br />{t('materials.headingEmphasis')}
               </h2>
             </div>
-            <a href="/materia" className="btn-outline-light btn-sm shrink-0">
-              Explore Materials
-            </a>
+            <Link href="/materia" className="btn-outline-light btn-sm shrink-0">
+              {t('materials.cta')}
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#3A2C24]">
@@ -484,20 +484,19 @@ export default function Home() {
         {/* Warm wood-tone gradient anchors the entry after the dark materials section */}
         <div aria-hidden="true" className="absolute inset-x-0 top-0 pointer-events-none" style={{ height: '80px', background: 'linear-gradient(to bottom, rgba(166,124,82,0.18), transparent)' }} />
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <span className="eyebrow">Work with Us</span>
+          <span className="eyebrow">{t('cta.eyebrow')}</span>
           <h2
             className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
             style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
           >
-            Have a project in mind?
+            {t('cta.heading')}
           </h2>
           <p className="font-body text-body-lg text-muted leading-relaxed mb-12 max-w-lg mx-auto">
-            Whether it&apos;s a single statement piece or a full-building fit-out,
-            our team works with you from initial brief to final installation.
+            {t('cta.body')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/contact"  className="btn-primary btn-lg">Start a Project</a>
-            <a href="/projects" className="btn-ghost   btn-lg">See Our Work</a>
+            <Link href="/contact" className="btn-primary btn-lg">{t('cta.startProject')}</Link>
+            <Link href="/projects" className="btn-ghost btn-lg">{t('cta.seeOurWork')}</Link>
           </div>
         </div>
       </section>
@@ -517,26 +516,26 @@ export default function Home() {
                 The M Concept
               </p>
               <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">
-                Custom furniture manufacturer. Designed and built in Vlorë — delivered worldwide.
+                {tFooter('tagline')}
               </p>
               <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Instagram</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Google Maps</a>
+                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
+                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
               </div>
             </div>
 
             {/* Navigate */}
             <div>
-              <p className="footer-heading">Navigate</p>
+              <p className="footer-heading">{tFooter('navigate')}</p>
               <ul className="flex flex-col gap-3">
                 {[
-                  { label: 'Company',  href: '/company'  },
-                  { label: 'Projects', href: '/projects' },
-                  { label: 'Contact',  href: '/contact'  },
-                  { label: 'Materia',  href: '/materia'  },
+                  { label: tFooter('nav.company'),  href: '/company'  },
+                  { label: tFooter('nav.projects'), href: '/projects' },
+                  { label: tFooter('nav.contact'),  href: '/contact'  },
+                  { label: tFooter('nav.materia'),  href: '/materia'  },
                 ].map((l) => (
                   <li key={l.href}>
-                    <a href={l.href} className="footer-link">{l.label}</a>
+                    <Link href={l.href} className="footer-link">{l.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -544,15 +543,14 @@ export default function Home() {
 
             {/* Contact */}
             <div>
-              <p className="footer-heading">Get in Touch</p>
+              <p className="footer-heading">{tFooter('getInTouch')}</p>
               <ul className="flex flex-col gap-3">
                 {[
-                  { label: 'Start a Project', href: '/contact' },
-                  { label: 'Showroom Visit',  href: '/contact' },
-                  { label: 'Careers',         href: '/careers'  },
+                  { label: tFooter('contact.startProject'), href: '/contact' },
+                  { label: tFooter('contact.showroom'),     href: '/contact' },
                 ].map((l) => (
                   <li key={l.label}>
-                    <a href={l.href} className="footer-link">{l.label}</a>
+                    <Link href={l.href} className="footer-link">{l.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -567,11 +565,11 @@ export default function Home() {
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-body text-[0.8125rem] text-stone-600">
-              &copy; {new Date().getFullYear()} The M Concept. All rights reserved.
+              &copy; {new Date().getFullYear()} {tFooter('copyright')}
             </p>
             <div className="flex gap-6">
-              <a href="#" className="footer-link text-[0.8125rem]">Privacy Policy</a>
-              <a href="#" className="footer-link text-[0.8125rem]">Terms</a>
+              <a href="#" className="footer-link text-[0.8125rem]">{tFooter('privacy')}</a>
+              <a href="#" className="footer-link text-[0.8125rem]">{tFooter('terms')}</a>
             </div>
           </div>
         </div>

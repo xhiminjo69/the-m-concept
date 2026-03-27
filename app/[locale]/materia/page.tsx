@@ -1,7 +1,11 @@
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 
-export default function MateriaPage() {
+export default async function MateriaPage() {
+  const t = await getTranslations('materia');
+
   return (
     <>
       <Navbar />
@@ -31,7 +35,7 @@ export default function MateriaPage() {
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="w-8 h-px" style={{ background: 'rgba(255,255,255,0.25)' }} />
             <p className="font-label text-[0.6rem] text-white/50 uppercase tracking-[0.45em]">
-              The M Concept &nbsp;&middot;&nbsp; Materia
+              {t('eyebrow')}
             </p>
             <div className="w-8 h-px" style={{ background: 'rgba(255,255,255,0.25)' }} />
           </div>
@@ -41,7 +45,7 @@ export default function MateriaPage() {
             className="font-display font-light text-white leading-tight tracking-tight mb-6"
             style={{ fontSize: 'clamp(3rem, 7vw, 6.5rem)', letterSpacing: '-0.025em' }}
           >
-            Coming Soon
+            {t('heading')}
           </h1>
 
           {/* Accent line */}
@@ -59,11 +63,9 @@ export default function MateriaPage() {
             className="font-display font-light text-white/70 leading-relaxed mb-4"
             style={{ fontSize: 'clamp(1.05rem, 1.8vw, 1.35rem)', letterSpacing: '0.01em' }}
           >
-            We are building something truly innovative — a platform powered by the latest
-            technology, designed to make it effortless for you to discover and find your
-            dream furniture and materials,{' '}
+            {t('bodyMain')}{' '}
             <em className="not-italic" style={{ color: 'rgba(244,163,130,0.95)' }}>
-              tailored precisely to your budget and vision.
+              {t('bodyEmphasis')}
             </em>
           </p>
 
@@ -71,14 +73,14 @@ export default function MateriaPage() {
             className="font-body text-white/45 leading-relaxed"
             style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}
           >
-            Stay tuned. The experience is worth the wait.
+            {t('body2')}
           </p>
 
           {/* Bottom CTA */}
           <div className="mt-14">
-            <a href="/contact" className="btn-outline-light btn-md">
-              Get in Touch
-            </a>
+            <Link href="/contact" className="btn-outline-light btn-md">
+              {t('cta')}
+            </Link>
           </div>
         </div>
 
@@ -88,7 +90,7 @@ export default function MateriaPage() {
             className="font-label text-[0.6rem] text-white/25 uppercase tracking-[0.35em]"
             style={{ writingMode: 'vertical-rl' }}
           >
-            Materia
+            {t('label')}
           </span>
           <div className="w-px h-12" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.15), transparent)' }} />
         </div>

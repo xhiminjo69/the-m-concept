@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Inter, Montserrat, Oswald } from 'next/font/google';
+import { getLocale } from 'next-intl/server';
 import './globals.css';
 
-// ── Fonts loaded via next/font (zero layout shift, self-hosted automatically)
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
@@ -47,14 +47,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const locale = await getLocale();
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${cormorant.variable} ${inter.variable} ${montserrat.variable} ${oswald.variable}`}
     >
       <body>{children}</body>

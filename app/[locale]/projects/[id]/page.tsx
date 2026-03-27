@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import GalleryGrid from '@/components/GalleryGrid';
-import { projects, getProject, categoryLabels } from '@/lib/projects';
+import { projects, getProject } from '@/lib/projects';
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -26,6 +27,9 @@ export default async function ProjectDetailPage({ params }: Props) {
   const { id } = await params;
   const project = getProject(Number(id));
   if (!project) notFound();
+
+  const t = await getTranslations('projects');
+  const tFooter = await getTranslations('footer');
 
   const prev = projects.find((p) => p.id === project.id - 1);
   const next = projects.find((p) => p.id === project.id + 1);
@@ -58,7 +62,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               className="font-label text-[0.6rem] uppercase tracking-[0.3em] transition-colors duration-200"
               style={{ color: 'rgba(255,255,255,0.45)' }}
             >
-              &larr; &nbsp; {categoryLabels[project.category]} Projects
+              &larr; &nbsp; {t(`categories.${project.category}.headline`)}
             </span>
           </Link>
         </div>
@@ -93,7 +97,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
             {/* Description */}
             <div className="lg:col-span-2">
-              <span className="eyebrow">Project Overview</span>
+              <span className="eyebrow">{t('detail.overview')}</span>
               <p
                 className="font-display font-light text-stone-700 leading-snug"
                 style={{ fontSize: 'clamp(1.25rem, 2.2vw, 1.75rem)' }}
@@ -106,11 +110,11 @@ export default async function ProjectDetailPage({ params }: Props) {
             {/* Meta */}
             <div className="flex flex-col gap-8 lg:pt-12">
               {[
-                { label: 'Client',    value: project.name },
-                { label: 'Sector',    value: categoryLabels[project.category] },
-                { label: 'Scope',     value: project.type.split('—')[1]?.trim() ?? project.type },
-                { label: 'Year',      value: project.year },
-                { label: 'Location',  value: project.location },
+                { label: t('detail.client'),   value: project.name },
+                { label: t('detail.sector'),   value: t(`categories.${project.category}.label`) },
+                { label: t('detail.scope'),    value: project.type.split('—')[1]?.trim() ?? project.type },
+                { label: t('detail.year'),     value: project.year },
+                { label: t('detail.location'), value: project.location },
               ].map((item) => (
                 <div key={item.label}>
                   <p className="font-label text-[0.65rem] text-stone-400 uppercase tracking-widest mb-1">
@@ -121,7 +125,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               ))}
               <div className="pt-4">
                 <Link href="/contact" className="btn-secondary btn-sm">
-                  Start a Similar Project
+                  {t('detail.startSimilar')}
                 </Link>
               </div>
             </div>
@@ -141,17 +145,15 @@ export default async function ProjectDetailPage({ params }: Props) {
 
           <div className="flex items-end justify-between mb-12">
             <div>
-              <span className="eyebrow">Gallery</span>
+              <span className="eyebrow">{t('detail.gallery')}</span>
               <h2
                 className="font-display font-light text-stone-800 leading-tight"
                 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}
               >
-                Project Photography
+                {t('detail.photography')}
               </h2>
             </div>
-            <p
-              className="font-label text-[0.65rem] text-stone-400 uppercase tracking-widest hidden sm:block"
-            >
+            <p className="font-label text-[0.65rem] text-stone-400 uppercase tracking-widest hidden sm:block">
               {project.gallery.length} images
             </p>
           </div>
@@ -172,7 +174,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 <Link href={`/projects/${prev.id}`} className="group flex-1 flex items-center gap-6 p-7 bg-surface hover:bg-wood-100 border border-border transition-colors duration-200">
                   <span className="font-display font-light text-stone-400 text-2xl">&larr;</span>
                   <div>
-                    <p className="font-label text-[0.6rem] text-stone-400 uppercase tracking-widest mb-1">Previous</p>
+                    <p className="font-label text-[0.6rem] text-stone-400 uppercase tracking-widest mb-1">{t('detail.previous')}</p>
                     <p className="font-display font-light text-stone-800 text-[1.125rem] group-hover:text-coral-500 transition-colors duration-200">{prev.name}</p>
                   </div>
                 </Link>
@@ -181,7 +183,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               {next ? (
                 <Link href={`/projects/${next.id}`} className="group flex-1 flex items-center justify-end gap-6 p-7 bg-surface hover:bg-wood-100 border border-border transition-colors duration-200 text-right">
                   <div>
-                    <p className="font-label text-[0.6rem] text-stone-400 uppercase tracking-widest mb-1">Next</p>
+                    <p className="font-label text-[0.6rem] text-stone-400 uppercase tracking-widest mb-1">{t('detail.next')}</p>
                     <p className="font-display font-light text-stone-800 text-[1.125rem] group-hover:text-coral-500 transition-colors duration-200">{next.name}</p>
                   </div>
                   <span className="font-display font-light text-stone-400 text-2xl">&rarr;</span>
@@ -200,29 +202,27 @@ export default async function ProjectDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
             <div className="md:col-span-2">
               <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
-              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">
-                Custom furniture manufacturer. Designed and built in Vlorë — delivered worldwide.
-              </p>
+              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">{tFooter('tagline')}</p>
               <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Instagram</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Google Maps</a>
+                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
+                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
               </div>
             </div>
             <div>
-              <p className="footer-heading">Navigate</p>
+              <p className="footer-heading">{tFooter('navigate')}</p>
               <ul className="flex flex-col gap-3">
-                {[
-                  { label: 'Company',  href: '/company'  },
-                  { label: 'Projects', href: '/projects' },
-                  { label: 'Contact',  href: '/contact'  },
-                  { label: 'Materia',  href: '/materia'  },
-                ].map((l) => (
-                  <li key={l.href}><Link href={l.href} className="footer-link">{l.label}</Link></li>
+                {([
+                  { key: 'company',  href: '/company'  },
+                  { key: 'projects', href: '/projects' },
+                  { key: 'contact',  href: '/contact'  },
+                  { key: 'materia',  href: '/materia'  },
+                ] as const).map((l) => (
+                  <li key={l.href}><Link href={l.href} className="footer-link">{tFooter(`nav.${l.key}`)}</Link></li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="footer-heading">Get in Touch</p>
+              <p className="footer-heading">{tFooter('getInTouch')}</p>
               <p className="font-body text-[0.8125rem] text-stone-500 leading-relaxed">
                 Vlorë, Albania<br />
                 <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
@@ -232,7 +232,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
           <div className="pt-8">
             <p className="font-body text-[0.8125rem] text-stone-600">
-              &copy; {new Date().getFullYear()} The M Concept. All rights reserved.
+              &copy; {new Date().getFullYear()} {tFooter('copyright')}
             </p>
           </div>
         </div>

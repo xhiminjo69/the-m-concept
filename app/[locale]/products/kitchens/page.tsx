@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import GalleryGrid from '@/components/GalleryGrid';
 
@@ -23,7 +24,10 @@ const images = [
   '/images/ProductsKitchen11.jpg',
 ];
 
-export default function KitchensPage() {
+export default async function KitchensPage() {
+  const t = await getTranslations('products');
+  const tFooter = await getTranslations('footer');
+
   return (
     <>
       <Navbar />
@@ -39,14 +43,14 @@ export default function KitchensPage() {
             className="inline-flex items-center gap-2 mb-10 font-label text-[0.65rem] uppercase tracking-[0.28em] text-stone-400 hover:text-coral-500 transition-colors duration-200"
           >
             <span>&larr;</span>
-            <span>All Products</span>
+            <span>{t('allProducts')}</span>
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-[200px,1fr] gap-x-20 gap-y-8 items-end">
             <div>
               <div className="divider-accent mt-6 mb-6" />
               <p className="font-body text-stone-500 leading-relaxed" style={{ fontSize: '0.875rem' }}>
-                Custom kitchen cabinetry and fitted furniture, built to last and designed for the way you live.
+                {t('categories.kitchens.heroDescription')}
               </p>
             </div>
             <div>
@@ -54,7 +58,7 @@ export default function KitchensPage() {
                 className="font-display font-light text-stone-900 leading-[0.9]"
                 style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', letterSpacing: '-0.025em' }}
               >
-                Kitchens
+                {t('categories.kitchens.label')}
               </h1>
             </div>
           </div>
@@ -69,7 +73,7 @@ export default function KitchensPage() {
         }}
       >
         <div className="px-6 md:px-10 lg:px-16">
-          <GalleryGrid images={images} projectName="Kitchens" />
+          <GalleryGrid images={images} projectName={t('categories.kitchens.label')} />
         </div>
       </section>
 
@@ -78,20 +82,19 @@ export default function KitchensPage() {
         <div className="px-6 md:px-10 lg:px-16">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
             <div>
-              <span className="eyebrow">Work with Us</span>
+              <span className="eyebrow">{t('cta.eyebrow')}</span>
               <h2
                 className="font-display font-light text-white leading-tight tracking-tight mt-3"
                 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)' }}
               >
-                Have a project in mind?
+                {t('cta.heading')}
               </h2>
               <p className="font-body text-stone-400 leading-relaxed mt-4 max-w-sm" style={{ fontSize: '0.9375rem' }}>
-                From a single bespoke piece to a full interior fit-out, we work
-                with you from brief to final installation.
+                {t('cta.body')}
               </p>
             </div>
             <Link href="/contact" className="btn-primary btn-lg shrink-0">
-              Start a Project
+              {t('cta.startProject')}
             </Link>
           </div>
         </div>
@@ -104,30 +107,28 @@ export default function KitchensPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
             <div className="md:col-span-2">
               <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
-              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">
-                Custom furniture manufacturer. Designed and built in Vlorë — delivered worldwide.
-              </p>
+              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">{tFooter('tagline')}</p>
               <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Instagram</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Google Maps</a>
+                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
+                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
               </div>
             </div>
             <div>
-              <p className="footer-heading">Navigate</p>
+              <p className="footer-heading">{tFooter('navigate')}</p>
               <ul className="flex flex-col gap-3">
-                {[
-                  { label: 'Company',  href: '/company'  },
-                  { label: 'Projects', href: '/projects' },
-                  { label: 'Products', href: '/products' },
-                  { label: 'Contact',  href: '/contact'  },
-                  { label: 'Materia',  href: '/materia'  },
-                ].map((l) => (
-                  <li key={l.href}><Link href={l.href} className="footer-link">{l.label}</Link></li>
+                {([
+                  { key: 'company',  href: '/company'  },
+                  { key: 'projects', href: '/projects' },
+                  { key: 'products', href: '/products' },
+                  { key: 'contact',  href: '/contact'  },
+                  { key: 'materia',  href: '/materia'  },
+                ] as const).map((l) => (
+                  <li key={l.href}><Link href={l.href} className="footer-link">{tFooter(`nav.${l.key}`)}</Link></li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="footer-heading">Get in Touch</p>
+              <p className="footer-heading">{tFooter('getInTouch')}</p>
               <p className="font-body text-[0.8125rem] text-stone-500 leading-relaxed">
                 Vlorë, Albania<br />
                 <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
@@ -137,7 +138,7 @@ export default function KitchensPage() {
           </div>
           <div className="pt-8">
             <p className="font-body text-[0.8125rem] text-stone-600">
-              &copy; {new Date().getFullYear()} The M Concept. All rights reserved.
+              &copy; {new Date().getFullYear()} {tFooter('copyright')}
             </p>
           </div>
         </div>

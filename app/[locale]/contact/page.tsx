@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import ContactForm from '@/components/ContactForm';
 
@@ -10,13 +11,16 @@ export const metadata: Metadata = {
     'Get in touch with The M Concept. Start a custom furniture project, request a quote, or visit our showroom in Vlorë, Albania.',
 };
 
-const hours = [
-  { day: 'Monday – Friday', time: '08:00 – 17:00' },
-  { day: 'Saturday',        time: '09:00 – 13:00' },
-  { day: 'Sunday',          time: 'Closed' },
-];
+export default async function ContactPage() {
+  const t = await getTranslations('contact');
+  const tFooter = await getTranslations('footer');
 
-export default function ContactPage() {
+  const hoursData = [
+    { day: t('hours.monFri'), time: '08:00 – 17:00', closed: false },
+    { day: t('hours.saturday'), time: '09:00 – 13:00', closed: false },
+    { day: t('hours.sunday'), time: t('hours.closed'), closed: true },
+  ];
+
   return (
     <>
       <Navbar />
@@ -37,14 +41,14 @@ export default function ContactPage() {
         </div>
 
         <div className="relative z-10 px-6 md:px-10 lg:px-16 pb-20 pt-40">
-          <span className="eyebrow" style={{ color: 'rgba(255,158,113,0.9)' }}>Contact</span>
+          <span className="eyebrow" style={{ color: 'rgba(255,158,113,0.9)' }}>{t('hero.eyebrow')}</span>
           <h1
             className="font-display font-light text-white leading-tight tracking-tight mt-2 mb-6"
             style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}
           >
-            Let&apos;s Build<br />
-            <em className="not-italic text-gradient-brand">Something</em><br />
-            Remarkable.
+            {t('hero.headingLine1')}<br />
+            <em className="not-italic text-gradient-brand">{t('hero.headingLine2')}</em><br />
+            {t('hero.headingLine3')}
           </h1>
           <div
             className="h-px w-16 opacity-60"
@@ -60,12 +64,12 @@ export default function ContactPage() {
 
             {/* ── Left: Contact Information ── */}
             <div>
-              <span className="eyebrow">Our Details</span>
+              <span className="eyebrow">{t('details.eyebrow')}</span>
               <h2
                 className="font-display font-light text-stone-800 leading-tight tracking-tight mt-4 mb-10"
                 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)' }}
               >
-                Visit us, call us,<br />or send a message.
+                {t('details.headingMain')}<br />{t('details.headingEmphasis')}
               </h2>
 
               {/* Address */}
@@ -77,7 +81,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-1">Address</p>
+                  <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-1">{t('details.address')}</p>
                   <p className="font-body text-stone-700 leading-relaxed">
                     Vlorë, Albania<br />
                     <a
@@ -86,7 +90,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-[0.875rem] text-coral-500 hover:text-coral-600 transition-colors"
                     >
-                      View on Google Maps →
+                      {t('details.viewOnMaps')}
                     </a>
                   </p>
                 </div>
@@ -100,7 +104,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-1">Phone</p>
+                  <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-1">{t('details.phone')}</p>
                   <a href="tel:+355682039345" className="font-body text-stone-700 hover:text-coral-500 transition-colors">
                     +355 68 203 9345
                   </a>
@@ -116,7 +120,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-1">Email</p>
+                  <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-1">{t('details.email')}</p>
                   <a href="mailto:info@themconcept.al" className="font-body text-stone-700 hover:text-coral-500 transition-colors">
                     info@themconcept.al
                   </a>
@@ -133,12 +137,12 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-4">Office Hours</p>
+                    <p className="font-label text-[0.7rem] uppercase tracking-[0.2em] text-stone-400 mb-4">{t('details.officeHours')}</p>
                     <div className="flex flex-col gap-3">
-                      {hours.map((h) => (
+                      {hoursData.map((h) => (
                         <div key={h.day} className="flex items-center justify-between">
                           <span className="font-body text-[0.875rem] text-stone-600">{h.day}</span>
-                          <span className={`font-label text-[0.8125rem] tabular-nums ${h.time === 'Closed' ? 'text-stone-400' : 'text-stone-700'}`}>
+                          <span className={`font-label text-[0.8125rem] tabular-nums ${h.closed ? 'text-stone-400' : 'text-stone-700'}`}>
                             {h.time}
                           </span>
                         </div>
@@ -161,7 +165,7 @@ export default function ContactPage() {
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                   </svg>
-                  Instagram
+                  {t('details.instagram')}
                 </a>
                 <a
                   href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7"
@@ -173,7 +177,7 @@ export default function ContactPage() {
                     <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  Google Maps
+                  {t('details.googleMaps')}
                 </a>
               </div>
             </div>
@@ -207,7 +211,7 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="btn-primary btn-sm"
           >
-            Open in Google Maps
+            {t('map.openInMaps')}
           </a>
         </div>
       </section>
@@ -224,30 +228,30 @@ export default function ContactPage() {
             <div className="md:col-span-2">
               <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
               <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">
-                Custom furniture manufacturer. Designed and built in Vlorë — delivered worldwide.
+                {tFooter('tagline')}
               </p>
               <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Instagram</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">Google Maps</a>
+                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
+                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
               </div>
             </div>
             <div>
-              <p className="footer-heading">Navigate</p>
+              <p className="footer-heading">{tFooter('navigate')}</p>
               <ul className="flex flex-col gap-3">
-                {[
-                  { label: 'Company',  href: '/company'  },
-                  { label: 'Projects', href: '/projects' },
-                  { label: 'Contact',  href: '/contact'  },
-                  { label: 'Materia',  href: '/materia'  },
-                ].map((l) => (
+                {([
+                  { key: 'company',  href: '/company'  },
+                  { key: 'projects', href: '/projects' },
+                  { key: 'contact',  href: '/contact'  },
+                  { key: 'materia',  href: '/materia'  },
+                ] as const).map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="footer-link">{l.label}</Link>
+                    <Link href={l.href} className="footer-link">{tFooter(`nav.${l.key}`)}</Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="footer-heading">Get in Touch</p>
+              <p className="footer-heading">{tFooter('getInTouch')}</p>
               <p className="font-body text-[0.8125rem] text-stone-500 leading-relaxed">
                 Vlorë, Albania<br />
                 <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
@@ -257,7 +261,7 @@ export default function ContactPage() {
           </div>
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-body text-[0.8125rem] text-stone-600">
-              &copy; {new Date().getFullYear()} The M Concept. All rights reserved.
+              &copy; {new Date().getFullYear()} {tFooter('copyright')}
             </p>
           </div>
         </div>

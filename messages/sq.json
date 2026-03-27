@@ -1,0 +1,366 @@
+{
+  "nav": {
+    "company": "Kompania",
+    "projects": "Projektet",
+    "products": "Produktet",
+    "contact": "Kontakt",
+    "materia": "Materia",
+    "cta": "Filloni një Projekt",
+    "projectsMenu": {
+      "commercial": "Projekte Komerciale",
+      "hospitality": "Projekte Hoteli",
+      "residential": "Projekte Banimi",
+      "all": "Të gjitha Projektet"
+    },
+    "productsMenu": {
+      "wardrobes": "Gardërobat",
+      "kitchens": "Kuzhinat",
+      "libraries": "Bibliotekat",
+      "all": "Të gjitha Produktet"
+    }
+  },
+  "footer": {
+    "tagline": "Prodhues mobiljesh me porosi. Projektuar dhe ndërtuar në Vlorë — dorëzuar në mbarë botën.",
+    "navigate": "Navigo",
+    "getInTouch": "Na Kontaktoni",
+    "copyright": "The M Concept. Të gjitha të drejtat e rezervuara.",
+    "privacy": "Politika e Privatësisë",
+    "terms": "Kushtet",
+    "instagram": "Instagram",
+    "googleMaps": "Google Maps",
+    "nav": {
+      "company": "Kompania",
+      "projects": "Projektet",
+      "products": "Produktet",
+      "contact": "Kontakt",
+      "materia": "Materia"
+    },
+    "contact": {
+      "startProject": "Filloni një Projekt",
+      "showroom": "Vizitë Showroom"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Mobilje Premium me Porosi · Vlorë, Shqipëri",
+      "taglineMain": "Elegancë që",
+      "taglineEmphasis": "qëndron.",
+      "viewProjects": "Shiko Projektet",
+      "ourStory": "Historia Jonë",
+      "estLabel": "Est. Vlorë",
+      "scroll": "Rrokullisu"
+    },
+    "statementMain": "Ne projektojmë dhe prodhojmë mobilje premium me porosi për hapësira banimi, hoteli dhe komerciale —",
+    "statementEmphasis": " me precizion dhe jetëgjatësi.",
+    "selectedWork": {
+      "eyebrow": "Punime të Zgjedhura",
+      "heading": "Projektet e Fundit",
+      "viewAll": "Shiko të Gjitha",
+      "viewProject": "Shiko Projektin",
+      "viewAllMobile": "Shiko të Gjitha Projektet"
+    },
+    "craft": {
+      "eyebrow": "Zanati Ynë",
+      "heading": "Mobilje\nme Shpirt.",
+      "body1": "The M Concept u ndërtua mbi një bindje të vetme: mobiljet duhet të kalojnë modën, të mbijetojnë gjeneratat dhe të përmirësohen me kohën. Punojmë ekskluzivisht me drurë premium dhe gur natyror, të formuar nga zejtarë që kujdesen për çdo lidhje, çdo sipërfaqe, çdo detaj.",
+      "body2": "Çdo copë projektohet në Vlorë dhe prodhohet plotësisht në fabrikat tona — pa nënkontraktim, pa kompromis cilësie, pa dy copë njëlloj.",
+      "cta": "Historia Jonë"
+    },
+    "stats": [
+      { "value": "100%", "label": "Me porosi" },
+      { "value": "Unik", "label": "Çdo copë e veçantë" },
+      { "value": "Premium", "label": "Materiale ekskluzive" },
+      { "value": "Vlorë", "label": "Projektuar & prodhuar" }
+    ],
+    "facility": {
+      "eyebrow": "Fabrika e Prodhimit",
+      "headingMain": "Shkallë industriale.",
+      "headingEmphasis": "Precizion artizanal.",
+      "body": "Fabrika jonë në Vlorë është e pajisur me makineritë më të avancuara të punimit të drurit — makina CNC, bashkime me precizion, dhoma përfundimi — të operuara nga një ekip i dedikuar artizanësh të aftë.",
+      "cta": "Brenda Fabrikës Sonë"
+    },
+    "materials": {
+      "eyebrow": "Materiale",
+      "headingMain": "Materiale autentike,",
+      "headingEmphasis": "rezultate të qëndrueshme.",
+      "cta": "Eksploroni Materialet",
+      "items": [
+        { "name": "Lisi i Bardhë", "desc": "Fije e lehtë, forcë e përjetshme" },
+        { "name": "Arrë", "desc": "Tone të pasura, sipërfaqe e lëmuar" },
+        { "name": "Dru Frashëri", "desc": "I qëndrueshëm, i zbehtë dhe i gjithanshëm" },
+        { "name": "Mermeri", "desc": "Luks i ftohtë për sipërfaqe tavoline" }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Punoni me Ne",
+      "heading": "Keni një projekt në mendje?",
+      "body": "Qoftë një copë e vetme apo një pajisje e plotë ndërtese, ekipi ynë punon me ju nga hapi i parë deri në instalimin final.",
+      "startProject": "Filloni një Projekt",
+      "seeOurWork": "Shihni Punën Tonë"
+    }
+  },
+  "company": {
+    "meta": {
+      "title": "Historia Jonë",
+      "description": "Themeluar në vitin 2000, The M Concept është rritur nga një punishte e vogël në Vlorë në prodhuesin kryesor të mobiljeve me porosi në Shqipëri."
+    },
+    "hero": {
+      "eyebrow": "Est. 2000 — Vlorë, Shqipëri",
+      "heading": "Historia Jonë",
+      "subheading": "Njëzet e pesë vjet ekspertize, pasion dhe mobilje të krijuara për të rezistuar kohës."
+    },
+    "statementMain": "U themeluam mbi një bindje — që një copë mobilje duhet të tregojë historinë e duarve që e bënë, dhe të qëndrojnë  ",
+    "statementEmphasis": "pesëdhjetë vjet nga tani.",
+    "founding": {
+      "eyebrow": "Themelimi",
+      "headingMain": "Lindur në Vlorë.",
+      "headingEmphasis": "Ndërtuar me Duar dhe Shpirt.",
+      "body1": "Në vitin 2000, një punishte e vogël e punimit të drurit u hap në skajin e Vlorës me një ambicie të thjeshtë: të bëjë mobilje që ia vlente të bëheshin. Pa montim. Pa shkurtësi. Vetëm dru, aftësi dhe sy obsesiv për detajet.",
+      "body2": "Vitet e hershme u përcaktuan nga goja në gojë. Hotelierët përgjatë Rivierës Shqiptare filluan të vërejnë — një dhomë gjumi që ndihej ndryshe, një gardërobë që mbyllej saktësisht, një tavolinë pritjeje që komandonte vëmendjen. Porosite u rritën. Edhe ekipi.",
+      "body3": "Nga mesi i viteve 2000 kishim tejkaluar hapësirën origjinale. Nga vitet 2010 kishim ndërtuar një fabrikë prodhimi të pajisur për shkallë serioze — pa humbur kurrë precizionin e punishtes ku gjithçka filloi.",
+      "cta": "Shihni Projektet Tona"
+    },
+    "timeline": {
+      "eyebrow": "Kronologjia",
+      "headingMain": "Njëzet e pesë vjet",
+      "headingEmphasis": "në bërje.",
+      "milestones": [
+        {
+          "year": "2000",
+          "title": "Fillimi",
+          "body": "Themeluar në një punishte të vogël në periferi të Vlorës, The M Concept filloi me një rrotull, një grusht vegla dhe besim të pakompromis se mobiljet duhet të ndërtohen për të qenë."
+        },
+        {
+          "year": "2006",
+          "title": "Kontrata e Parë e Madhe",
+          "body": "Komisionimi ynë i parë i mëdhenj i hospitalitetit — pajisja e plotë e dhomave të gjumit për një resort bregdetar — vendosi standardin për atë që do të bëheshim: partner i besuar për projekte kërkuese."
+        },
+        {
+          "year": "2012",
+          "title": "Fabrika e Re",
+          "body": "Kërkesa tejkaloi punishten origjinale. U zhvendosëm në një fabrikë prodhimi të ndërtuar për qëllim në Vlorë, të pajisur me makineritë CNC dhe dhoma dedikuara — duke mbajtur çdo artizanë në staf."
+        },
+        {
+          "year": "2017",
+          "title": "Zgjerimi i Flotës",
+          "body": "Sollëm dorëzimin dhe instalimin brenda kompanisë, duke shtuar automjetet tona të markës. Nga dyshemeja e fabrikës deri në hapësirën tuaj — çdo hap nën kontrollin tonë."
+        },
+        {
+          "year": "2022",
+          "title": "Brendi The M Concept",
+          "body": "Pas dy dekadash ndërtimi të qetë të reputacionit, bashkuam identitetin tonë nën The M Concept — emër që qëndron për precizion, zanatat dhe ndjekjen e palodhur të cilësisë."
+        },
+        {
+          "year": "2026",
+          "title": "Ditët e Sotme",
+          "body": "Sot u shërbejmë hoteleve, rezidencave dhe klientëve komercialë në të gjithë rajonin, duke prodhuar çdo copë plotësisht brenda kompanisë — pa nënkontraktim, pa shkurtësi, pa dy copë njëlloj."
+        }
+      ]
+    },
+    "facility": {
+      "eyebrow": "Fabrika",
+      "headingMain": "Shkallë industriale.",
+      "headingEmphasis": "Precizion artizanal.",
+      "body1": "Fabrika jonë në Vlorë shtrihet mbi 2,500 m² hapësirë dedikuese prodhimi. Makina CNC, bashkime me precizion, dhoma lakerimi dhe tapiceri — të gjitha nën një çati, të gjitha të operuara nga artizanë që kanë qenë me ne për vite.",
+      "body2": "Ne nuk nënkontraktojmë. Copa që largohet nga dyshemeja jonë është copa që ekipi ynë projektoi, preu, përfundoi dhe miratoi. Kjo është mënyra e vetme për të garantuar atë që garantojmë.",
+      "startProject": "Filloni një Projekt",
+      "seeWork": "Shihni Punën Tonë"
+    },
+    "values": {
+      "eyebrow": "Si Punojmë",
+      "headingMain": "Parimet tona,",
+      "headingEmphasis": "të pandryshuara që nga dita e parë.",
+      "items": [
+        {
+          "label": "Pa Nënkontraktim",
+          "desc": "Çdo lidhje, sipërfaqe dhe përfundim bëhet nën çatinë tonë nga ekipi ynë."
+        },
+        {
+          "label": "Ndërtuar me Porosi",
+          "desc": "Asgjë nuk prodhohet spekulativisht. Çdo copë porositet, projektohet dhe prodhohet për një hapësirë specifike."
+        },
+        {
+          "label": "Materiale Premium",
+          "desc": "Punojmë ekskluzivisht me drurë të certifikuara, gur natyror dhe harduer premium — të burimuar për jetëgjatësi."
+        },
+        {
+          "label": "Dorëzuar i Plotë",
+          "desc": "Ne trajtojmë prodhimin, dorëzimin dhe instalimin në vend — kështu merrni një rezultat të përfunduar, jo një montim."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Punoni me Ne",
+      "heading": "Keni një projekt në mendje?",
+      "body": "Qoftë një copë e vetme apo një pajisje e plotë ndërtese, ekipi ynë punon me ju nga hapi i parë deri në instalimin final.",
+      "startProject": "Filloni një Projekt",
+      "seeOurWork": "Shihni Punën Tonë"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt",
+      "description": "Na kontaktoni. Filloni një projekt mobiljesh me porosi, kërkoni një ofertë, ose vizitoni showroom-in tonë në Vlorë, Shqipëri."
+    },
+    "hero": {
+      "eyebrow": "Kontakt",
+      "headingLine1": "Le të Ndërtojmë",
+      "headingLine2": "Diçka",
+      "headingLine3": "të Jashtëzakonshme."
+    },
+    "details": {
+      "eyebrow": "Të Dhënat Tona",
+      "headingMain": "Na vizitoni, na telefononi,",
+      "headingEmphasis": "ose dërgoni një mesazh.",
+      "address": "Adresa",
+      "viewOnMaps": "Shiko në Google Maps →",
+      "phone": "Telefon",
+      "email": "Email",
+      "officeHours": "Orari i Punës",
+      "instagram": "Instagram",
+      "googleMaps": "Google Maps"
+    },
+    "hours": {
+      "monFri": "E Hënë – E Premte",
+      "saturday": "E Shtunë",
+      "sunday": "E Diel",
+      "closed": "Mbyllur"
+    },
+    "form": {
+      "eyebrow": "Dërgo një Mesazh",
+      "headingMain": "Na tregoni",
+      "headingEmphasis": "për projektin tuaj.",
+      "fullName": "Emri i Plotë *",
+      "fullNamePlaceholder": "Emri juaj",
+      "emailAddress": "Adresa Email *",
+      "emailPlaceholder": "email@juaj.com",
+      "phone": "Telefon (opsional)",
+      "phonePlaceholder": "+355...",
+      "projectType": "Lloji i Projektit",
+      "selectType": "Zgjidhni një lloj",
+      "message": "Mesazhi Juaj *",
+      "messagePlaceholder": "Përshkruani projektin, hapësirën ose kërkesat tuaja…",
+      "send": "Dërgo Mesazhin",
+      "sending": "Duke dërguar…",
+      "successHeading": "Mesazhi u Mor",
+      "successBody": "Faleminderit që na kontaktuat. Ekipi ynë do të komunikojë brenda një dite pune.",
+      "typeCommercial": "Komercial",
+      "typeHospitality": "Hoteli",
+      "typeResidential": "Banimi",
+      "typeOther": "Tjetër"
+    },
+    "map": {
+      "openInMaps": "Hap në Google Maps"
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Produktet",
+      "description": "Eksploroni koleksionet tona të mobiljeve me porosi — gardëroba, kuzhina dhe biblioteka të punuara nga The M Concept në Vlorë, Shqipëri."
+    },
+    "hero": {
+      "eyebrow": "Koleksionet Tona",
+      "bespoke": "Me Porosi",
+      "heading": "Produktet",
+      "description": "Tre koleksione. Një standard zanati. Mobilje me porosi projektuar dhe ndërtuar në Vlorë."
+    },
+    "explore": "Eksploroni",
+    "allProducts": "Të gjitha Produktet",
+    "categories": {
+      "wardrobes": {
+        "label": "Gardërobat",
+        "description": "Zgjidhje gardërobash me porosi të përshtatura për hapësirën dhe stilin tuaj.",
+        "heroDescription": "Zgjidhje gardërobash me porosi të përshtatura për hapësirën dhe stilin tuaj, të punuara me precizion në Vlorë."
+      },
+      "kitchens": {
+        "label": "Kuzhinat",
+        "description": "Kasaforte kuzhine me porosi dhe mobilje të montuara, ndërtuar për të qenë.",
+        "heroDescription": "Kasaforte kuzhine me porosi dhe mobilje të montuara projektuar dhe prodhuar me precizion në Vlorë."
+      },
+      "libraries": {
+        "label": "Bibliotekat",
+        "description": "Sisteme rafte dhe bibliotekash të punuara me dorë për çdo interior.",
+        "heroDescription": "Sisteme rafte dhe bibliotekash të punuara me dorë projektuar dhe ndërtuar në Vlorë."
+      }
+    },
+    "cta": {
+      "eyebrow": "Punoni me Ne",
+      "heading": "Keni një projekt në mendje?",
+      "body": "Nga një copë e vetme deri në pajisjen e plotë të interiorit, punojmë me ju nga hapi i parë deri në instalimin final.",
+      "startProject": "Filloni një Projekt"
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projektet",
+      "description": "Eksploroni punën tonë në sektorët komercial, hoteli dhe banimi — mobilje me porosi projektuar dhe prodhuar në Vlorë."
+    },
+    "hero": {
+      "eyebrow": "Puna Jonë",
+      "selected": "Të Zgjedhura",
+      "heading": "Projektet",
+      "description": "Tre sektorë. Një standard zanati. Eksploroni punën tonë në kategoritë komerciale, hoteli dhe banimi."
+    },
+    "explore": "Eksploroni",
+    "allProjects": "Të gjitha Projektet",
+    "viewProject": "Shiko Projektin",
+    "noProjects": "Ende nuk ka projekte të disponueshme — kontrolloni sërish së shpejti.",
+    "categories": {
+      "commercial": {
+        "label": "Komercial",
+        "headline": "Projekte Komerciale",
+        "eyebrow": "Sektori 01",
+        "description": "Ambiente pune, hapësira tregtare dhe interiore korporative të realizuara me standarde të larta — funksionalitet dhe cilësi pa kompromis.",
+        "metaTitle": "Projekte Komerciale",
+        "metaDescription": "Pajisje komerciale nga The M Concept — interiore zyresh, hapësira tregtare dhe mjedise korporative të punuara në Vlorë.",
+        "ctaBody": "Nga një copë e vetme deri në pajisjen e plotë komerciale, punojmë me ju nga hapi i parë deri në instalimin final."
+      },
+      "hospitality": {
+        "label": "Hoteli",
+        "headline": "Projekte Hoteli",
+        "eyebrow": "Sektori 02",
+        "description": "Interiore të plota hoteliere — nga prania e parë në hyrje deri në dhomën e fundit. Projektuar dhe prodhuar tërësisht në Vlorë.",
+        "metaTitle": "Projekte Hoteli",
+        "metaDescription": "Pajisje hoteliere nga The M Concept — interiore hotelesh, mobilje dhomash dhe programe të plota interiorësh projektuar dhe ndërtuar në Vlorë.",
+        "ctaBody": "Nga një dhomë mysafiri e vetme deri në pajisjen e plotë të hotelit, punojmë me ju nga hapi i parë deri në instalimin final."
+      },
+      "residential": {
+        "label": "Banimi",
+        "headline": "Projekte Banimi",
+        "eyebrow": "Sektori 03",
+        "description": "Rezidenca private ku çdo element projektohet rreth jetës dhe stilit të klientit — asgjë standarde, gjithçka me porosi.",
+        "metaTitle": "Projekte Banimi",
+        "metaDescription": "Interiore banimi nga The M Concept — shtëpi private dhe apartamente me porosi projektuar dhe punuar në Vlorë.",
+        "ctaBody": "Nga kuzhina dhe dhoma e ndenjjes deri në rezidencën e plotë private, punojmë me ju nga hapi i parë deri në instalimin final."
+      }
+    },
+    "cta": {
+      "eyebrow": "Punoni me Ne",
+      "heading": "Keni një projekt në mendje?",
+      "startProject": "Filloni një Projekt",
+      "bodyDefault": "Nga një copë e vetme deri në pajisjen e plotë të hotelit, punojmë me ju nga hapi i parë deri në instalimin final."
+    },
+    "detail": {
+      "overview": "Vështrim i Projektit",
+      "gallery": "Galeria",
+      "photography": "Fotografitë e Projektit",
+      "client": "Klienti",
+      "sector": "Sektori",
+      "scope": "Shtrirja",
+      "year": "Viti",
+      "location": "Vendndodhja",
+      "startSimilar": "Filloni një Projekt të Ngjashëm",
+      "previous": "I Mëparshmi",
+      "next": "I Ardhshmi"
+    }
+  },
+  "materia": {
+    "eyebrow": "The M Concept · Materia",
+    "heading": "Vjen Shpejt",
+    "bodyMain": "Po ndërtojmë diçka me të vërtetë inovative — një platformë e fuqizuar nga teknologjia më e fundit, e projektuar për t'ju bërë të lehtë zbulimin e mobiljeve dhe materialeve të ëndrrave tuaja,",
+    "bodyEmphasis": "të përshtatura saktësisht për buxhetin dhe vizionin tuaj.",
+    "body2": "Qëndroni të informuar. Eksperienca ia vlen të prisni.",
+    "cta": "Na Kontaktoni",
+    "label": "Materia"
+  }
+}
