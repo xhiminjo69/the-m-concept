@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:maps.app.goo.gl)",
+      "Bash(cmd.exe /c \"dir C:\\\\Users\\\\xhlek\\\\OneDrive\\\\Desktop\\\\TheMConcept\\\\public\"\")",
+      "Bash(cmd.exe /c 'dir C:\\\\Users\\\\xhlek\\\\OneDrive\\\\Desktop\\\\TheMConcept\\\\public')",
+      "Bash(cmd.exe /c 'dir \"\"C:\\\\Users\\\\xhlek\\\\OneDrive\\\\Desktop\\\\TheMConcept\\\\public\"\" /b')",
+      "Bash(powershell.exe -Command 'Get-ChildItem \"\"C:\\\\Users\\\\xhlek\\\\OneDrive\\\\Desktop\\\\TheMConcept\\\\public\"\" | Select-Object Name')",
+      "Bash(npx tsc:*)",
+      "WebFetch(domain:share.google)"
+    ]
+  }
+}

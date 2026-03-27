@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -1 /c/Users/xhlek/OneDrive/Desktop/TheMConcept/public/images/ProductsWardrobe* /c/Users/xhlek/OneDrive/Desktop/TheMConcept/public/images/ProductsKitchen* /c/Users/xhlek/OneDrive/Desktop/TheMConcept/public/images/ProductsLibrary*)"
+    ]
+  }
+}
