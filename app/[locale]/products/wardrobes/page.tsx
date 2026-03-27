@@ -32,12 +32,13 @@ export default async function WardrobesPage() {
       {/* ── Page hero ──────────────────────────────────────────────────────── */}
       <section
         className="relative overflow-hidden"
-        style={{ paddingTop: '7rem', paddingBottom: '5rem', background: 'linear-gradient(160deg, #EDEAE4 0%, #CCC6B8 100%)' }}
+        style={{ paddingTop: '7rem', paddingBottom: '5rem', backgroundImage: 'url(/images/ProductsWardrobe.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
+        <div className="absolute inset-0 bg-black/55" />
         <div className="px-6 md:px-10 lg:px-16 relative z-10">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 mb-10 font-label text-[0.65rem] uppercase tracking-[0.28em] text-stone-400 hover:text-coral-500 transition-colors duration-200"
+            className="inline-flex items-center gap-2 mb-10 font-label text-[0.65rem] uppercase tracking-[0.28em] text-stone-300 hover:text-coral-500 transition-colors duration-200"
           >
             <span>&larr;</span>
             <span>{t('allProducts')}</span>
@@ -46,13 +47,13 @@ export default async function WardrobesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[200px,1fr] gap-x-20 gap-y-8 items-end">
             <div>
               <div className="divider-accent mt-6 mb-6" />
-              <p className="font-body text-stone-500 leading-relaxed" style={{ fontSize: '0.875rem' }}>
+              <p className="font-body text-stone-300 leading-relaxed" style={{ fontSize: '0.875rem' }}>
                 {t('categories.wardrobes.heroDescription')}
               </p>
             </div>
             <div>
               <h1
-                className="font-display font-light text-stone-900 leading-[0.9]"
+                className="font-display font-light text-white leading-[0.9]"
                 style={{ fontSize: 'clamp(3.5rem, 7vw, 6.5rem)', letterSpacing: '-0.025em' }}
               >
                 {t('categories.wardrobes.label')}

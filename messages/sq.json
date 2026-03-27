@@ -13,7 +13,7 @@
       "all": "Të gjitha Projektet"
     },
     "productsMenu": {
-      "wardrobes": "Gardërobat",
+      "wardrobes": "Garderobat",
       "kitchens": "Kuzhinat",
       "libraries": "Bibliotekat",
       "all": "Të gjitha Produktet"
@@ -268,9 +268,9 @@
     "allProducts": "Të gjitha Produktet",
     "categories": {
       "wardrobes": {
-        "label": "Gardërobat",
-        "description": "Zgjidhje gardërobash me porosi të përshtatura për hapësirën dhe stilin tuaj.",
-        "heroDescription": "Zgjidhje gardërobash me porosi të përshtatura për hapësirën dhe stilin tuaj, të punuara me precizion në Vlorë."
+        "label": "Garderobat",
+        "description": "Zgjedhje gardërobash me porosi të përshtatura për hapësirën dhe stilin tuaj.",
+        "heroDescription": "Zgjedhje gardërobash me porosi të përshtatura për hapësirën dhe stilin tuaj, të punuara me precizion në Vlorë."
       },
       "kitchens": {
         "label": "Kuzhinat",
@@ -356,7 +356,7 @@
   },
   "materia": {
     "eyebrow": "The M Concept · Materia",
-    "heading": "Vjen Shpejt",
+    "heading": "Vjen Se Shpejti",
     "bodyMain": "Po ndërtojmë diçka me të vërtetë inovative — një platformë e fuqizuar nga teknologjia më e fundit, e projektuar për t'ju bërë të lehtë zbulimin e mobiljeve dhe materialeve të ëndrrave tuaja,",
     "bodyEmphasis": "të përshtatura saktësisht për buxhetin dhe vizionin tuaj.",
     "body2": "Qëndroni të informuar. Eksperienca ia vlen të prisni.",
