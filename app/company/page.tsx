@@ -36,7 +36,7 @@ const milestones = [
     body: 'After two decades of quiet reputation-building, we unified our identity under The M Concept — a name that stands for precision, craft, and the relentless pursuit of quality.',
   },
   {
-    year: '2024',
+    year: '2026',
     title: 'Present Day',
     body: 'Today we serve hotels, residences, and commercial clients across the region, producing every piece entirely in-house — no outsourcing, no shortcuts, no two pieces alike.',
   },

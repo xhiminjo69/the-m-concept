@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 const projects = [
   {
     id: 1,
-    name: 'Hotel Lion',
+    name: 'Hotel Lion Gate',
     type: 'Hospitality — Full Fit-Out',
     year: '2024',
     location: 'Vlorë, Albania',
