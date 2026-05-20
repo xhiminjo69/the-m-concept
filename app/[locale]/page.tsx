@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar';
 import { projects as allProjects } from '@/lib/projects';
 
 // Featured projects shown on the homepage — Lion Gate, Vale, Radream
-const projects = allProjects.filter((p) => [1, 2, 3].includes(p.id))
-  .sort((a, b) => [2, 3, 1].indexOf(a.id) - [2, 3, 1].indexOf(b.id));
+const projects = allProjects.filter((p) => [1, 2, 4].includes(p.id))
+  .sort((a, b) => [2, 4, 1].indexOf(a.id) - [2, 4, 1].indexOf(b.id));
 
 export default async function Home() {
   const t = await getTranslations('home');
