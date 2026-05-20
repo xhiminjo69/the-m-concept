@@ -17,7 +17,7 @@ export default async function ContactPage() {
 
   const hoursData = [
     { day: t('hours.monFri'), time: '08:00 – 17:00', closed: false },
-    { day: t('hours.saturday'), time: '09:00 – 13:00', closed: false },
+    { day: t('hours.saturday'), time: t('hours.closed'), closed: true },
     { day: t('hours.sunday'), time: t('hours.closed'), closed: true },
   ];
 
