@@ -116,10 +116,11 @@ module.exports = {
       // ─── TYPOGRAPHY ───────────────────────────────────────────────────────
       fontFamily: {
         // CSS variables injected by next/font — fall back to system fonts
-        display: ['var(--font-display)', '"Cormorant Garamond"', 'Georgia', 'serif'],
-        body:    ['var(--font-body)',    'Inter', 'system-ui', 'sans-serif'],
-        label:   ['var(--font-label)',   'Montserrat', 'Inter', 'sans-serif'],
-        brand:   ['var(--font-brand)',   'Oswald', 'Impact', 'sans-serif'],
+        display:    ['var(--font-display)', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        body:       ['var(--font-body)',    'Inter', 'system-ui', 'sans-serif'],
+        label:      ['var(--font-label)',   'Montserrat', 'Inter', 'sans-serif'],
+        brand:      ['var(--font-brand)',   'Oswald', 'Impact', 'sans-serif'],
+        condensed:  ['"Bebas Neue"', '"Bank Gothic"', 'Oswald', 'Impact', 'sans-serif'],
       },
 
       fontSize: {

@@ -102,12 +102,12 @@
   "company": {
     "meta": {
       "title": "Historia Jonë",
-      "description": "Themeluar në vitin 2000, The M Concept është rritur nga një punishte e vogël në Vlorë në prodhuesin kryesor të mobiljeve me porosi në Shqipëri."
+      "description": "Themeluar në vitin 2007, The M Concept është rritur nga një punishte e vogël në Vlorë në prodhuesin kryesor të mobiljeve me porosi në Shqipëri."
     },
     "hero": {
-      "eyebrow": "Est. 2000 — Vlorë, Shqipëri",
+      "eyebrow": "Est. 2007 — Vlorë, Shqipëri",
       "heading": "Historia Jonë",
-      "subheading": "Njëzet e pesë vjet ekspertize, pasion dhe mobilje të krijuara për të rezistuar kohës."
+      "subheading": "Tetëmbëdhjetë vjet ekspertize, pasion dhe mobilje të krijuara për të rezistuar kohës."
     },
     "statementMain": "U themeluam mbi një bindje — që një copë mobilje duhet të tregojë historinë e duarve që e bënë, dhe të qëndrojnë  ",
     "statementEmphasis": "pesëdhjetë vjet nga tani.",
@@ -115,18 +115,18 @@
       "eyebrow": "Themelimi",
       "headingMain": "Lindur në Vlorë.",
       "headingEmphasis": "Ndërtuar me Duar dhe Shpirt.",
-      "body1": "Në vitin 2000, një punishte e vogël e punimit të drurit u hap në skajin e Vlorës me një ambicie të thjeshtë: të bëjë mobilje që ia vlente të bëheshin. Pa montim. Pa shkurtësi. Vetëm dru, aftësi dhe sy obsesiv për detajet.",
+      "body1": "Në vitin 2007, një punishte e vogël e punimit të drurit u hap në skajin e Vlorës me një ambicie të thjeshtë: të bëjë mobilje që ia vlente të bëheshin. Pa montim. Pa shkurtësi. Vetëm dru, aftësi dhe sy obsesiv për detajet.",
       "body2": "Vitet e hershme u përcaktuan nga goja në gojë. Hotelierët përgjatë Rivierës Shqiptare filluan të vërejnë — një dhomë gjumi që ndihej ndryshe, një gardërobë që mbyllej saktësisht, një tavolinë pritjeje që komandonte vëmendjen. Porosite u rritën. Edhe ekipi.",
-      "body3": "Nga mesi i viteve 2000 kishim tejkaluar hapësirën origjinale. Nga vitet 2010 kishim ndërtuar një fabrikë prodhimi të pajisur për shkallë serioze — pa humbur kurrë precizionin e punishtes ku gjithçka filloi.",
+      "body3": "Nga fillimi i viteve 2010 kishim tejkaluar hapësirën origjinale. Nga fundi i viteve 2010 kishim ndërtuar një fabrikë prodhimi të pajisur për shkallë serioze — pa humbur kurrë precizionin e punishtes ku gjithçka filloi.",
       "cta": "Shihni Projektet Tona"
     },
     "timeline": {
       "eyebrow": "Kronologjia",
-      "headingMain": "Njëzet e pesë vjet",
+      "headingMain": "Tetëmbëdhjetë vjet",
       "headingEmphasis": "në bërje.",
       "milestones": [
         {
-          "year": "2000",
+          "year": "2007",
           "title": "Fillimi",
           "body": "Themeluar në një punishte të vogël në periferi të Vlorës, The M Concept filloi me një rrotull, një grusht vegla dhe besim të pakompromis se mobiljet duhet të ndërtohen për të qenë."
         },
@@ -165,6 +165,43 @@
       "body2": "Ne nuk nënkontraktojmë. Copa që largohet nga dyshemeja jonë është copa që ekipi ynë projektoi, preu, përfundoi dhe miratoi. Kjo është mënyra e vetme për të garantuar atë që garantojmë.",
       "startProject": "Filloni një Projekt",
       "seeWork": "Shihni Punën Tonë"
+    },
+    "story": {
+      "philosophy": {
+        "intro1": "THE M CONCEPT, një fabrikë e prodhimit të mobiljeve me porosi, që prej themelimit, ka patur si qëllim promovimin e standardit në prodhim përmes materialeve, makinerive, pajisjeve dhe teknologjisë së fundit."
+      },
+      "craft": {
+        "eyebrow": "Prodhimi & Zanati",
+        "headingMain": "Cilësi dhe çmim,",
+        "headingEmphasis": "në raport të përsosur",
+        "body1": "Duke ruajtur një raport efektiv cilësi-çmim, kemi arritur vazhdimisht t'u ofrojmë klientëve tanë produktet e kërkuara.",
+        "body2": "Kompania realizon prodhimin dhe furnizimin e mobiljeve për njësi elitare banimi dhe hotelerie, si dhe për ambiente tregtare."
+      },
+      "consultancy": {
+        "eyebrow": "Përtej Mobiljeve",
+        "headingMain": "Konsulencë arkitektonike",
+        "headingEmphasis": "në projektimin e interiereve",
+        "body": "Gjithashtu, disponojmë shërbim konsulence arkitektonike në fushën e projektimit të interiereve dhe zbatimit të projekteve."
+      },
+      "hospitality": {
+        "eyebrow": "Partneritete Ndërkombëtare",
+        "headingMain": "Kjo ka rezultuar në bashkëpunime të suksesshme",
+        "headingEmphasis": "me disa nga brand-et kryesore hoteliere ndërkombëtare"
+      },
+      "exports": {
+        "eyebrow": "Horizonte në Zgjerim",
+        "headingMain": "Nga Shqipëria",
+        "headingEmphasis": "drejt Europës dhe më gjet",
+        "body": "Për më tepër, gjatë viteve të fundit, kemi realizuar eksporte në vendet fqinje në rajonin e Ballkanit Perëndimor, në Greqi e në Itali, si dhe në disa vende të tjera europiane, kryesisht mobilje për ambiente rezidenciale banimi.",
+        "markets": ["Shqipëri", "Ballkan", "Greqi", "Itali", "Europë"]
+      },
+      "vision": {
+        "eyebrow": "Strategjia 2025 — 2030",
+        "headingMain": "Kërkimi, zhvillimi,",
+        "headingEmphasis": "dhe Europa Perëndimore",
+        "body": "Aktualisht, strategjia për periudhën 2025–2030 është fokusuar drejt kërkimit dhe zhvillimit të aksesit në tregun e Europës Perëndimore.",
+        "cta": "Filloni një projekt"
+      }
     },
     "values": {
       "eyebrow": "Si Punojmë",

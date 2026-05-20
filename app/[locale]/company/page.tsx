@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 export default async function CompanyPage() {
   const t = await getTranslations('company');
   const tFooter = await getTranslations('footer');
-  const milestones = t.raw('timeline.milestones') as Array<{ year: string; title: string; body: string }>;
   const values = t.raw('values.items') as Array<{ label: string; desc: string }>;
 
   return (
@@ -65,7 +64,9 @@ export default async function CompanyPage() {
         </div>
       </section>
 
-      {/* ── Opening statement ─────────────────────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════════
+          01 — PHILOSOPHY  Editorial intro statement on showroom background
+          ══════════════════════════════════════════════════════════════════════ */}
       <section className="section-xl relative overflow-hidden">
         <Image
           src="/images/showroom.jpg"
@@ -75,17 +76,14 @@ export default async function CompanyPage() {
           style={{ zIndex: 0 }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0" style={{ background: 'rgba(247, 240, 228, 0.91)', zIndex: 1 }} />
+        <div className="absolute inset-0" style={{ background: 'rgba(247,240,228,0.92)', zIndex: 1 }} />
         <div className="relative max-w-4xl mx-auto px-6 md:px-10 text-center" style={{ zIndex: 2 }}>
           <div className="divider-accent-lg mx-auto mb-14" />
           <p
-            className="font-display font-light text-stone-800 leading-snug tracking-tight"
-            style={{ fontSize: 'clamp(1.875rem, 3.6vw, 3rem)' }}
+            className="font-display font-light text-stone-800 leading-snug"
+            style={{ fontSize: 'clamp(1.875rem, 3.4vw, 2.875rem)', letterSpacing: '-0.01em' }}
           >
-            {t('statementMain')}
-            <em className="not-italic" style={{ color: '#A67C52' }}>
-              {t('statementEmphasis')}
-            </em>
+            {t('story.philosophy.intro1')}
           </p>
           <div
             className="mx-auto mt-14"
@@ -94,136 +92,47 @@ export default async function CompanyPage() {
         </div>
       </section>
 
-      {/* ── Founding story + lifestyle image ──────────────────────────────────── */}
+      {/* ══════════════════════════════════════════════════════════════════════
+          02 — CRAFTSMANSHIP  Split: ghost stat + copy + factory image
+          ══════════════════════════════════════════════════════════════════════ */}
       <section className="section-lg section-white">
         <div className="px-6 md:px-10 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
 
-            {/* Text */}
-            <div>
-              <span className="eyebrow">{t('founding.eyebrow')}</span>
-              <h2
-                className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
-                style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
-              >
-                {t('founding.headingMain')}<br />{t('founding.headingEmphasis')}
-              </h2>
-              <div className="divider-accent mb-8" />
-              <p className="font-body text-body-lg text-stone-600 leading-relaxed mb-5">
-                {t('founding.body1')}
-              </p>
-              <p className="font-body text-body-md text-muted leading-relaxed mb-5">
-                {t('founding.body2')}
-              </p>
-              <p className="font-body text-body-md text-muted leading-relaxed mb-10">
-                {t('founding.body3')}
-              </p>
-              <Link href="/projects" className="btn-secondary btn-md">
-                {t('founding.cta')}
-              </Link>
-            </div>
-
-            {/* Lifestyle image */}
+            {/* Text side */}
             <div className="relative">
+              {/* Ghost year */}
               <span
-                className="absolute -right-4 -top-8 font-display font-light select-none pointer-events-none leading-none z-0 hidden lg:block"
-                style={{ fontSize: 'clamp(9rem, 18vw, 18rem)', letterSpacing: '-0.06em', color: 'rgba(166,124,82,0.06)' }}
+                className="absolute -left-6 -top-10 font-display font-light select-none pointer-events-none leading-none hidden lg:block"
+                style={{ fontSize: 'clamp(9rem, 16vw, 16rem)', letterSpacing: '-0.06em', color: 'rgba(166,124,82,0.07)' }}
                 aria-hidden="true"
               >
-                25
+                18
               </span>
-              <div
-                className="relative w-full overflow-hidden rounded-lg bg-wood-100 z-10"
-                style={{ aspectRatio: '3/4' }}
-              >
-                <Image
-                  src="/images/ProjectsHotelLion.jpg"
-                  alt="The M Concept — crafted hotel bedroom interior"
-                  fill
-                  className="object-cover transition-transform duration-[1.2s] ease-premium hover:scale-[1.03]"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
+              <div className="relative z-10">
+                <span className="eyebrow">{t('story.craft.eyebrow')}</span>
+                <h2
+                  className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
+                  style={{ fontSize: 'clamp(2rem, 3.2vw, 2.75rem)' }}
+                >
+                  {t('story.craft.headingMain')}
+                  <br />
+                  <em style={{ fontStyle: 'italic' }}>{t('story.craft.headingEmphasis')}</em>
+                </h2>
+                <div className="divider-accent mb-8" />
+                <p className="font-body text-body-lg text-stone-600 leading-relaxed mb-5">
+                  {t('story.craft.body1')}
+                </p>
+                <p className="font-body text-body-md text-muted leading-relaxed">
+                  {t('story.craft.body2')}
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Timeline ──────────────────────────────────────────────────────────── */}
-      <section
-        style={{
-          padding: 'clamp(6rem, 9vw, 10rem) 0',
-          background: 'linear-gradient(to bottom, #FDF8F2 0%, #F5EAD9 100%)',
-        }}
-      >
-        <div className="px-6 md:px-10 lg:px-16">
-          <div className="mb-16">
-            <span className="eyebrow">{t('timeline.eyebrow')}</span>
-            <h2
-              className="font-display font-light text-stone-800 leading-tight"
-              style={{ fontSize: 'clamp(1.75rem, 2.8vw, 2.375rem)' }}
-            >
-              {t('timeline.headingMain')}<br />{t('timeline.headingEmphasis')}
-            </h2>
-          </div>
-
-          <div className="relative">
-            {/* Vertical spine */}
-            <div
-              className="absolute left-[3.25rem] top-0 bottom-0 w-px hidden md:block"
-              style={{ background: 'linear-gradient(to bottom, rgba(166,124,82,0.4), rgba(166,124,82,0.08))' }}
-            />
-
-            <div className="flex flex-col gap-0">
-              {milestones.map((m, i) => (
-                <div key={m.year} className="grid grid-cols-1 md:grid-cols-[7rem_1fr] gap-0 md:gap-12 group">
-                  {/* Year column */}
-                  <div className="flex md:flex-col items-center md:items-end gap-4 md:gap-0 pb-2 md:pb-0 md:pt-1">
-                    <div
-                      className="hidden md:block w-2 h-2 rounded-full shrink-0 mt-[0.35rem] ml-auto mr-[-0.3125rem] relative z-10 transition-all duration-300 group-hover:scale-150"
-                      style={{ background: i === milestones.length - 1 ? '#F4511E' : '#A67C52' }}
-                    />
-                    <span
-                      className="font-display font-light text-stone-400 md:text-right leading-none"
-                      style={{ fontSize: 'clamp(1.25rem, 2vw, 1.625rem)' }}
-                    >
-                      {m.year}
-                    </span>
-                  </div>
-
-                  {/* Content column */}
-                  <div className="pb-14 border-b md:border-b-0 border-stone-200 last:border-0 md:pl-0">
-                    <h3
-                      className="font-display font-light text-stone-800 mb-3 leading-tight"
-                      style={{ fontSize: 'clamp(1.25rem, 1.8vw, 1.625rem)' }}
-                    >
-                      {m.title}
-                    </h3>
-                    <p className="font-body text-body-md text-stone-500 leading-relaxed max-w-lg">
-                      {m.body}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Factory section ───────────────────────────────────────────────────── */}
-      <section className="section-lg section-white relative">
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-0 pointer-events-none"
-          style={{ height: '80px', background: 'linear-gradient(to bottom, #F5EAD9, transparent)' }}
-        />
-        <div className="px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
 
             {/* Factory image */}
-            <div className="relative order-2 lg:order-1">
+            <div className="relative">
               <div
-                className="relative w-full overflow-hidden rounded-lg bg-stone-100 z-10"
+                className="relative w-full overflow-hidden rounded-lg bg-stone-100"
                 style={{ aspectRatio: '4/3' }}
               >
                 <Image
@@ -236,32 +145,239 @@ export default async function CompanyPage() {
               </div>
             </div>
 
-            {/* Text */}
-            <div className="order-1 lg:order-2">
-              <span className="eyebrow">{t('facility.eyebrow')}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════════
+          03 — CONSULTANCY  Right-anchored minimal text, sand gradient
+          ══════════════════════════════════════════════════════════════════════ */}
+      <section style={{ padding: 'clamp(6rem, 9vw, 10rem) 0', background: 'linear-gradient(to bottom, #FDF8F2 0%, #F5EAD9 100%)' }}>
+        <div className="px-6 md:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+
+            {/* Image — left column */}
+            <div
+              className="relative w-full overflow-hidden rounded-lg bg-wood-100"
+              style={{ aspectRatio: '3/4' }}
+            >
+              <Image
+                src="/images/Projects-Residential7.jpg"
+                alt="Residential interior design — The M Concept"
+                fill
+                className="object-cover transition-transform duration-[1.2s] ease-premium hover:scale-[1.03]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+
+            {/* Text — right column */}
+            <div className="lg:text-right">
+              <span className="eyebrow lg:block lg:text-right">{t('story.consultancy.eyebrow')}</span>
               <h2
                 className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
+                style={{ fontSize: 'clamp(2rem, 3.2vw, 2.75rem)' }}
+              >
+                {t('story.consultancy.headingMain')}
+                <br />
+                <em style={{ fontStyle: 'italic' }}>{t('story.consultancy.headingEmphasis')}</em>
+              </h2>
+              <div
+                style={{
+                  width: '48px',
+                  height: '1px',
+                  background: 'linear-gradient(to left, #F4511E, transparent)',
+                  marginLeft: 'auto',
+                  marginBottom: '2rem',
+                }}
+              />
+              <p className="font-body text-body-lg text-stone-600 leading-relaxed">
+                {t('story.consultancy.body')}
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════════
+          04 — HOSPITALITY  Dark section, editorial brand roll-call
+          ══════════════════════════════════════════════════════════════════════ */}
+      <div aria-hidden="true" style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, #6B4A2E 20%, #A67C52 50%, #6B4A2E 80%, transparent 100%)' }} />
+      <section className="section-md section-charcoal">
+        <div className="px-6 md:px-10 lg:px-16">
+
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div>
+              <span
+                className="font-label text-[0.7rem] uppercase tracking-[0.22em] mb-4 block"
+                style={{ color: '#FF9E71' }}
+              >
+                {t('story.hospitality.eyebrow')}
+              </span>
+              <h2
+                className="font-display font-light text-white leading-tight"
                 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
               >
-                {t('facility.headingMain')}<br />{t('facility.headingEmphasis')}
+                {t('story.hospitality.headingMain')}
+                <br />
+                <em style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.65)' }}>{t('story.hospitality.headingEmphasis')}</em>
+              </h2>
+            </div>
+          </div>
+
+          {/* Brand list */}
+          <div className="border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+            {([
+              { name: 'Hotel Plaza Tirana',          parent: 'Maritim',  location: 'Tirana'  },
+              { name: 'Marina Bay Resort Vlorë',     parent: 'Maritim',  location: 'Vlorë'   },
+              { name: 'Sol Tropikal Durrës',         parent: 'Meliá',    location: 'Durrës'  },
+              { name: 'Hotel Mercure Tirana',        parent: 'Accor',    location: 'Tirana'  },
+              { name: 'Tirana Marriott Hotel',       parent: 'Marriott', location: 'Tirana'  },
+              { name: 'InterContinental Hotel Tirana', parent: 'IHG',      location: 'Tirana'  },
+              { name: 'Crowne Plaza Durrës',         parent: 'IHG',      location: 'Durrës'  },
+            ] as const).map((brand, i) => (
+              <div
+                key={brand.name}
+                className="flex items-center justify-between py-5 group"
+                style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+              >
+                <div className="flex items-center gap-6">
+                  <span
+                    className="font-label text-[0.58rem] tracking-[0.25em] w-6 shrink-0 tabular-nums"
+                    style={{ color: 'rgba(255,255,255,0.2)' }}
+                  >
+                    0{i + 1}
+                  </span>
+                  <h3
+                    className="font-display font-light text-white leading-none group-hover:text-stone-300 transition-colors duration-300"
+                    style={{ fontSize: 'clamp(1.125rem, 1.8vw, 1.625rem)' }}
+                  >
+                    {brand.name}
+                  </h3>
+                </div>
+                <div className="flex items-center gap-6 shrink-0">
+                  <span
+                    className="font-label text-[0.65rem] uppercase tracking-[0.22em]"
+                    style={{ color: 'rgba(191,148,104,0.85)' }}
+                  >
+                    {brand.parent}
+                  </span>
+                  <span
+                    className="font-label text-[0.58rem] uppercase tracking-[0.2em] hidden sm:block"
+                    style={{ color: 'rgba(255,255,255,0.25)' }}
+                  >
+                    {brand.location}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════════
+          05 — EXPORTS  Image left, copy right, market tags
+          ══════════════════════════════════════════════════════════════════════ */}
+      <section className="section-lg section-white relative">
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 pointer-events-none"
+          style={{ height: '80px', background: 'linear-gradient(to bottom, #1C1916, transparent)' }}
+        />
+        <div className="px-6 md:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+
+            {/* Image */}
+            <div
+              className="relative w-full overflow-hidden rounded-lg bg-wood-100"
+              style={{ aspectRatio: '3/4' }}
+            >
+              <Image
+                src="/images/ProjectsHotelLion.jpg"
+                alt="Bespoke residential furniture — International export"
+                fill
+                className="object-cover transition-transform duration-[1.2s] ease-premium hover:scale-[1.03]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+
+            {/* Text */}
+            <div>
+              <span className="eyebrow">{t('story.exports.eyebrow')}</span>
+              <h2
+                className="font-display font-light text-stone-800 leading-tight tracking-tight mb-6"
+                style={{ fontSize: 'clamp(2rem, 3.2vw, 2.75rem)' }}
+              >
+                {t('story.exports.headingMain')}
+                <br />
+                <em style={{ fontStyle: 'italic' }}>{t('story.exports.headingEmphasis')}</em>
               </h2>
               <div className="divider-accent mb-8" />
-              <p className="font-body text-body-lg text-stone-600 leading-relaxed mb-5">
-                {t('facility.body1')}
+              <p className="font-body text-body-lg text-stone-600 leading-relaxed mb-10">
+                {t('story.exports.body')}
               </p>
-              <p className="font-body text-body-md text-muted leading-relaxed mb-10">
-                {t('facility.body2')}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="btn-primary btn-md">
-                  {t('facility.startProject')}
-                </Link>
-                <Link href="/projects" className="btn-ghost btn-md">
-                  {t('facility.seeWork')}
-                </Link>
+              <div className="flex flex-wrap gap-2">
+                {(t.raw('story.exports.markets') as string[]).map((market: string) => (
+                  <span
+                    key={market}
+                    className="font-label text-[0.62rem] uppercase tracking-[0.22em] px-3 py-2 text-stone-500"
+                    style={{ border: '1px solid #E8D0B0' }}
+                  >
+                    {market}
+                  </span>
+                ))}
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════════════
+          06 — VISION 2025–2030  Dark, oversized ghost year, forward-looking
+          ══════════════════════════════════════════════════════════════════════ */}
+      <section className="section-md section-charcoal relative overflow-hidden">
+        <div aria-hidden="true" style={{ height: '1px', background: 'linear-gradient(90deg, transparent 0%, #6B4A2E 20%, #A67C52 50%, #6B4A2E 80%, transparent 100%)', position: 'absolute', top: 0, left: 0, right: 0 }} />
+        {/* Oversized ghost year */}
+        <span
+          className="absolute right-0 bottom-0 font-display font-light select-none pointer-events-none leading-none hidden lg:block"
+          style={{
+            fontSize: 'clamp(10rem, 22vw, 24rem)',
+            letterSpacing: '-0.06em',
+            color: 'rgba(255,255,255,0.03)',
+            lineHeight: 0.82,
+          }}
+          aria-hidden="true"
+        >
+          2030
+        </span>
+
+        <div className="relative z-10 px-6 md:px-10 lg:px-16">
+          <div className="max-w-xl">
+            <span
+              className="font-label text-[0.7rem] uppercase tracking-[0.22em] mb-6 block"
+              style={{ color: '#FF9E71' }}
+            >
+              {t('story.vision.eyebrow')}
+            </span>
+            <h2
+              className="font-display font-light text-white leading-tight mb-8"
+              style={{ fontSize: 'clamp(2rem, 3.5vw, 2.875rem)' }}
+            >
+              {t('story.vision.headingMain')}
+              <br />
+              <em style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.6)' }}>{t('story.vision.headingEmphasis')}</em>
+            </h2>
+            <div
+              style={{ width: '48px', height: '1px', background: 'linear-gradient(to right, #F4511E, transparent)', marginBottom: '2rem' }}
+            />
+            <p className="font-body text-body-lg text-stone-300 leading-relaxed mb-10 max-w-md">
+              {t('story.vision.body')}
+            </p>
+            <Link href="/contact" className="btn-outline-light btn-md">
+              {t('story.vision.cta')}
+            </Link>
           </div>
         </div>
       </section>

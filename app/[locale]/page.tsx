@@ -75,18 +75,25 @@ export default async function Home() {
             className="font-display font-light uppercase text-center leading-none"
             style={{ fontSize: 'clamp(4rem, 8.5vw, 10rem)', letterSpacing: '0.18em', color: '#1C1714' }}
           >
-            The{' '}
             <span
+              className="font-condensed"
+              style={{ fontSize: '0.72em', letterSpacing: '0.28em', opacity: 0.9 }}
+            >The</span>{' '}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/NewLogo.jpg"
+              alt=""
+              aria-hidden="true"
               style={{
-                backgroundImage: 'linear-gradient(135deg, #8E2FA8 0%, #F4511E 60%, #BF9468 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
+                display: 'inline-block',
+                height: '1.48em',
+                width: 'auto',
+                verticalAlign: '-0.34em',
+                mixBlendMode: 'multiply',
+                marginRight: '0.08em',
               }}
-            >
-              M
-            </span>
-            {' '}Concept
+            />
+            {' '}<span className="font-display font-light" style={{ fontStyle: 'italic' }}>Concept</span>
           </h1>
           <div
             className="mt-10 mb-8"

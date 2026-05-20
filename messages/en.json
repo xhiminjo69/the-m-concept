@@ -102,12 +102,12 @@
   "company": {
     "meta": {
       "title": "Our Story",
-      "description": "Founded in 2000, The M Concept has grown from a small workshop in Vlorë into Albania's leading custom furniture manufacturer."
+      "description": "Founded in 2007, The M Concept has grown from a small workshop in Vlorë into Albania's leading custom furniture manufacturer."
     },
     "hero": {
-      "eyebrow": "Est. 2000 — Vlorë, Albania",
+      "eyebrow": "Est. 2007 — Vlorë, Albania",
       "heading": "Our Story",
-      "subheading": "Twenty-five years of craft, conviction, and furniture built to outlast trends."
+      "subheading": "Eighteen years of craft, conviction, and furniture built to outlast trends."
     },
     "statementMain": "Founded on a conviction — that a piece of furniture should tell the story of the hands that made it, and stand",
     "statementEmphasis": " fifty years from now.",
@@ -115,18 +115,18 @@
       "eyebrow": "The Founding",
       "headingMain": "Born in Vlorë.",
       "headingEmphasis": "Built by Hand.",
-      "body1": "In 2000, a small woodworking workshop opened on the edge of Vlorë with a simple ambition: to make furniture worth making. No assembly. No shortcuts. Just wood, skill, and an obsessive eye for detail.",
+      "body1": "In 2007, a small woodworking workshop opened on the edge of Vlorë with a simple ambition: to make furniture worth making. No assembly. No shortcuts. Just wood, skill, and an obsessive eye for detail.",
       "body2": "The early years were defined by word of mouth. Hoteliers along the Albanian Riviera started to notice — a bedroom that felt different, a wardrobe that closed exactly, a reception table that commanded attention. Orders grew. So did the team.",
-      "body3": "By the mid-2000s we had outgrown the original space. By the 2010s we had built a production facility equipped for serious scale — without ever losing the precision of the workshop where everything began.",
+      "body3": "By the early 2010s we had outgrown the original space. By the late 2010s we had built a production facility equipped for serious scale — without ever losing the precision of the workshop where everything began.",
       "cta": "See Our Projects"
     },
     "timeline": {
       "eyebrow": "The Timeline",
-      "headingMain": "Twenty-five years",
+      "headingMain": "Eighteen years",
       "headingEmphasis": "in the making.",
       "milestones": [
         {
-          "year": "2000",
+          "year": "2007",
           "title": "The Beginning",
           "body": "Founded in a small workshop on the outskirts of Vlorë, The M Concept started with a lathe, a handful of tools, and an uncompromising belief that furniture should be built to last."
         },
@@ -165,6 +165,43 @@
       "body2": "We do not subcontract. The piece that leaves our floor is the piece our team designed, cut, finished, and approved. That's the only way to guarantee what we guarantee.",
       "startProject": "Start a Project",
       "seeWork": "See Our Work"
+    },
+    "story": {
+      "philosophy": {
+        "intro1": "THE M CONCEPT is a custom furniture manufacturing company that, since its foundation, has been committed to elevating production standards through the use of premium materials, advanced machinery, modern equipment, and the latest technologies."
+      },
+      "craft": {
+        "eyebrow": "Production & Craftsmanship",
+        "headingMain": "Quality and value,",
+        "headingEmphasis": "in perfect balance",
+        "body1": "By maintaining an effective balance between quality and value, we have consistently delivered tailored solutions that meet the expectations of our clients.",
+        "body2": "The company specialises in the production and supply of bespoke furniture for luxury residential developments, hospitality environments, and commercial spaces."
+      },
+      "consultancy": {
+        "eyebrow": "Beyond Furniture",
+        "headingMain": "Architectural consultancy",
+        "headingEmphasis": "in interior design",
+        "body": "In addition, we offer architectural consultancy services in the field of interior design and project implementation."
+      },
+      "hospitality": {
+        "eyebrow": "International Partnerships",
+        "headingMain": "Over the years, this commitment has led to",
+        "headingEmphasis": "successful collaborations with leading international hospitality brands"
+      },
+      "exports": {
+        "eyebrow": "Expanding Horizons",
+        "headingMain": "From Albania",
+        "headingEmphasis": "to Europe and beyond",
+        "body": "Furthermore, in recent years, THE M CONCEPT has expanded its presence beyond Albania through exports to neighboring Balkan countries, Greece, Italy, and several other European markets, primarily focusing on bespoke residential furniture.",
+        "markets": ["Albania", "Balkans", "Greece", "Italy", "Europe"]
+      },
+      "vision": {
+        "eyebrow": "Strategy 2025 — 2030",
+        "headingMain": "Research, development,",
+        "headingEmphasis": "and Western Europe",
+        "body": "Looking ahead, the company's 2025–2030 strategy is focused on research, development, and expanding access to Western European markets.",
+        "cta": "Start a project"
+      }
     },
     "values": {
       "eyebrow": "How We Work",
