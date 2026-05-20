@@ -2,7 +2,6 @@
   "nav": {
     "company": "Company",
     "projects": "Projects",
-    "products": "Products",
     "contact": "Contact",
     "materia": "Materia",
     "cta": "Start a Project",
@@ -12,11 +11,14 @@
       "residential": "Residential Projects",
       "all": "All Projects"
     },
-    "productsMenu": {
-      "wardrobes": "Wardrobes",
-      "kitchens": "Kitchens",
-      "libraries": "Libraries",
-      "all": "All Products"
+    "spaces": "Spaces",
+    "spacesMenu": {
+      "kitchen-dining": "Kitchen & Dining",
+      "living-room": "Living Room",
+      "bedroom-wardrobes": "Bedroom & Wardrobes",
+      "bathroom": "Bathroom",
+      "others": "Others",
+      "all": "All Spaces"
     }
   },
   "footer": {
@@ -31,9 +33,9 @@
     "nav": {
       "company": "Company",
       "projects": "Projects",
-      "products": "Products",
       "contact": "Contact",
-      "materia": "Materia"
+      "materia": "Materia",
+      "spaces": "Spaces"
     },
     "contact": {
       "startProject": "Start a Project",
@@ -67,10 +69,22 @@
       "cta": "Our Story"
     },
     "stats": [
-      { "value": "100%", "label": "Built to order" },
-      { "value": "Custom", "label": "Every piece unique" },
-      { "value": "Premium", "label": "Materials only" },
-      { "value": "Vlorë", "label": "Designed & manufactured" }
+      {
+        "value": "100%",
+        "label": "Built to order"
+      },
+      {
+        "value": "Custom",
+        "label": "Every piece unique"
+      },
+      {
+        "value": "Premium",
+        "label": "Materials only"
+      },
+      {
+        "value": "Vlorë",
+        "label": "Designed & manufactured"
+      }
     ],
     "facility": {
       "eyebrow": "Production Facility",
@@ -85,10 +99,22 @@
       "headingEmphasis": "lasting results.",
       "cta": "Explore Materials",
       "items": [
-        { "name": "White Oak", "desc": "Light grain, timeless strength" },
-        { "name": "Walnut", "desc": "Rich chocolate tones, smooth finish" },
-        { "name": "Ash Wood", "desc": "Resilient, pale, and versatile" },
-        { "name": "Marble", "desc": "Cold luxury for tabletop surfaces" }
+        {
+          "name": "White Oak",
+          "desc": "Light grain, timeless strength"
+        },
+        {
+          "name": "Walnut",
+          "desc": "Rich chocolate tones, smooth finish"
+        },
+        {
+          "name": "Ash Wood",
+          "desc": "Resilient, pale, and versatile"
+        },
+        {
+          "name": "Marble",
+          "desc": "Cold luxury for tabletop surfaces"
+        }
       ]
     },
     "cta": {
@@ -193,7 +219,13 @@
         "headingMain": "From Albania",
         "headingEmphasis": "to Europe and beyond",
         "body": "Furthermore, in recent years, THE M CONCEPT has expanded its presence beyond Albania through exports to neighboring Balkan countries, Greece, Italy, and several other European markets, primarily focusing on bespoke residential furniture.",
-        "markets": ["Albania", "Balkans", "Greece", "Italy", "Europe"]
+        "markets": [
+          "Albania",
+          "Balkans",
+          "Greece",
+          "Italy",
+          "Europe"
+        ]
       },
       "vision": {
         "eyebrow": "Strategy 2025 — 2030",
@@ -399,5 +431,52 @@
     "body2": "Stay tuned. The experience will be worth the wait.",
     "cta": "Contact Us",
     "label": "Materia"
+  },
+  "spaces": {
+    "meta": {
+      "title": "Spaces",
+      "description": "Custom furniture for every room — kitchens, living rooms, bedrooms, bathrooms, and beyond."
+    },
+    "hero": {
+      "eyebrow": "Our Spaces",
+      "bespoke": "Designed for every room",
+      "heading": "Spaces",
+      "description": "Five collections tailored to every interior. Each piece custom-made to the highest standard of craft."
+    },
+    "explore": "Explore",
+    "allSpaces": "All Spaces",
+    "categories": {
+      "kitchen-dining": {
+        "label": "Kitchen & Dining",
+        "description": "Bespoke kitchen cabinetry and dining furniture.",
+        "heroDescription": "Custom-crafted kitchen and dining spaces that blend precision with warmth."
+      },
+      "living-room": {
+        "label": "Living Room",
+        "description": "Shelving, media units, and living room furniture.",
+        "heroDescription": "Living room furniture designed for everyday refinement and lasting comfort."
+      },
+      "bedroom-wardrobes": {
+        "label": "Bedroom & Wardrobes",
+        "description": "Built-in wardrobes and bespoke bedroom furniture.",
+        "heroDescription": "Bespoke bedroom furniture and built-in wardrobe systems crafted to your exact space."
+      },
+      "bathroom": {
+        "label": "Bathroom",
+        "description": "Custom bathroom vanities and fitted storage.",
+        "heroDescription": "Refined bathroom furniture crafted to your exact specifications."
+      },
+      "others": {
+        "label": "Others",
+        "description": "Custom pieces for offices, corridors, and every other space.",
+        "heroDescription": "Bespoke furniture for offices, corridors, and every space in between."
+      }
+    },
+    "cta": {
+      "eyebrow": "Work with Us",
+      "heading": "Have a project in mind?",
+      "body": "From a single piece to a complete interior fit-out, we work with you from initial brief to final installation.",
+      "startProject": "Start a Project"
+    }
   }
 }

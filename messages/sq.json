@@ -2,7 +2,6 @@
   "nav": {
     "company": "Kompania",
     "projects": "Projektet",
-    "products": "Produktet",
     "contact": "Kontakt",
     "materia": "Materia",
     "cta": "Filloni një Projekt",
@@ -12,11 +11,14 @@
       "residential": "Projekte Banimi",
       "all": "Të gjitha Projektet"
     },
-    "productsMenu": {
-      "wardrobes": "Garderobat",
-      "kitchens": "Kuzhinat",
-      "libraries": "Bibliotekat",
-      "all": "Të gjitha Produktet"
+    "spaces": "Hapësirat",
+    "spacesMenu": {
+      "kitchen-dining": "Kuzhinë & Ngrënie",
+      "living-room": "Dhomë Ndenjeje",
+      "bedroom-wardrobes": "Dhomë Gjumi & Garderoba",
+      "bathroom": "Banjo",
+      "others": "Të tjera",
+      "all": "Të gjitha Hapësirat"
     }
   },
   "footer": {
@@ -31,9 +33,9 @@
     "nav": {
       "company": "Kompania",
       "projects": "Projektet",
-      "products": "Produktet",
       "contact": "Kontakt",
-      "materia": "Materia"
+      "materia": "Materia",
+      "spaces": "Hapësirat"
     },
     "contact": {
       "startProject": "Filloni një Projekt",
@@ -67,10 +69,22 @@
       "cta": "Historia Jonë"
     },
     "stats": [
-      { "value": "100%", "label": "Me porosi" },
-      { "value": "Unik", "label": "Çdo copë e veçantë" },
-      { "value": "Premium", "label": "Materiale ekskluzive" },
-      { "value": "Vlorë", "label": "Projektuar & prodhuar" }
+      {
+        "value": "100%",
+        "label": "Me porosi"
+      },
+      {
+        "value": "Unik",
+        "label": "Çdo copë e veçantë"
+      },
+      {
+        "value": "Premium",
+        "label": "Materiale ekskluzive"
+      },
+      {
+        "value": "Vlorë",
+        "label": "Projektuar & prodhuar"
+      }
     ],
     "facility": {
       "eyebrow": "Fabrika e Prodhimit",
@@ -85,10 +99,22 @@
       "headingEmphasis": "rezultate të qëndrueshme.",
       "cta": "Eksploroni Materialet",
       "items": [
-        { "name": "Lisi i Bardhë", "desc": "Fije e lehtë, forcë e përjetshme" },
-        { "name": "Arrë", "desc": "Tone të pasura, sipërfaqe e lëmuar" },
-        { "name": "Dru Frashëri", "desc": "I qëndrueshëm, i zbehtë dhe i gjithanshëm" },
-        { "name": "Mermeri", "desc": "Luks i ftohtë për sipërfaqe tavoline" }
+        {
+          "name": "Lisi i Bardhë",
+          "desc": "Fije e lehtë, forcë e përjetshme"
+        },
+        {
+          "name": "Arrë",
+          "desc": "Tone të pasura, sipërfaqe e lëmuar"
+        },
+        {
+          "name": "Dru Frashëri",
+          "desc": "I qëndrueshëm, i zbehtë dhe i gjithanshëm"
+        },
+        {
+          "name": "Mermeri",
+          "desc": "Luks i ftohtë për sipërfaqe tavoline"
+        }
       ]
     },
     "cta": {
@@ -193,7 +219,13 @@
         "headingMain": "Nga Shqipëria",
         "headingEmphasis": "drejt Europës dhe më gjet",
         "body": "Për më tepër, gjatë viteve të fundit, kemi realizuar eksporte në vendet fqinje në rajonin e Ballkanit Perëndimor, në Greqi e në Itali, si dhe në disa vende të tjera europiane, kryesisht mobilje për ambiente rezidenciale banimi.",
-        "markets": ["Shqipëri", "Ballkan", "Greqi", "Itali", "Europë"]
+        "markets": [
+          "Shqipëri",
+          "Ballkan",
+          "Greqi",
+          "Itali",
+          "Europë"
+        ]
       },
       "vision": {
         "eyebrow": "Strategjia 2025 — 2030",
@@ -399,5 +431,52 @@
     "body2": "Qëndroni të informuar. Eksperienca ia vlen të prisni.",
     "cta": "Na Kontaktoni",
     "label": "Materia"
+  },
+  "spaces": {
+    "meta": {
+      "title": "Hapësirat",
+      "description": "Mobilje me porosi për çdo dhomë — kuzhina, dhoma ndenjeje, dhoma gjumi, banjo dhe më shumë."
+    },
+    "hero": {
+      "eyebrow": "Hapësirat Tona",
+      "bespoke": "Projektuar për çdo dhomë",
+      "heading": "Hapësirat",
+      "description": "Pesë koleksione të përshtatura për çdo interior. Çdo copë e punuar me standardin më të lartë të zejtarisë."
+    },
+    "explore": "Eksploro",
+    "allSpaces": "Të gjitha Hapësirat",
+    "categories": {
+      "kitchen-dining": {
+        "label": "Kuzhinë & Ngrënie",
+        "description": "Mobilje kuzhinë dhe ngrënie me porosi.",
+        "heroDescription": "Hapësira kuzhine dhe ngrënieje të punuara me precizion dhe ngrohtësi."
+      },
+      "living-room": {
+        "label": "Dhomë Ndenjeje",
+        "description": "Rafte, njësi media dhe mobilje dhome ndenjeje.",
+        "heroDescription": "Mobilje dhome ndenjeje të projektuara për refikim dhe komoditet të përditshëm."
+      },
+      "bedroom-wardrobes": {
+        "label": "Dhomë Gjumi & Garderoba",
+        "description": "Garderoba të integruara dhe mobilje dhome gjumi.",
+        "heroDescription": "Mobilje dhome gjumi dhe sisteme garderobe të integruara, të punuara sipas hapësirës tuaj."
+      },
+      "bathroom": {
+        "label": "Banjo",
+        "description": "Lavamane dhe ruajtje të personalizuara për banjot.",
+        "heroDescription": "Mobilje banjo të rafinuara të punuara sipas specifikimeve tuaja."
+      },
+      "others": {
+        "label": "Të tjera",
+        "description": "Copë me porosi për zyra, korridore dhe çdo hapësirë tjetër.",
+        "heroDescription": "Mobilje me porosi për zyra, korridore dhe çdo hapësirë tjetër."
+      }
+    },
+    "cta": {
+      "eyebrow": "Punoni me Ne",
+      "heading": "Keni një projekt në mendje?",
+      "body": "Nga një copë e vetme deri te një instalim i plotë interieri, punojmë me ju nga briefi fillestar deri te instalimi final.",
+      "startProject": "Filloni një Projekt"
+    }
   }
 }

@@ -47,10 +47,12 @@ export default function Navbar() {
     { label: t('projectsMenu.residential'), href: '/projects/residential' },
   ];
 
-  const productSubLinks = [
-    { label: t('productsMenu.wardrobes'), href: '/products/wardrobes' },
-    { label: t('productsMenu.kitchens'), href: '/products/kitchens' },
-    { label: t('productsMenu.libraries'), href: '/products/libraries' },
+  const spacesSubLinks = [
+    { label: t('spacesMenu.kitchen-dining'),    href: '/spaces/kitchen-dining'    },
+    { label: t('spacesMenu.living-room'),        href: '/spaces/living-room'        },
+    { label: t('spacesMenu.bedroom-wardrobes'),  href: '/spaces/bedroom-wardrobes'  },
+    { label: t('spacesMenu.bathroom'),           href: '/spaces/bathroom'           },
+    { label: t('spacesMenu.others'),             href: '/spaces/others'             },
   ];
 
   return (
@@ -138,10 +140,10 @@ export default function Navbar() {
           onMouseLeave={closeProductsDropdown}
         >
           <Link
-            href="/products"
+            href="/spaces"
             className="nav-link flex items-center gap-1.5"
           >
-            {t('products')}
+            {t('spaces')}
             <svg
               width="9"
               height="9"
@@ -164,7 +166,7 @@ export default function Navbar() {
               className="bg-background border border-border min-w-[180px]"
               style={{ boxShadow: '0 8px 40px rgba(44,29,16,0.13)' }}
             >
-              {productSubLinks.map((sub) => (
+              {spacesSubLinks.map((sub) => (
                 <Link
                   key={sub.href}
                   href={sub.href}
@@ -180,11 +182,11 @@ export default function Navbar() {
               ))}
               <div className="border-t border-border">
                 <Link
-                  href="/products"
+                  href="/spaces"
                   className="flex items-center px-5 py-3 font-label text-[0.65rem] uppercase tracking-[0.2em] text-stone-400 hover:text-stone-600 transition-colors duration-150"
                   onClick={() => setProductsDropdownOpen(false)}
                 >
-                  {t('productsMenu.all')}
+                  {t('spacesMenu.all')}
                 </Link>
               </div>
             </div>
@@ -299,7 +301,7 @@ export default function Navbar() {
               className="flex items-center justify-between w-full font-label text-[0.875rem] text-stone-700 uppercase tracking-widest hover:text-coral-500 transition-colors"
               onClick={() => setMobileProductsOpen((o) => !o)}
             >
-              {t('products')}
+              {t('spaces')}
               <svg
                 width="9"
                 height="9"
@@ -314,7 +316,7 @@ export default function Navbar() {
 
             {mobileProductsOpen && (
               <div className="mt-4 ml-1 flex flex-col gap-4 border-l-2 pl-5" style={{ borderColor: 'rgba(166,124,82,0.25)' }}>
-                {productSubLinks.map((sub) => (
+                {spacesSubLinks.map((sub) => (
                   <Link
                     key={sub.href}
                     href={sub.href}
@@ -325,11 +327,11 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <Link
-                  href="/products"
+                  href="/spaces"
                   className="font-label text-[0.7rem] text-stone-400 uppercase tracking-widest hover:text-stone-600 transition-colors"
                   onClick={() => { setMenuOpen(false); setMobileProductsOpen(false); }}
                 >
-                  {t('productsMenu.all')}
+                  {t('spacesMenu.all')}
                 </Link>
               </div>
             )}
