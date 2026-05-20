@@ -2,34 +2,11 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
+import { projects as allProjects } from '@/lib/projects';
 
-// ─── Portfolio project data ───────────────────────────────────────────────────
-const projects = [
-  {
-    id: 1,
-    name: 'Hotel Lion Gate',
-    type: 'Hospitality — Full Fit-Out',
-    year: '2024',
-    location: 'Vlorë, Albania',
-    image: '/images/ProjectsHotelLion.jpg',
-  },
-  {
-    id: 2,
-    name: 'Hotel Vale',
-    type: 'Hospitality — Bedroom & Wardrobe',
-    year: '2024',
-    location: 'Vlorë, Albania',
-    image: '/images/ProjectsHotelVale.jpg',
-  },
-  {
-    id: 3,
-    name: 'Hotel Radream',
-    type: 'Hospitality — Full Interior',
-    year: '2023',
-    location: 'Vlorë, Albania',
-    image: '/images/ProjectsHotelRadream.jpg',
-  },
-];
+// Featured projects shown on the homepage — Lion Gate, Vale, Radream
+const projects = allProjects.filter((p) => [1, 2, 3].includes(p.id))
+  .sort((a, b) => [2, 3, 1].indexOf(a.id) - [2, 3, 1].indexOf(b.id));
 
 export default async function Home() {
   const t = await getTranslations('home');
