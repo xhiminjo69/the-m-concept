@@ -214,6 +214,25 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    id: 9,
+    name: 'Marina Bay',
+    category: 'commercial',
+    type: 'Commercial — Full Fit-Out',
+    year: '2024',
+    location: 'Albania',
+    image: '/images/MarinaBayProject.jpg',
+    description:
+      'A complete furniture fit-out for Marina Bay — reception, lounge, and dining areas crafted to complement the waterfront setting. Clean lines, durable materials, and a refined coastal character throughout.',
+    gallery: [
+      '/images/MarinaBayProject.jpg',
+      '/images/MarinaBayProject2.jpg',
+      '/images/MarinaBayProject3.jpg',
+      '/images/MarinaBayProject4.jpg',
+      '/images/MarinaBayProject5.jpg',
+    ],
+  },
+
   // ── Residential ───────────────────────────────────────────────────────────
   {
     id: 8,
