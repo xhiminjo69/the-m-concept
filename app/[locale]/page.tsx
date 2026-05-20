@@ -75,10 +75,7 @@ export default async function Home() {
             className="font-display font-light uppercase text-center leading-none"
             style={{ fontSize: 'clamp(4rem, 8.5vw, 10rem)', letterSpacing: '0.18em', color: '#1C1714' }}
           >
-            <span
-              className="font-condensed"
-              style={{ fontSize: '0.72em', letterSpacing: '0.28em', opacity: 0.9 }}
-            >The</span>{' '}
+            <span className="font-condensed">The</span>{' '}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/NewLogo.jpg"
@@ -86,14 +83,22 @@ export default async function Home() {
               aria-hidden="true"
               style={{
                 display: 'inline-block',
-                height: '1.48em',
+                /*
+                 * Bebas Neue cap height ≈ 0.87em.
+                 * The M shape occupies ~70% of the JPEG height (rest is white padding).
+                 * So to render the M at cap height: 0.87 / 0.70 = 1.24em image height.
+                 * Bottom white padding = 18% × 1.24em = 0.22em → verticalAlign: -0.22em
+                 * seats the M's visual bottom exactly on the text baseline.
+                 */
+                height: '1.24em',
                 width: 'auto',
-                verticalAlign: '-0.34em',
+                verticalAlign: '-0.22em',
                 mixBlendMode: 'multiply',
-                marginRight: '0.08em',
+                marginLeft: '0.04em',
+                marginRight: '0.04em',
               }}
             />
-            {' '}<span className="font-display font-light" style={{ fontStyle: 'italic' }}>Concept</span>
+            {' '}<span className="font-condensed">Concept</span>
           </h1>
           <div
             className="mt-10 mb-8"
