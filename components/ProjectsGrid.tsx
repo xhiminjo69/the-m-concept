@@ -62,7 +62,7 @@ export default async function ProjectsGrid({ projects }: Props) {
                 className="font-label text-[0.6rem] uppercase tracking-[0.35em] mb-5 block"
                 style={{ color: 'rgba(191,148,104,0.8)' }}
               >
-                {String(index + 1).padStart(2, '0')} &nbsp;&middot;&nbsp; {project.year}
+                {String(index + 1).padStart(2, '0')}
               </span>
 
               {/* Name */}

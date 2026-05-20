@@ -73,7 +73,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             className="font-label text-[0.6rem] uppercase tracking-[0.32em] mb-4 block"
             style={{ color: 'rgba(191,148,104,0.85)' }}
           >
-            {project.type} &nbsp;&middot;&nbsp; {project.year}
+            {project.type}
           </span>
           <h1
             className="font-display font-light text-white leading-tight"
@@ -113,7 +113,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 { label: t('detail.client'),   value: project.name },
                 { label: t('detail.sector'),   value: t(`categories.${project.category}.label`) },
                 { label: t('detail.scope'),    value: project.type.split('—')[1]?.trim() ?? project.type },
-                { label: t('detail.year'),     value: project.year },
+
                 { label: t('detail.location'), value: project.location },
               ].map((item) => (
                 <div key={item.label}>
