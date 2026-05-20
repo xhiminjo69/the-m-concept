@@ -138,7 +138,7 @@ export const projects: Project[] = [
     type: 'Hospitality — Full Fit-Out',
     year: '2024',
     location: 'Tirana, Albania',
-    image: '/images/MercureHotel.jpg',
+    image: '/images/MercureHotel2.jpg',
     description:
       'A full furniture fit-out for Mercure Hotel Tirana — guest rooms, suites, and public-area joinery designed and manufactured entirely in-house. A project that demanded both volume and precision, delivered on schedule without concession to quality.',
     gallery: [
