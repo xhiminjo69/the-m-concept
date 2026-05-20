@@ -65,30 +65,78 @@ export default async function CompanyPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════════════
-          01 — PHILOSOPHY  Editorial intro statement on showroom background
+          01 — PHILOSOPHY  Typographic manifesto opener — no image, pure editorial
           ══════════════════════════════════════════════════════════════════════ */}
-      <section className="section-xl relative overflow-hidden">
-        <Image
-          src="/images/showroom.jpg"
-          alt=""
-          fill
-          className="object-cover object-center"
-          style={{ zIndex: 0 }}
+      <section
+        className="relative overflow-hidden"
+        style={{ padding: 'clamp(6rem, 10vw, 11rem) 0', background: '#F9F6F1' }}
+      >
+        {/* Ghost founding year — barely visible depth layer */}
+        <span
+          className="absolute left-0 top-1/2 -translate-y-1/2 font-display font-light select-none pointer-events-none leading-none hidden lg:block"
+          style={{
+            fontSize: 'clamp(14rem, 28vw, 30rem)',
+            letterSpacing: '-0.06em',
+            color: 'rgba(166,124,82,0.06)',
+            userSelect: 'none',
+          }}
           aria-hidden="true"
-        />
-        <div className="absolute inset-0" style={{ background: 'rgba(247,240,228,0.92)', zIndex: 1 }} />
-        <div className="relative max-w-4xl mx-auto px-6 md:px-10 text-center" style={{ zIndex: 2 }}>
-          <div className="divider-accent-lg mx-auto mb-14" />
-          <p
-            className="font-display font-light text-stone-800 leading-snug"
-            style={{ fontSize: 'clamp(1.875rem, 3.4vw, 2.875rem)', letterSpacing: '-0.01em' }}
-          >
-            {t('story.philosophy.intro1')}
-          </p>
-          <div
-            className="mx-auto mt-14"
-            style={{ width: '1px', height: '60px', background: 'linear-gradient(to bottom, rgba(166,124,82,0.5), transparent)' }}
-          />
+        >
+          2007
+        </span>
+
+        <div className="relative z-10 px-6 md:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[80px_1fr] gap-10 lg:gap-16 items-start max-w-5xl">
+
+            {/* Left: vertical chapter marker */}
+            <div className="hidden lg:flex flex-col items-center gap-4 pt-2">
+              <span
+                className="font-label text-[0.58rem] uppercase tracking-[0.35em] text-stone-400"
+                style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+              >
+                {t('hero.eyebrow').split('—')[0].trim()}
+              </span>
+              <div
+                className="flex-1 w-px mt-2"
+                style={{
+                  minHeight: '80px',
+                  background: 'linear-gradient(to bottom, rgba(166,124,82,0.35), transparent)',
+                }}
+              />
+            </div>
+
+            {/* Right: philosophy statement */}
+            <div>
+              <div className="flex items-center gap-4 mb-10">
+                <div
+                  style={{ width: '32px', height: '1px', background: 'linear-gradient(to right, #8E2FA8, #F4511E)' }}
+                />
+                <span className="font-label text-[0.62rem] uppercase tracking-[0.3em] text-stone-400">
+                  {t('story.craft.eyebrow')}
+                </span>
+              </div>
+
+              <p
+                className="font-display font-light text-stone-800 leading-snug"
+                style={{ fontSize: 'clamp(1.625rem, 2.8vw, 2.5rem)', letterSpacing: '-0.01em', maxWidth: '44ch' }}
+              >
+                {t('story.philosophy.intro1')}
+              </p>
+
+              <div className="flex items-center gap-6 mt-12">
+                <div
+                  style={{ width: '48px', height: '1px', background: 'linear-gradient(to right, #A67C52, transparent)' }}
+                />
+                <span
+                  className="font-display font-light italic"
+                  style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', color: '#A67C52' }}
+                >
+                  Est. 2007 — Vlorë, Albania
+                </span>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 

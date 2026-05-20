@@ -64,41 +64,73 @@ export default async function Home() {
 
         {/* Brand name — centrepiece of the hero */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-8 h-px" style={{ background: 'rgba(255,255,255,0.3)' }} />
-            <p className="font-label text-[0.6rem] text-white/50 uppercase tracking-[0.45em]">
-              {t('hero.eyebrow')}
-            </p>
-            <div className="w-8 h-px" style={{ background: 'rgba(255,255,255,0.3)' }} />
-          </div>
-          <h1
-            className="font-display font-light uppercase text-center leading-none"
-            style={{ fontSize: 'clamp(4rem, 8.5vw, 10rem)', letterSpacing: '0.18em', color: '#1C1714' }}
+          {/* Location label — subtle context above the title */}
+          <p
+            className="font-label uppercase text-center"
+            style={{
+              fontSize: 'clamp(0.58rem, 0.75vw, 0.72rem)',
+              letterSpacing: '0.32em',
+              color: 'rgba(255,255,255,0.38)',
+              marginBottom: 'clamp(1.6rem, 2.8vw, 2.4rem)',
+            }}
           >
-            <span className="font-condensed">The</span>{' '}
+            {t('hero.eyebrow')}
+          </p>
+
+          {/* THE M CONCEPT — flex serif wordmark, logo as centrepiece */}
+          <h1
+            className="uppercase"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontFamily: 'var(--font-hero), "Playfair Display", Georgia, serif',
+              fontWeight: 400,
+              fontSize: 'clamp(2.4rem, 4.6vw, 6rem)',
+              lineHeight: 1,
+            }}
+            aria-label="The M Concept"
+          >
+            {/* THE — slightly quieter so logo reads as the dominant mark */}
+            <span style={{
+              letterSpacing: '0.18em',
+              color: 'rgba(28,20,14,0.90)',
+              marginRight: '0.08em',
+            }}>THE</span>
+
+            {/* Logo M — sized to match cap height + optical weight of the serif */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/NewLogo.jpg"
               alt=""
               aria-hidden="true"
               style={{
-                display: 'inline-block',
                 /*
-                 * Bebas Neue cap height ≈ 0.87em.
-                 * The M shape occupies ~70% of the JPEG height (rest is white padding).
-                 * So to render the M at cap height: 0.87 / 0.70 = 1.24em image height.
-                 * Bottom white padding = 18% × 1.24em = 0.22em → verticalAlign: -0.22em
-                 * seats the M's visual bottom exactly on the text baseline.
+                 * JPEG: top pad 12%, M letterform 65%, bottom pad 23%, ~10% side pad each.
+                 * flex alignItems:center → flex container height = img height (1.52em).
+                 * Text span (1em lineHeight) sits centered → baseline at ~0.48em from container floor.
+                 * M visual bottom = 0.23 × 1.52 = 0.35em.
+                 * translateY(-0.11em) lifts M so its base ≈ text baseline (0.35 + 0.11 ≈ 0.46em).
+                 * M visual top ≈ 0.46 + 0.65×1.52 = 1.45em — peaks ride just above serif caps,
+                 * giving the logo the dominant optical weight of a centrepiece mark.
                  */
-                height: '1.24em',
+                height: '1.74em',
                 width: 'auto',
-                verticalAlign: '-0.22em',
+                flexShrink: 0,
                 mixBlendMode: 'multiply',
-                marginLeft: '0.04em',
-                marginRight: '0.04em',
+                transform: 'translateY(0.04em)',
+                marginLeft: '-0.02em',
+                marginRight: '0.05em',
               }}
             />
-            {' '}<span className="font-condensed">Concept</span>
+
+            {/* CONCEPT — tighter tracking for refined editorial feel */}
+            <span style={{
+              letterSpacing: '0.12em',
+              color: 'rgba(28,20,14,0.92)',
+              marginLeft: '0.04em',
+              marginRight: '-0.12em', /* cancel trailing letterSpacing so flex centres truly */
+            }}>CONCEPT</span>
           </h1>
           <div
             className="mt-10 mb-8"

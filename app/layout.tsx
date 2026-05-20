@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Inter, Montserrat, Oswald } from 'next/font/google';
+import { Cormorant_Garamond, Inter, Montserrat, Oswald, Playfair_Display } from 'next/font/google';
 import { getLocale } from 'next-intl/server';
 import './globals.css';
 
@@ -32,6 +32,14 @@ const oswald = Oswald({
   display: 'swap',
 });
 
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-hero',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: {
     default: 'The M Concept — Premium Furniture',
@@ -56,7 +64,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${cormorant.variable} ${inter.variable} ${montserrat.variable} ${oswald.variable}`}
+      className={`${cormorant.variable} ${inter.variable} ${montserrat.variable} ${oswald.variable} ${playfair.variable}`}
     >
       <body>{children}</body>
     </html>
