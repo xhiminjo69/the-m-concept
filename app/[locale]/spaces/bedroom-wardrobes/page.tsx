@@ -21,6 +21,7 @@ const images = [
   '/images/ProductsLibrary.jpg',
   '/images/ProductsLibrary2.jpg',
   '/images/ProductsLibrary3.jpg',
+  '/images/Projects-Residential2.jpg',
 ];
 
 export default async function BedroomWardrobesPage() {

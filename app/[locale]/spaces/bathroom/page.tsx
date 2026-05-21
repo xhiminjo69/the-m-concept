@@ -21,7 +21,7 @@ export default async function BathroomPage() {
 
       <section
         className="relative overflow-hidden"
-        style={{ paddingTop: '7rem', paddingBottom: '5rem', backgroundImage: 'url(/images/Projects-Residential2.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ paddingTop: '7rem', paddingBottom: '5rem', background: '#1C1410' }}
       >
         <div className="absolute inset-0 bg-black/55" />
         <div className="px-6 md:px-10 lg:px-16 relative z-10">
