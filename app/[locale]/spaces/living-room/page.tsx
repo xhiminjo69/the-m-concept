@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   description: 'Custom living room furniture and shelving by The M Concept — designed and manufactured in Vlorë, Albania.',
 };
 
-const images: string[] = [];
+const images = [
+  '/images/Projects-Residential7.jpg',
+];
 
 export default async function LivingRoomPage() {
   const t = await getTranslations('spaces');
@@ -21,7 +23,7 @@ export default async function LivingRoomPage() {
 
       <section
         className="relative overflow-hidden"
-        style={{ paddingTop: '7rem', paddingBottom: '5rem', backgroundImage: 'url(/images/ProductsLibrary.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ paddingTop: '7rem', paddingBottom: '5rem', backgroundImage: 'url(/images/Projects-Residential7.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className="absolute inset-0 bg-black/55" />
         <div className="px-6 md:px-10 lg:px-16 relative z-10">
@@ -52,13 +54,11 @@ export default async function LivingRoomPage() {
         </div>
       </section>
 
-      {images.length > 0 && (
-        <section style={{ padding: 'clamp(5rem, 8vw, 9rem) 0', background: 'linear-gradient(to bottom, #CCC6B8 0%, #EAE7E2 22%)' }}>
-          <div className="px-6 md:px-10 lg:px-16">
-            <GalleryGrid images={images} projectName={t('categories.living-room.label')} />
-          </div>
-        </section>
-      )}
+      <section style={{ padding: 'clamp(5rem, 8vw, 9rem) 0', background: 'linear-gradient(to bottom, #CCC6B8 0%, #EAE7E2 22%)' }}>
+        <div className="px-6 md:px-10 lg:px-16">
+          <GalleryGrid images={images} projectName={t('categories.living-room.label')} />
+        </div>
+      </section>
 
       <section className="section-md" style={{ background: 'linear-gradient(180deg, #1B1208 0%, #271810 100%)' }}>
         <div className="px-6 md:px-10 lg:px-16">
