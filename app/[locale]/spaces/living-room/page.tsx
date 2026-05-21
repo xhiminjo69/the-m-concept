@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   description: 'Custom living room furniture and shelving by The M Concept — designed and manufactured in Vlorë, Albania.',
 };
 
-const images = [
-  '/images/ProductsLibrary.jpg',
-  '/images/ProductsLibrary2.jpg',
-  '/images/ProductsLibrary3.jpg',
-];
+const images: string[] = [];
 
 export default async function LivingRoomPage() {
   const t = await getTranslations('spaces');
@@ -56,11 +52,13 @@ export default async function LivingRoomPage() {
         </div>
       </section>
 
-      <section style={{ padding: 'clamp(5rem, 8vw, 9rem) 0', background: 'linear-gradient(to bottom, #CCC6B8 0%, #EAE7E2 22%)' }}>
-        <div className="px-6 md:px-10 lg:px-16">
-          <GalleryGrid images={images} projectName={t('categories.living-room.label')} />
-        </div>
-      </section>
+      {images.length > 0 && (
+        <section style={{ padding: 'clamp(5rem, 8vw, 9rem) 0', background: 'linear-gradient(to bottom, #CCC6B8 0%, #EAE7E2 22%)' }}>
+          <div className="px-6 md:px-10 lg:px-16">
+            <GalleryGrid images={images} projectName={t('categories.living-room.label')} />
+          </div>
+        </section>
+      )}
 
       <section className="section-md" style={{ background: 'linear-gradient(180deg, #1B1208 0%, #271810 100%)' }}>
         <div className="px-6 md:px-10 lg:px-16">
