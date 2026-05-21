@@ -153,6 +153,31 @@ export const projects: Project[] = [
     ],
   },
 
+  {
+    id: 10,
+    name: "Diora's Hotel",
+    category: 'hospitality',
+    type: 'Hospitality — Full Fit-Out',
+    year: '2024',
+    location: 'Albania',
+    image: '/images/DiorasHotelProject.jpg',
+    description:
+      "A complete furniture fit-out for Diora's Hotel — guest rooms, corridors, and common areas furnished with bespoke pieces manufactured entirely in-house. Each element crafted to meet the hotel's standard of comfort and refined hospitality.",
+    gallery: [
+      '/images/DiorasHotelProject.jpg',
+      '/images/DiorasHotelProject2.jpg',
+      '/images/DiorasHotelProject3.jpg',
+      '/images/DiorasHotelProject4.jpg',
+      '/images/DiorasHotelProject5.jpg',
+      '/images/DiorasHotelProject6.jpg',
+      '/images/DiorasHotelProject7.jpg',
+      '/images/DiorasHotelProject8.jpg',
+      '/images/DiorasHotelProject9.jpg',
+      '/images/DiorasHotelProject10.jpg',
+      '/images/DiorasHotelProject11.jpg',
+    ],
+  },
+
   // ── Commercial ───────────────────────────────────────────────────────────
   {
     id: 5,
