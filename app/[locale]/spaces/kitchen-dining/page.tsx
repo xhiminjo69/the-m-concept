@@ -21,6 +21,22 @@ const images = [
   '/images/ProductsKitchen9.jpg',
   '/images/ProductsKitchen10.jpg',
   '/images/ProductsKitchen11.jpg',
+  '/images/kitchens.jpg',
+  '/images/kitchens2.jpg',
+  '/images/kitchens3.jpg',
+  '/images/kitchens4.jpg',
+  '/images/kitchens5.jpg',
+  '/images/kitchens6.jpg',
+  '/images/kitchens7.jpg',
+  '/images/kitchens8.jpg',
+  '/images/kitchens9.jpg',
+  '/images/kitchens10.jpg',
+  '/images/kitchens11.jpg',
+  '/images/kitchens12.jpg',
+  '/images/kitchens13.jpg',
+  '/images/kitchens14.jpg',
+  '/images/kitchens16.jpg',
+  '/images/kitchens18.jpg',
 ];
 
 export default async function KitchenDiningPage() {
