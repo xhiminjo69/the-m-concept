@@ -37,6 +37,9 @@ const images = [
   '/images/kitchens14.jpg',
   '/images/kitchens16.jpg',
   '/images/kitchens18.jpg',
+  '/images/kitchens20.jpg',
+  '/images/kitchens21.jpg',
+  '/images/kitchens22.jpg',
 ];
 
 export default async function KitchenDiningPage() {
