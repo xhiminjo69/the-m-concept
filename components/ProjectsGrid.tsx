@@ -1,10 +1,18 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import type { Project } from '@/lib/projects';
+
+type GridProject = {
+  id: string | number;
+  name: string;
+  category: string;
+  type: string;
+  location: string;
+  image: string;
+};
 
 type Props = {
-  projects: Project[];
+  projects: GridProject[];
 };
 
 export default async function ProjectsGrid({ projects }: Props) {

@@ -5,17 +5,14 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import GalleryGrid from '@/components/GalleryGrid';
-import { projects, getProject } from '@/lib/projects';
+import Footer from '@/components/Footer';
+import { getSupabaseProject, getAllSupabaseProjects } from '@/lib/supabase-projects';
 
 type Props = { params: Promise<{ id: string }> };
 
-export async function generateStaticParams() {
-  return projects.map((p) => ({ id: String(p.id) }));
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
-  const project = getProject(Number(id));
+  const project = await getSupabaseProject(id);
   if (!project) return {};
   return {
     title: project.name,
@@ -25,14 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProjectDetailPage({ params }: Props) {
   const { id } = await params;
-  const project = getProject(Number(id));
+  const project = await getSupabaseProject(id);
   if (!project) notFound();
 
   const t = await getTranslations('projects');
-  const tFooter = await getTranslations('footer');
 
-  const prev = projects.find((p) => p.id === project.id - 1);
-  const next = projects.find((p) => p.id === project.id + 1);
+  // Load siblings for prev/next navigation
+  const allProjects = await getAllSupabaseProjects();
+  const currentIndex = allProjects.findIndex((p) => p.id === id);
+  const prev = currentIndex > 0 ? allProjects[currentIndex - 1] : null;
+  const next = currentIndex < allProjects.length - 1 ? allProjects[currentIndex + 1] : null;
 
   return (
     <>
@@ -195,48 +194,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         </section>
       )}
 
-      {/* ── Footer ─────────────────────────────────────────────────────────── */}
-      <footer className="footer relative overflow-hidden" style={{ background: '#110E0C' }}>
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 pointer-events-none" style={{ height: '64px', background: 'linear-gradient(to bottom, rgba(245,234,217,0.18), transparent)' }} />
-        <div className="px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
-            <div className="md:col-span-2">
-              <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
-              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">{tFooter('tagline')}</p>
-              <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
-              </div>
-            </div>
-            <div>
-              <p className="footer-heading">{tFooter('navigate')}</p>
-              <ul className="flex flex-col gap-3">
-                {([
-                  { key: 'company',  href: '/company'  },
-                  { key: 'projects', href: '/projects' },
-                  { key: 'contact',  href: '/contact'  },
-                  { key: 'materia',  href: '/materia'  },
-                ] as const).map((l) => (
-                  <li key={l.href}><Link href={l.href} className="footer-link">{tFooter(`nav.${l.key}`)}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="footer-heading">{tFooter('getInTouch')}</p>
-              <p className="font-body text-[0.8125rem] text-stone-500 leading-relaxed">
-                Vlorë, Albania<br />
-                <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
-                <a href="tel:+355682039345" className="footer-link">+355 68 203 9345</a>
-              </p>
-            </div>
-          </div>
-          <div className="pt-8">
-            <p className="font-body text-[0.8125rem] text-stone-600">
-              &copy; {new Date().getFullYear()} {tFooter('copyright')}
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

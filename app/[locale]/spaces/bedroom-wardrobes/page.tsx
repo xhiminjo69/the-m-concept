@@ -3,44 +3,18 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import GalleryGrid from '@/components/GalleryGrid';
+import Footer from '@/components/Footer';
+import { getSpaceByCategory } from '@/lib/supabase-spaces';
 
 export const metadata: Metadata = {
   title: 'Bedroom & Wardrobes',
   description: 'Custom bedroom furniture and built-in wardrobes by The M Concept — designed and manufactured in Vlorë, Albania.',
 };
 
-const images = [
-  '/images/ProductsWardrobe.jpg',
-  '/images/ProductsWardrobe2.jpg',
-  '/images/ProductsWardrobe3.jpg',
-  '/images/ProductsWardrobe4.jpg',
-  '/images/ProductsWardrobe5.jpg',
-  '/images/ProductsWardrobe6.jpg',
-  '/images/ProductsWardrobe7.jpg',
-  '/images/ProductsWardrobe8.jpg',
-  '/images/ProductsLibrary.jpg',
-  '/images/ProductsLibrary2.jpg',
-  '/images/ProductsLibrary3.jpg',
-  '/images/Projects-Residential2.jpg',
-  '/images/wardrobes.jpg',
-  '/images/wardrobes2.jpg',
-  '/images/wardrobes3.jpg',
-  '/images/wardrobes4.jpg',
-  '/images/wardrobes5.jpg',
-  '/images/wardrobes6.jpg',
-  '/images/wardrobes7.jpg',
-  '/images/wardrobes8.jpg',
-  '/images/wardrobes9.jpg',
-  '/images/wardrobes10.jpg',
-  '/images/bedroom.jpg',
-  '/images/bedroom2.jpg',
-  '/images/bedroom3.jpg',
-  '/images/bedroom4.jpg',
-];
-
 export default async function BedroomWardrobesPage() {
   const t = await getTranslations('spaces');
-  const tFooter = await getTranslations('footer');
+  const space = await getSpaceByCategory('bedroom-wardrobes');
+  const images = space?.images ?? [];
 
   return (
     <>
@@ -102,46 +76,7 @@ export default async function BedroomWardrobesPage() {
         </div>
       </section>
 
-      <footer className="footer relative overflow-hidden" style={{ background: '#110E0C' }}>
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 pointer-events-none" style={{ height: '64px', background: 'linear-gradient(to bottom, rgba(245,234,217,0.18), transparent)' }} />
-        <div className="px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
-            <div className="md:col-span-2">
-              <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
-              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">{tFooter('tagline')}</p>
-              <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
-              </div>
-            </div>
-            <div>
-              <p className="footer-heading">{tFooter('navigate')}</p>
-              <ul className="flex flex-col gap-3">
-                {([
-                  { key: 'company',  href: '/company'  },
-                  { key: 'projects', href: '/projects' },
-                  { key: 'spaces',   href: '/spaces'   },
-                  { key: 'contact',  href: '/contact'  },
-                  { key: 'materia',  href: '/materia'  },
-                ] as const).map((l) => (
-                  <li key={l.href}><Link href={l.href} className="footer-link">{tFooter(`nav.${l.key}`)}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="footer-heading">{tFooter('getInTouch')}</p>
-              <p className="font-body text-[0.8125rem] text-stone-500 leading-relaxed">
-                Vlorë, Albania<br />
-                <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
-                <a href="tel:+355682039345" className="footer-link">+355 68 203 9345</a>
-              </p>
-            </div>
-          </div>
-          <div className="pt-8">
-            <p className="font-body text-[0.8125rem] text-stone-600">&copy; {new Date().getFullYear()} {tFooter('copyright')}</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

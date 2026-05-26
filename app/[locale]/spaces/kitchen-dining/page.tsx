@@ -3,48 +3,18 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import GalleryGrid from '@/components/GalleryGrid';
+import Footer from '@/components/Footer';
+import { getSpaceByCategory } from '@/lib/supabase-spaces';
 
 export const metadata: Metadata = {
   title: 'Kitchen & Dining',
   description: 'Custom kitchen cabinetry and dining furniture by The M Concept — designed and manufactured in Vlorë, Albania.',
 };
 
-const images = [
-  '/images/ProductsKitchen.jpg',
-  '/images/ProductsKitchen2.jpg',
-  '/images/ProductsKitchen3.jpg',
-  '/images/ProductsKitchen4.jpg',
-  '/images/ProductsKitchen5.jpg',
-  '/images/ProductsKitchen6.jpg',
-  '/images/ProductsKitchen7.jpg',
-  '/images/ProductsKitchen8.jpg',
-  '/images/ProductsKitchen9.jpg',
-  '/images/ProductsKitchen10.jpg',
-  '/images/ProductsKitchen11.jpg',
-  '/images/kitchens.jpg',
-  '/images/kitchens2.jpg',
-  '/images/kitchens3.jpg',
-  '/images/kitchens4.jpg',
-  '/images/kitchens5.jpg',
-  '/images/kitchens6.jpg',
-  '/images/kitchens7.jpg',
-  '/images/kitchens8.jpg',
-  '/images/kitchens9.jpg',
-  '/images/kitchens10.jpg',
-  '/images/kitchens11.jpg',
-  '/images/kitchens12.jpg',
-  '/images/kitchens13.jpg',
-  '/images/kitchens14.jpg',
-  '/images/kitchens16.jpg',
-  '/images/kitchens18.jpg',
-  '/images/kitchens20.jpg',
-  '/images/kitchens21.jpg',
-  '/images/kitchens22.jpg',
-];
-
 export default async function KitchenDiningPage() {
   const t = await getTranslations('spaces');
-  const tFooter = await getTranslations('footer');
+  const space = await getSpaceByCategory('kitchens');
+  const images = space?.images ?? [];
 
   return (
     <>
@@ -106,46 +76,7 @@ export default async function KitchenDiningPage() {
         </div>
       </section>
 
-      <footer className="footer relative overflow-hidden" style={{ background: '#110E0C' }}>
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 pointer-events-none" style={{ height: '64px', background: 'linear-gradient(to bottom, rgba(245,234,217,0.18), transparent)' }} />
-        <div className="px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
-            <div className="md:col-span-2">
-              <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
-              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">{tFooter('tagline')}</p>
-              <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
-              </div>
-            </div>
-            <div>
-              <p className="footer-heading">{tFooter('navigate')}</p>
-              <ul className="flex flex-col gap-3">
-                {([
-                  { key: 'company',  href: '/company'  },
-                  { key: 'projects', href: '/projects' },
-                  { key: 'spaces',   href: '/spaces'   },
-                  { key: 'contact',  href: '/contact'  },
-                  { key: 'materia',  href: '/materia'  },
-                ] as const).map((l) => (
-                  <li key={l.href}><Link href={l.href} className="footer-link">{tFooter(`nav.${l.key}`)}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="footer-heading">{tFooter('getInTouch')}</p>
-              <p className="font-body text-[0.8125rem] text-stone-500 leading-relaxed">
-                Vlorë, Albania<br />
-                <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
-                <a href="tel:+355682039345" className="footer-link">+355 68 203 9345</a>
-              </p>
-            </div>
-          </div>
-          <div className="pt-8">
-            <p className="font-body text-[0.8125rem] text-stone-600">&copy; {new Date().getFullYear()} {tFooter('copyright')}</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

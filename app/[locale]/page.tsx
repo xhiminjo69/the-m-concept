@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { projects as allProjects } from '@/lib/projects';
 
 // Featured projects shown on the homepage — Lion Gate, Vale, Radream
@@ -10,7 +11,6 @@ const projects = allProjects.filter((p) => [1, 2, 4].includes(p.id))
 
 export default async function Home() {
   const t = await getTranslations('home');
-  const tFooter = await getTranslations('footer');
   const stats = t.raw('stats') as Array<{ value: string; label: string }>;
   const materials = t.raw('materials.items') as Array<{ name: string; desc: string }>;
 
@@ -522,79 +522,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════════════════════════════
-          FOOTER
-          ══════════════════════════════════════════════════════════════════════ */}
-      <footer className="footer relative overflow-hidden" style={{ background: '#110E0C' }}>
-        {/* Warm sand fades into the dark footer — no hard cut */}
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 pointer-events-none" style={{ height: '64px', background: 'linear-gradient(to bottom, rgba(245,234,217,0.22), transparent)' }} />
-        <div className="px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
-
-            {/* Brand */}
-            <div className="md:col-span-2">
-              <p className="font-display font-light text-2xl text-white mb-4">
-                The M Concept
-              </p>
-              <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">
-                {tFooter('tagline')}
-              </p>
-              <div className="flex gap-6">
-                <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('instagram')}</a>
-                <a href="https://maps.app.goo.gl/XA6shhvbyDpGnugZ7?g_st=iw" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{tFooter('googleMaps')}</a>
-              </div>
-            </div>
-
-            {/* Navigate */}
-            <div>
-              <p className="footer-heading">{tFooter('navigate')}</p>
-              <ul className="flex flex-col gap-3">
-                {[
-                  { label: tFooter('nav.company'),  href: '/company'  },
-                  { label: tFooter('nav.projects'), href: '/projects' },
-                  { label: tFooter('nav.contact'),  href: '/contact'  },
-                  { label: tFooter('nav.materia'),  href: '/materia'  },
-                ].map((l) => (
-                  <li key={l.href}>
-                    <Link href={l.href} className="footer-link">{l.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <p className="footer-heading">{tFooter('getInTouch')}</p>
-              <ul className="flex flex-col gap-3">
-                {[
-                  { label: tFooter('contact.startProject'), href: '/contact' },
-                  { label: tFooter('contact.showroom'),     href: '/contact' },
-                ].map((l) => (
-                  <li key={l.label}>
-                    <Link href={l.href} className="footer-link">{l.label}</Link>
-                  </li>
-                ))}
-              </ul>
-              <p className="font-body text-[0.8125rem] text-stone-500 mt-6 leading-relaxed">
-                Vlorë, Albania<br />
-                <a href="mailto:info@themconcept.al" className="footer-link">info@themconcept.al</a><br />
-                <a href="tel:+355682039345" className="footer-link">+355 68 203 9345</a>
-              </p>
-            </div>
-
-          </div>
-
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="font-body text-[0.8125rem] text-stone-600">
-              &copy; {new Date().getFullYear()} {tFooter('copyright')}
-            </p>
-            <div className="flex gap-6">
-              <a href="#" className="footer-link text-[0.8125rem]">{tFooter('privacy')}</a>
-              <a href="#" className="footer-link text-[0.8125rem]">{tFooter('terms')}</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
