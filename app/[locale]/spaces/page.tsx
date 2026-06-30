@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Spaces',
   description:
-    'Custom furniture for every room — kitchens, living rooms, bedrooms, bathrooms, and beyond. Crafted by The M Concept in Vlorë, Albania.',
+    'Custom furniture for every room — kitchens, living rooms, bedrooms, bathrooms, and beyond. Crafted by THE M CONCEPT in Vlorë, Albania.',
 };
 
 const categoryData = [

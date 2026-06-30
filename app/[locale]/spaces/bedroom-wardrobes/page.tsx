@@ -8,7 +8,7 @@ import { getSpaceByCategory } from '@/lib/supabase-spaces';
 
 export const metadata: Metadata = {
   title: 'Bedroom & Wardrobes',
-  description: 'Custom bedroom furniture and built-in wardrobes by The M Concept — designed and manufactured in Vlorë, Albania.',
+  description: 'Custom bedroom furniture and built-in wardrobes by THE M CONCEPT — designed and manufactured in Vlorë, Albania.',
 };
 
 export default async function BedroomWardrobesPage() {

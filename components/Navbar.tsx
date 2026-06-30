@@ -61,7 +61,7 @@ export default function Navbar() {
       <Link href="/" className="flex items-center shrink-0">
         <Image
           src="/images/NewLogo.jpg"
-          alt="The M Concept"
+          alt="THE M CONCEPT"
           width={64}
           height={64}
           className="rounded-sm object-contain"

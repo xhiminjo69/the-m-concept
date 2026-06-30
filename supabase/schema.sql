@@ -1,5 +1,5 @@
 -- ============================================================
--- The M Concept — Supabase Schema
+-- THE M CONCEPT — Supabase Schema
 -- Run this in: Supabase Dashboard → SQL Editor → New query
 -- ============================================================
 

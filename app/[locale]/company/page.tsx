@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Our Story',
   description:
-    "Founded in 2000, The M Concept has grown from a small Vlorë workshop into Albania's premier custom furniture manufacturer — crafting bespoke pieces for hospitality and residential spaces worldwide.",
+    "Founded in 2000, THE M CONCEPT has grown from a small Vlorë workshop into Albania's premier custom furniture manufacturer — crafting bespoke pieces for hospitality and residential spaces worldwide.",
 };
 
 export default async function CompanyPage() {
@@ -24,7 +24,7 @@ export default async function CompanyPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/Foto.jpg"
-            alt="The M Concept headquarters — Vlorë, Albania"
+            alt="THE M CONCEPT headquarters — Vlorë, Albania"
             fill
             className="object-cover"
             style={{ objectPosition: '50% 70%' }}
@@ -185,7 +185,7 @@ export default async function CompanyPage() {
               >
                 <Image
                   src="/images/factory.jpg"
-                  alt="The M Concept manufacturing facility — Vlorë"
+                  alt="THE M CONCEPT manufacturing facility — Vlorë"
                   fill
                   className="object-cover transition-transform duration-[1.2s] ease-premium hover:scale-[1.03]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -211,7 +211,7 @@ export default async function CompanyPage() {
             >
               <Image
                 src="/images/Projects-Residential7.jpg"
-                alt="Residential interior design — The M Concept"
+                alt="Residential interior design — THE M CONCEPT"
                 fill
                 className="object-cover transition-transform duration-[1.2s] ease-premium hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 100vw, 50vw"

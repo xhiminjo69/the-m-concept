@@ -8,7 +8,7 @@ import { getSpaceByCategory } from '@/lib/supabase-spaces';
 
 export const metadata: Metadata = {
   title: 'Living Room',
-  description: 'Custom living room furniture and shelving by The M Concept — designed and manufactured in Vlorë, Albania.',
+  description: 'Custom living room furniture and shelving by THE M CONCEPT — designed and manufactured in Vlorë, Albania.',
 };
 
 export default async function LivingRoomPage() {

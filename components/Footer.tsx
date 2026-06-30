@@ -11,7 +11,7 @@ export default async function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 pb-16 border-b border-stone-800">
 
           <div className="md:col-span-2">
-            <p className="font-display font-light text-2xl text-white mb-4">The M Concept</p>
+            <p className="font-display font-light text-2xl text-white mb-4">THE M CONCEPT</p>
             <p className="font-body text-body-sm text-stone-400 leading-relaxed max-w-xs mb-8">{t('tagline')}</p>
             <div className="flex gap-6">
               <a href="https://www.instagram.com/themconcept.al/" target="_blank" rel="noopener noreferrer" className="footer-link text-[0.8125rem]">{t('instagram')}</a>

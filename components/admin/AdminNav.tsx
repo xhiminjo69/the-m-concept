@@ -29,7 +29,7 @@ export default function AdminNav() {
       <div className="md:hidden sticky top-0 z-50 bg-[#1C1410] border-b border-white/10">
         <div className="flex items-center justify-between px-4 py-3">
           <div>
-            <p className="text-white font-semibold text-sm tracking-widest uppercase">The M Concept</p>
+            <p className="text-white font-semibold text-sm tracking-widest uppercase">THE M CONCEPT</p>
             <p className="text-gray-400 text-xs">Admin</p>
           </div>
           <button
@@ -80,7 +80,7 @@ export default function AdminNav() {
       {/* ── Desktop sidebar ── */}
       <aside className="hidden md:flex w-56 min-h-screen bg-[#1C1410] flex-col shrink-0">
         <div className="px-6 py-6 border-b border-white/10">
-          <p className="text-white font-semibold text-sm tracking-widest uppercase">The M Concept</p>
+          <p className="text-white font-semibold text-sm tracking-widest uppercase">THE M CONCEPT</p>
           <p className="text-gray-400 text-xs mt-0.5">Admin</p>
         </div>
         <nav className="flex-1 px-3 py-4 space-y-1">

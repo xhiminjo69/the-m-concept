@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Products',
   description:
-    'Explore our bespoke furniture collections — wardrobes, kitchens, and libraries crafted by The M Concept in Vlorë, Albania.',
+    'Explore our bespoke furniture collections — wardrobes, kitchens, and libraries crafted by THE M CONCEPT in Vlorë, Albania.',
 };
 
 const categoryData = [

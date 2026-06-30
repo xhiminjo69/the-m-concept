@@ -10,7 +10,7 @@ import { getSupabaseProjectsByCategory } from '@/lib/supabase-projects';
 export const metadata: Metadata = {
   title: 'Residential Projects',
   description:
-    'Residential interiors by The M Concept — private homes and bespoke apartments designed and crafted in Vlorë, Albania.',
+    'Residential interiors by THE M CONCEPT — private homes and bespoke apartments designed and crafted in Vlorë, Albania.',
 };
 
 export default async function ResidentialProjectsPage() {

@@ -42,14 +42,14 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'The M Concept — Premium Furniture',
-    template: '%s | The M Concept',
+    default: 'THE M CONCEPT — Premium Furniture',
+    template: '%s | THE M CONCEPT',
   },
   description:
     'Handcrafted premium furniture where artistry meets function. Explore our collections of bespoke pieces built for a lifetime.',
   keywords: ['furniture', 'premium', 'handcrafted', 'bespoke', 'interior design'],
   openGraph: {
-    title: 'The M Concept — Premium Furniture',
+    title: 'THE M CONCEPT — Premium Furniture',
     description: 'Handcrafted premium furniture where artistry meets function.',
     type: 'website',
   },

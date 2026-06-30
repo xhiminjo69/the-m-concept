@@ -25,7 +25,7 @@
     "tagline": "Custom furniture manufacturer. Designed and built in Vlorë — delivered worldwide.",
     "navigate": "Navigate",
     "getInTouch": "Get in Touch",
-    "copyright": "The M Concept. All rights reserved.",
+    "copyright": "THE M CONCEPT. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms",
     "instagram": "Instagram",
@@ -64,7 +64,7 @@
     "craft": {
       "eyebrow": "Our Craft",
       "heading": "Furniture\nwith a soul.",
-      "body1": "The M Concept was built on a single conviction: furniture should outlast trends, survive generations, and improve with age. We work exclusively with premium hardwoods and natural stone, shaped by craftsmen who care deeply about every joint, every surface, every detail.",
+      "body1": "THE M CONCEPT was built on a single conviction: furniture should outlast trends, survive generations, and improve with age. We work exclusively with premium  materials, shaped by craftsmen who care deeply about every joint, every surface, every detail.",
       "body2": "Every piece is designed in Vlorë and produced entirely in our own facilities — no outsourcing, no compromise on quality, no two pieces exactly alike.",
       "cta": "Our Story"
     },
@@ -88,8 +88,8 @@
     ],
     "facility": {
       "eyebrow": "Production Facility",
-      "headingMain": "Industrial scale.",
-      "headingEmphasis": "Artisan precision.",
+      "headingMain": "Industrial scale",
+      "headingEmphasis": "Artisan precision",
       "body": "Our Vlorë facility is equipped with advanced woodworking machinery — CNC machining, precision joinery, finishing rooms — operated by a dedicated team of skilled craftsmen.",
       "cta": "Inside Our Factory"
     },
@@ -128,12 +128,12 @@
   "company": {
     "meta": {
       "title": "Our Story",
-      "description": "Founded in 2007, The M Concept has grown from a small workshop in Vlorë into Albania's leading custom furniture manufacturer."
+      "description": "Founded in 2007, THE M CONCEPT has grown from a small workshop in Vlorë into Albania's leading custom furniture manufacturer."
     },
     "hero": {
       "eyebrow": "Est. 2007 — Vlorë, Albania",
       "heading": "Our Story",
-      "subheading": "Eighteen years of craft, conviction, and furniture built to outlast trends."
+      "subheading": " Furniture built to outlast trends."
     },
     "statementMain": "Founded on a conviction — that a piece of furniture should tell the story of the hands that made it, and stand",
     "statementEmphasis": " fifty years from now.",
@@ -154,7 +154,7 @@
         {
           "year": "2007",
           "title": "The Beginning",
-          "body": "Founded in a small workshop on the outskirts of Vlorë, The M Concept started with a lathe, a handful of tools, and an uncompromising belief that furniture should be built to last."
+          "body": "Founded in a small workshop on the outskirts of Vlorë, THE M CONCEPT started with a lathe, a handful of tools, and an uncompromising belief that furniture should be built to last."
         },
         {
           "year": "2006",
@@ -173,8 +173,8 @@
         },
         {
           "year": "2022",
-          "title": "The M Concept Brand",
-          "body": "After two decades of quietly building a reputation, we unified our identity under The M Concept — a name that stands for precision, craft, and an unrelenting pursuit of quality."
+          "title": "THE M CONCEPT Brand",
+          "body": "After two decades of quietly building a reputation, we unified our identity under THE M CONCEPT — a name that stands for precision, craft, and an unrelenting pursuit of quality."
         },
         {
           "year": "2026",
@@ -218,12 +218,13 @@
         "eyebrow": "Expanding Horizons",
         "headingMain": "From Albania",
         "headingEmphasis": "to Europe and beyond",
-        "body": "Furthermore, in recent years, THE M CONCEPT has expanded its presence beyond Albania through exports to neighboring Balkan countries, Greece, Italy, and several other European markets, primarily focusing on bespoke residential furniture.",
+        "body": "Furthermore, in recent years, THE M CONCEPT has expanded its presence beyond Albania through exports to neighboring Balkan countries, Greece, Italy, Spain, and several other European markets, primarily focusing on bespoke residential furniture.",
         "markets": [
           "Albania",
           "Balkans",
           "Greece",
           "Italy",
+          "Spain",
           "Europe"
         ]
       },
@@ -325,7 +326,7 @@
   "products": {
     "meta": {
       "title": "Products",
-      "description": "Explore our custom furniture collections — wardrobes, kitchens, and libraries crafted by The M Concept in Vlorë, Albania."
+      "description": "Explore our custom furniture collections — wardrobes, kitchens, and libraries crafted by THE M CONCEPT in Vlorë, Albania."
     },
     "hero": {
       "eyebrow": "Our Collections",
@@ -381,7 +382,7 @@
         "eyebrow": "Sector 01",
         "description": "Offices, retail spaces, and corporate interiors built to exacting standards. Functional precision without compromise on material or craft.",
         "metaTitle": "Commercial Projects",
-        "metaDescription": "Commercial fit-outs by The M Concept — office interiors, retail spaces, and corporate environments crafted in Vlorë.",
+        "metaDescription": "Commercial fit-outs by THE M CONCEPT — office interiors, retail spaces, and corporate environments crafted in Vlorë.",
         "ctaBody": "From a single piece to a full commercial fit-out, we work with you from initial brief to final installation."
       },
       "hospitality": {
@@ -390,7 +391,7 @@
         "eyebrow": "Sector 02",
         "description": "Full hotel fit-outs and guest experience interiors — from lobby to guest room, designed and manufactured entirely in Vlorë.",
         "metaTitle": "Hospitality Projects",
-        "metaDescription": "Hospitality fit-outs by The M Concept — hotel interiors, bedroom furniture, and full interior programmes designed and built in Vlorë.",
+        "metaDescription": "Hospitality fit-outs by THE M CONCEPT — hotel interiors, bedroom furniture, and full interior programmes designed and built in Vlorë.",
         "ctaBody": "From a single guest room to a full hotel fit-out, we work with you from initial brief to final installation."
       },
       "residential": {
@@ -399,7 +400,7 @@
         "eyebrow": "Sector 03",
         "description": "Bespoke private residences where every element is designed around how the client lives — no off-the-shelf components.",
         "metaTitle": "Residential Projects",
-        "metaDescription": "Residential interiors by The M Concept — private homes and bespoke apartments designed and crafted in Vlorë.",
+        "metaDescription": "Residential interiors by THE M CONCEPT — private homes and bespoke apartments designed and crafted in Vlorë.",
         "ctaBody": "From kitchen and living room to a complete private residence, we work with you from initial brief to final installation."
       }
     },
@@ -424,7 +425,7 @@
     }
   },
   "materia": {
-    "eyebrow": "The M Concept · Materia",
+    "eyebrow": "THE M CONCEPT · Materia",
     "heading": "Coming Soon",
     "bodyMain": "We're building something truly innovative — a platform powered by the latest technology, designed to make it easy for you to discover the furniture and materials of your dreams,",
     "bodyEmphasis": "tailored precisely to your budget and vision.",
@@ -449,12 +450,12 @@
       "kitchen-dining": {
         "label": "Kitchen & Dining",
         "description": "Bespoke kitchen cabinetry and dining furniture.",
-        "heroDescription": "Custom-crafted kitchen and dining spaces that blend precision with warmth."
+        "heroDescription": "Custom-crafted kitchen and dining spaces that blend precision with warmth"
       },
       "living-room": {
         "label": "Living Room",
         "description": "Shelving, media units, and living room furniture.",
-        "heroDescription": "Living room furniture designed for everyday refinement and lasting comfort."
+        "heroDescription": "Living room furniture designed for everyday refinement and lasting comfort"
       },
       "bedroom-wardrobes": {
         "label": "Bedroom & Wardrobes",

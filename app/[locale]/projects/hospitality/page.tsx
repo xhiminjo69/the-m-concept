@@ -10,7 +10,7 @@ import { getSupabaseProjectsByCategory } from '@/lib/supabase-projects';
 export const metadata: Metadata = {
   title: 'Hospitality Projects',
   description:
-    'Hospitality fit-outs by The M Concept — hotel interiors, guest-room furniture, and full interior programmes designed and built in Vlorë, Albania.',
+    'Hospitality fit-outs by THE M CONCEPT — hotel interiors, guest-room furniture, and full interior programmes designed and built in Vlorë, Albania.',
 };
 
 export default async function HospitalityProjectsPage() {

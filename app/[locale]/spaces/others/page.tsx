@@ -8,7 +8,7 @@ import { getSpaceByCategory } from '@/lib/supabase-spaces';
 
 export const metadata: Metadata = {
   title: 'Others',
-  description: 'Custom furniture for offices, corridors, and every other space — by The M Concept in Vlorë, Albania.',
+  description: 'Custom furniture for offices, corridors, and every other space — by THE M CONCEPT in Vlorë, Albania.',
 };
 
 export default async function OthersPage() {

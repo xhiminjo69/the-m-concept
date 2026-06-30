@@ -3,14 +3,17 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { projects as allProjects } from '@/lib/projects';
+import { getAllSupabaseProjects } from '@/lib/supabase-projects';
 
-// Featured projects shown on the homepage — Lion Gate, Vale, Radream
-const projects = allProjects.filter((p) => [1, 2, 4].includes(p.id))
-  .sort((a, b) => [2, 4, 1].indexOf(a.id) - [2, 4, 1].indexOf(b.id));
+// Featured projects shown on the homepage, in display order
+const FEATURED_NAMES = ["Diora's Hotel", 'Mercure Hotel', 'Hotel Radream'];
 
 export default async function Home() {
   const t = await getTranslations('home');
+  const allProjects = await getAllSupabaseProjects();
+  const projects = FEATURED_NAMES
+    .map((name) => allProjects.find((p) => p.name === name))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
   const stats = t.raw('stats') as Array<{ value: string; label: string }>;
   const materials = t.raw('materials.items') as Array<{ name: string; desc: string }>;
 
@@ -28,7 +31,7 @@ export default async function Home() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero.jpg"
-            alt="The M Concept — Premium Custom Furniture"
+            alt="THE M CONCEPT — Premium Custom Furniture"
             fill
             className="object-cover object-center"
             priority
@@ -66,7 +69,7 @@ export default async function Home() {
               fontSize: 'clamp(2.4rem, 4.6vw, 6rem)',
               lineHeight: 1,
             }}
-            aria-label="The M Concept"
+            aria-label="THE M CONCEPT"
           >
             {/* THE — slightly quieter so logo reads as the dominant mark */}
             <span style={{
@@ -227,7 +230,7 @@ export default async function Home() {
 
           {/* 3-column curated portfolio grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <Link
                 key={project.id}
                 href={`/projects/${project.id}`}
@@ -266,18 +269,18 @@ export default async function Home() {
                     className="absolute top-6 right-6 font-label text-[0.6rem] tracking-[0.3em] uppercase transition-opacity duration-300 group-hover:opacity-0"
                     style={{ color: 'rgba(255,255,255,0.3)' }}
                   >
-                    0{project.id}
+                    0{index + 1}
                   </span>
 
                   {/* Text — anchored to bottom of image */}
                   <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
 
-                    {/* Category + year */}
+                    {/* Category */}
                     <p
                       className="font-label text-[0.6rem] uppercase tracking-[0.28em] mb-3 transition-colors duration-300"
                       style={{ color: 'rgba(191,148,104,0.85)' }}
                     >
-                      {project.type} &middot; {project.year}
+                      {project.type}
                     </p>
 
                     {/* Project title */}
@@ -347,7 +350,7 @@ export default async function Home() {
               >
                 <Image
                   src="/images/craftsmanship.jpg"
-                  alt="Custom joinery and fitted wardrobe — The M Concept"
+                  alt="Custom joinery and fitted wardrobe — THE M CONCEPT"
                   fill
                   className="object-cover transition-transform duration-[1.2s] ease-premium hover:scale-[1.03]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -408,7 +411,7 @@ export default async function Home() {
         <div className="absolute inset-0 bg-stone-900">
           <Image
             src="/images/InteriorPicturee.jpg"
-            alt="The M Concept — interior design at scale"
+            alt="THE M CONCEPT — interior design at scale"
             fill
             className="object-cover object-center opacity-55"
             sizes="100vw"

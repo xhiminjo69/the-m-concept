@@ -8,7 +8,7 @@ import { getSpaceByCategory } from '@/lib/supabase-spaces';
 
 export const metadata: Metadata = {
   title: 'Bathroom',
-  description: 'Custom bathroom vanities and fitted storage by The M Concept — designed and manufactured in Vlorë, Albania.',
+  description: 'Custom bathroom vanities and fitted storage by THE M CONCEPT — designed and manufactured in Vlorë, Albania.',
 };
 
 export default async function BathroomPage() {

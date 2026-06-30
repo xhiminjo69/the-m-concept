@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Libraries',
   description:
-    'Handcrafted library and shelving systems by The M Concept — custom-built storage and display furniture designed in Vlorë, Albania.',
+    'Handcrafted library and shelving systems by THE M CONCEPT — custom-built storage and display furniture designed in Vlorë, Albania.',
 };
 
 const images = [

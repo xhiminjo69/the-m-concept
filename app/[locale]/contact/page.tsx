@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with The M Concept. Start a custom furniture project, request a quote, or visit our showroom in Vlorë, Albania.',
+    'Get in touch with THE M CONCEPT. Start a custom furniture project, request a quote, or visit our showroom in Vlorë, Albania.',
 };
 
 export default async function ContactPage() {
@@ -30,7 +30,7 @@ export default async function ContactPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/showroom.jpg"
-            alt="The M Concept showroom — Vlorë, Albania"
+            alt="THE M CONCEPT showroom — Vlorë, Albania"
             fill
             priority
             className="object-cover"

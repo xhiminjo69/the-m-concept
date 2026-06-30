@@ -34,7 +34,7 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <h1 className="text-white text-2xl font-semibold tracking-wide">
-            The M Concept
+            THE M CONCEPT
           </h1>
           <p className="text-gray-400 text-sm mt-1">Admin Dashboard</p>
         </div>

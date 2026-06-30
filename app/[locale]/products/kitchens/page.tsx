@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Kitchens',
   description:
-    'Custom kitchen cabinetry and fitted furniture by The M Concept — designed and manufactured in Vlorë, Albania.',
+    'Custom kitchen cabinetry and fitted furniture by THE M CONCEPT — designed and manufactured in Vlorë, Albania.',
 };
 
 const images = [

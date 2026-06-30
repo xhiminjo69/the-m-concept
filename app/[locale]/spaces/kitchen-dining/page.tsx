@@ -8,7 +8,7 @@ import { getSpaceByCategory } from '@/lib/supabase-spaces';
 
 export const metadata: Metadata = {
   title: 'Kitchen & Dining',
-  description: 'Custom kitchen cabinetry and dining furniture by The M Concept — designed and manufactured in Vlorë, Albania.',
+  description: 'Custom kitchen cabinetry and dining furniture by THE M CONCEPT — designed and manufactured in Vlorë, Albania.',
 };
 
 export default async function KitchenDiningPage() {

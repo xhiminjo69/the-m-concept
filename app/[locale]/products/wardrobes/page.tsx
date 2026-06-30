@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Wardrobes',
   description:
-    'Bespoke wardrobe collections by The M Concept — custom-built storage solutions designed and manufactured in Vlorë, Albania.',
+    'Bespoke wardrobe collections by THE M CONCEPT — custom-built storage solutions designed and manufactured in Vlorë, Albania.',
 };
 
 const images = [

@@ -10,7 +10,7 @@ import { getSupabaseProjectsByCategory } from '@/lib/supabase-projects';
 export const metadata: Metadata = {
   title: 'Commercial Projects',
   description:
-    'Commercial fit-outs by The M Concept — office interiors, retail spaces, and corporate environments crafted in Vlorë, Albania.',
+    'Commercial fit-outs by THE M CONCEPT — office interiors, retail spaces, and corporate environments crafted in Vlorë, Albania.',
 };
 
 export default async function CommercialProjectsPage() {
