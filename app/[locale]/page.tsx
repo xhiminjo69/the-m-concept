@@ -42,21 +42,20 @@ export default async function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-stone-900/20 via-transparent to-stone-900/15" />
         </div>
 
+        {/* Location label — sits up in the bright ceiling area for contrast */}
+        <p
+          className="absolute top-10 md:top-12 inset-x-0 z-10 font-label uppercase text-center pointer-events-none"
+          style={{
+            fontSize: 'clamp(0.58rem, 0.75vw, 0.72rem)',
+            letterSpacing: '0.32em',
+            color: 'rgba(28,20,14,0.55)',
+          }}
+        >
+          {t('hero.eyebrow')}
+        </p>
+
         {/* Brand name — centrepiece of the hero */}
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center pointer-events-none">
-          {/* Location label — subtle context above the title */}
-          <p
-            className="font-label uppercase text-center"
-            style={{
-              fontSize: 'clamp(0.58rem, 0.75vw, 0.72rem)',
-              letterSpacing: '0.32em',
-              color: 'rgba(28,20,14,0.55)',
-              marginBottom: 'clamp(1.6rem, 2.8vw, 2.4rem)',
-            }}
-          >
-            {t('hero.eyebrow')}
-          </p>
-
           {/* THE M CONCEPT — big centred logo mark, wordmark stacked underneath */}
           <h1
             className="uppercase"
