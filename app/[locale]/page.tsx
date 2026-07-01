@@ -50,7 +50,7 @@ export default async function Home() {
             style={{
               fontSize: 'clamp(0.58rem, 0.75vw, 0.72rem)',
               letterSpacing: '0.32em',
-              color: 'rgba(255,255,255,0.38)',
+              color: 'rgba(28,20,14,0.55)',
               marginBottom: 'clamp(1.6rem, 2.8vw, 2.4rem)',
             }}
           >
