@@ -33,13 +33,13 @@ export default async function Home() {
             src="/images/ProjectsHotelRadream.jpg"
             alt="THE M CONCEPT — Premium Custom Furniture"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center brightness-125 contrast-95"
             priority
             sizes="100vw"
           />
           {/* Layered gradient: cinematic vignette with strong base */}
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/35 to-stone-900/10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/30 via-transparent to-stone-900/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-stone-900/15 to-stone-900/0" />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/20 via-transparent to-stone-900/15" />
         </div>
 
         {/* Brand name — centrepiece of the hero */}
@@ -75,7 +75,7 @@ export default async function Home() {
               alt=""
               aria-hidden="true"
               style={{
-                height: 'clamp(6.5rem, 16vw, 15rem)',
+                height: 'clamp(7.5rem, 18vw, 17rem)',
                 width: 'auto',
                 mixBlendMode: 'multiply',
               }}
@@ -85,7 +85,7 @@ export default async function Home() {
             <span
               className="font-label font-bold"
               style={{
-                marginTop: 'clamp(1rem, 2.2vw, 1.75rem)',
+                marginTop: 'clamp(0.35rem, 0.8vw, 0.6rem)',
                 fontSize: 'clamp(1.1rem, 2.2vw, 1.75rem)',
                 letterSpacing: '0.32em',
                 color: 'rgba(28,20,14,0.92)',
